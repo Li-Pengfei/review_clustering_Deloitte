@@ -1,0 +1,3 @@
+they should give proper explanation . ['proper', 'give']
+they have to give proper explanations . ['proper', 'give']
+they have to give proper explanations . ['proper', 'give']
