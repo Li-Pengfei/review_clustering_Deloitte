@@ -2,6 +2,7 @@ or they should arrange service like we can do booking through messages . ['appoi
 last time appointment was been cancelled . ['appointment', 'last']
 they give us time for the service appointment but if any other vehicle comes , they start doing servicing of that vehicle before we come . ['appointment']
 i always taken appointment before the one day but then also after the visiting number was arriving late as well as i was facing problems . ['appointment', 'number']
+if we get the appointment on the time which we want so it will be ok . ['appointment', 'ok']
 you can improve your service i want next day appointment but they gave me after one week appointment . ['appointment', 'next']
 servicing must be done perfectly in the given appointment time . ['appointment']
 t get the quick booking service from the dealership they are taking approx . ['quick', 'approx', 'appointment', 'booking']
