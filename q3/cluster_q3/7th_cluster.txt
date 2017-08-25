@@ -1,7 +1,0 @@
-they satisfy customer after knowing the reason of dissatisfaction . they should not guide wrong to customer . ['reason', u'satisfi', 'wrong', u'know', u'dissatisfact', u'guid']
-they should satisfied customer properly . they should guide customer properly do not pay extra money . [u'satisfi', 'pay', u'guid', 'money', 'extra']
-the car features they should be guide properly . they should also guide us how to driving . [u'guid', u'featur', u'drive']
-advisor should give knowledge to there workers . so that the they guide the customer . [u'guid', u'knowledg', u'worker', 'advisor', 'give']
-while for the service they must give explanation and guide us how to maintain properly . [u'guid', 'give', 'maintain']
-they should have a person at the service center who can guide the customer when customer visit the service center . ['person', u'guid', 'visit', 'center']
-they should be guide to the customer properly . [u'guid']
