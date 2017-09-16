@@ -24,5 +24,3 @@ NLTK (wordnet)
 10 Your satisfaction towards the follow-up calls made by the  dealership post servicing of your vehicle to check your service experience and car condition
 11 No improvement required
 
-
-ddddd
