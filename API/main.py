@@ -44,7 +44,9 @@ def q3(content, csv_path):
 
     # LSI + Spectral Clustering
     nn_extracted_unclustered = [nn_extracted[i][0] for i in unclustered_index]
-    auto_clustering.lsi(nn_extracted_unclustered)
+    similarity_matrix = auto_clustering.lsi(nn_extracted_unclustered)
+    auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_unclustered)
+
 
 
 
