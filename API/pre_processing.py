@@ -17,7 +17,6 @@ def process_corpus(content, pos_tags, question):
     nn_extracted = []
     doc_other = []
     if question in [3, 5, 10]:
-
         for idx, review in enumerate(content):
             if 'no improvement' in review:
                 doc_noimprove.append((review, idx))
