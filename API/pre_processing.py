@@ -1,7 +1,7 @@
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize
-from nltk.stem.porter import *
+from nltk.stem.porter import PorterStemmer
 import string
 
 
@@ -35,9 +35,9 @@ def process_corpus(content, pos_tags, question):
                 1: rule_q1, 2: rule_q2, 3: rule_q3, 4: rule_q4, 5: rule_q5, 6: rule_q6,
                 7: rule_q7, 8: rule_q8, 9: rule_q9, 10: rule_q10
             }
-            # Get the function from switcher dictionary to process corresponding question
+            # Get the corresponding rule function
             func = switcher.get(question, lambda: "Question number must between 1-10 (inclusive)!")
-            # Execute the function
+            # Execute the rule function
             nn_list = func(sen, nn_list)
 
             if nn_list != []:
@@ -48,19 +48,20 @@ def process_corpus(content, pos_tags, question):
     return doc_noimprove, [doc_nn, nn_extracted], doc_other
 
 
-def rule_q1(sen, ne):
+def rule_q3(sen, ne):
     clean_ne = list(set(ne))
     #     remove_words = ["improv", "custom", "servic", "peopl","person","facil","avail","good",\
     #                     "center","centr","car", "dealership", "vehicl", "toyota", "problem","work", "much",\
     #                    "thing", "possibl","need"]   #stemmed
     remove_words = ['custom', 'car', 'vehicl', 'servic', 'toyota', 'thing', 'good', \
-                    'day', 'center', 'centre', 'dealership', 'time']
+                    'day', 'center', 'centr', 'dealership', 'time']
     clean_ne = [word for word in clean_ne if word not in remove_words]
 
     save_words = ['inform', 'tell', 'advis', 'understand', 'advic', 'call', 'answer', 'correct', 'guid', \
                   'train', 'suggest', 'respons', 'commit', 'solv', 'queri', 'updat', 'attend', 'deliv', \
                   'wait', 'mention', 'listen', 'resolv', 'respond', 'share', 'commun', 'confirm', \
                   'behavior', 'behav', 'properly', 'proper']  # stemmed
+    stemmer = PorterStemmer()
     clean_ne = clean_ne + [stemmer.stem(word) for word in sen.split() if stemmer.stem(word) in save_words]
     clean_ne = list(set(clean_ne))
 
