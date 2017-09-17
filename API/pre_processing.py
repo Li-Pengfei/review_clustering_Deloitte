@@ -51,6 +51,8 @@ def process_corpus(content, pos_tags, question):
     else if question in [2]:
         doc_days = []
         doc_time = []
+        day_senswords = ['sunday', 'sundays', 'weekend', 'weekends', 'holidays', 'holiday']
+
         for idx, review in enumerate(content):
             if 'no improvement' in review:
                 doc_noimprove.append((review, idx))
@@ -64,7 +66,7 @@ def process_corpus(content, pos_tags, question):
                         clean_word_list = []
                         for word in word_list:
                             clean_word_list = clean_word_list + filter(None, re.split('(-|:|am|pm)', word)) 
-                        if 'am' in clean_word_list or 'pm' in clean_word_list or num_there(clean_word_list):
+                        if 'am' in clean_word_list or 'pm' in clean_word_list or any(i.isdigit() for i in s):
                             doc_time.append((sen, idx))
                         else:
                             doc_other.append((sen, idx))
@@ -108,21 +110,6 @@ def process_corpus(content, pos_tags, question):
 
 
 
-def rule_q2(sen):
-    word_list = nltk.word_tokenize(sen)
-    if not set(word_list).isdisjoint(day_senswords):
-        doc_days.append((sen, x[1]))
-    else:
-        clean_word_list = []
-            for word in word_list:
-                clean_word_list = clean_word_list + filter(None, re.split('(-|:|am|pm)', word)) 
-            if 'am' in clean_word_list or 'pm' in clean_word_list or num_there(clean_word_list):
-                doc_time.append((sen, x[1]))
-            else:
-                doc_other.append((sen, x[1]))
-
-    return doc_days, doc_time, doc_other
-    return clean_ne
 
 
 def rule_q3(sen, ne):
