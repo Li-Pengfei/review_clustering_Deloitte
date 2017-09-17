@@ -3,7 +3,7 @@ import pre_processing
 import post_processing
 import rule_based_clustering
 import auto_clustering
-
+from q2_timeinfo import time_extract, day_extract
 import pandas as pd
 
 
@@ -50,11 +50,20 @@ def q3(content, csv_path):
 
 
 
+
 def q2(content, csv_path):
     pos_tags = []
     doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=2)
     doc_day, doc_time = doc_extracted[0], doc_extracted[1]
-    print doc_time
+    for idx, sing_review in enumerate(doc_day):
+        doc_day[idx] = (sing_review[0], sing_review[1], day_extract(sing_review))
+    for idx, sing_review in enumerate(doc_time):
+        doc_time[idx] = (sing_review[0], sing_review[1], time_extract(sing_review))
+    for idx, sing_review in enumerate(doc_noimprove):
+        doc_noimprove[idx] = (sing_review[0], sing_review[1], 'noimprove')
+    for idx, sing_review in enumerate(doc_other):
+        doc_other[idx] = (sing_review[0], sing_review[1], 'others')
+    return doc_day + doc_time + doc_noimprove + doc_other
 
 
 
