@@ -4,6 +4,7 @@ from nltk.tokenize import sent_tokenize
 from nltk.stem.porter import PorterStemmer
 import string
 import re
+stemmer = PorterStemmer()
 
 def process_corpus(content, pos_tags, question):
     stop_words = stopwords.words('english')
@@ -28,7 +29,6 @@ def process_corpus(content, pos_tags, question):
                     if token[1] in pos_tags and not token[0] in stop_words:
                         nn_list.append(token[0])
             # stemming
-                stemmer = PorterStemmer()
                 for counter, word in enumerate(nn_list):
                     nn_list[counter] = stemmer.stem(word)
             # apply rule
@@ -86,7 +86,6 @@ def process_corpus(content, pos_tags, question):
                         if token[1] in pos_tags and not token[0] in stop_words:
                             nn_list.append(token[0])
             # stemming
-                    stemmer = PorterStemmer()
                     for counter, word in enumerate(nn_list):
                         nn_list[counter] = stemmer.stem(word)
             # apply rule
@@ -96,10 +95,7 @@ def process_corpus(content, pos_tags, question):
                     }
             # Get the corresponding rule function
                     func = switcher.get(question, lambda: "Question number must between 1-10 (inclusive)!")
-            # Execute the rule function
-                    
-
-                
+            # Execute the rule function               
                     nn_list = func(sen, nn_list)
                     if nn_list != []:
                         nn_extracted.append((nn_list, idx))
@@ -116,9 +112,6 @@ def process_corpus(content, pos_tags, question):
 
 def rule_q3(sen, ne):
     clean_ne = list(set(ne))
-    #     remove_words = ["improv", "custom", "servic", "peopl","person","facil","avail","good",\
-    #                     "center","centr","car", "dealership", "vehicl", "toyota", "problem","work", "much",\
-    #                    "thing", "possibl","need"]   #stemmed
     remove_words = ['custom', 'car', 'vehicl', 'servic', 'toyota', 'thing', 'good', \
                     'day', 'center', 'centr', 'dealership', 'time']
     clean_ne = [word for word in clean_ne if word not in remove_words]
@@ -127,7 +120,6 @@ def rule_q3(sen, ne):
                   'train', 'suggest', 'respons', 'commit', 'solv', 'queri', 'updat', 'attend', 'deliv', \
                   'wait', 'mention', 'listen', 'resolv', 'respond', 'share', 'commun', 'confirm', \
                   'behavior', 'behav', 'properly', 'proper']  # stemmed
-    stemmer = PorterStemmer()
     clean_ne = clean_ne + [stemmer.stem(word) for word in sen.split() if stemmer.stem(word) in save_words]
     clean_ne = list(set(clean_ne))
 
@@ -158,5 +150,184 @@ def rule_q3(sen, ne):
     if 'listen' in clean_ne:
         clean_ne[clean_ne.index('listen')] = 'respond'
 
+    clean_ne = list(set(clean_ne))
+    return clean_ne
+
+
+def rule_q4(sen, ne):
+    clean_ne = list(set(ne))
+    remove_words = ['car', 'vehicl','improv','dealership','custom','receiv','satisfact','respond','servic','time',\
+                    'innova','center','facil','feel','ok','tell','problem','pay','dealer','attent','hurri','condit',\
+                    'ant','fine','deliver','get','question','deliveri','need','quality','day','side','kind','chang',\
+                    'honda','visit','told','speak','ask','requir','maruti','cleanli','henc','place','area','hand',\
+                    'compani','process','qualiti','care','outsid','complaint','depart','hour','wait','front','home',\
+                    'centr','system']
+    clean_ne = [word for word in clean_ne if word not in remove_words and len(word)>1]
+    save_words = ['polish','wash','interior','extra','rupe','check','vacuum','clean','intern',
+                  'insid','ac','dry','engin','inter']
+    uni_words = ['mat','interior','charg']
+    clean_ne = list(set(clean_ne + [stemmer.stem(word) for word in sen.split() if stemmer.stem(word) in save_words]))
+
+    # rules to seperate keywords:
+    if 'rupe' in clean_ne:
+        clean_ne[clean_ne.index('rupe')] = 'charg'
+    if 'rate' in clean_ne:
+        clean_ne[clean_ne.index('rate')] = 'charg'        
+    if 'cost' in clean_ne:
+        clean_ne[clean_ne.index('cost')] = 'charg'
+    if 'money' in clean_ne:
+        clean_ne[clean_ne.index('money')] = 'charg'
+    if 'insid' in clean_ne:
+        clean_ne[clean_ne.index('insid')] = 'interior'
+    if 'intern' in clean_ne:
+        clean_ne[clean_ne.index('intern')] = 'interior'
+    if 'window' in clean_ne:
+        clean_ne[clean_ne.index('window')] = 'glass'
+    if 'dirt' in clean_ne:
+        clean_ne[clean_ne.index('dirt')] = 'dust'  
+    if 'manag' in clean_ne:
+        clean_ne[clean_ne.index('manag')] = 'staff'
+    if 'advisor' in clean_ne:
+        clean_ne[clean_ne.index('advisor')] = 'staff'  
+    if 'supervisor' in clean_ne:
+        clean_ne[clean_ne.index('supervisor')] = 'staff'  
+    if 'labor' in clean_ne:
+        clean_ne[clean_ne.index('labor')] = 'staff'
+    if 'worker' in clean_ne:
+        clean_ne[clean_ne.index('worker')] = 'staff'         
+    if 'cloth' in clean_ne:
+        clean_ne[clean_ne.index('cloth')] = 'dri'
+    if 'vacuum' in clean_ne:
+        clean_ne[clean_ne.index('vacuum')] = 'dri'        
+    if 'water' in clean_ne:
+        clean_ne[clean_ne.index('water')] = 'clean'
+    if 'spot' in clean_ne:
+        clean_ne[clean_ne.index('spot')] = 'stain'          
+    if 'wash' in clean_ne:
+        clean_ne[clean_ne.index('wash')] = 'clean'
+    # rules for multi-keywords case
+    if len(clean_ne) > 1 and 'dust' in clean_ne:
+        clean_ne.remove('dust')
+    if len(clean_ne) > 1 and 'clean' in clean_ne:
+        clean_ne.remove('clean')
+        
+    uniwrd = [cn for cn in clean_ne if cn in uni_words]
+    if uniwrd != []:
+        clean_ne = uniwrd
+    clean_ne = list(set(clean_ne))
+    return clean_ne
+
+def rule_q7(sen, ne):
+    clean_ne = list(set(ne))
+    remove_words = ['custom','wait','car','facil','dealership','toyota','center',\
+                    'room','improv','servic','arrang','owner','peopl','time']
+    clean_ne = [word for word in clean_ne if word not in remove_words and len(word)>1]    
+    save_words = ['clean','cleanli']
+    clean_ne = list(set(clean_ne + [stemmer.stem(word) for word in sen.split() if stemmer.stem(word) in save_words]))
+    if len(clean_ne) > 1 and 'area' in clean_ne:
+        clean_ne.remove('area')
+    if len(clean_ne) < 2 and 'area' in clean_ne:
+        clean_ne[clean_ne.index('area')] = 'space'
+    if 'place' in clean_ne:
+        clean_ne[clean_ne.index('place')] = 'space'
+    if 'chair' in clean_ne:
+        clean_ne[clean_ne.index('chair')] = 'seat'
+    if 'sofa' in clean_ne:
+        clean_ne[clean_ne.index('sofa')] = 'seat'
+    if 'coffe' in clean_ne:
+        clean_ne[clean_ne.index('coffe')] = 'drink'
+    if 'water' in clean_ne:
+        clean_ne[clean_ne.index('water')] = 'drink'
+    if 'tea' in clean_ne:
+        clean_ne[clean_ne.index('tea')] = 'drink'         
+    if 'clean' in clean_ne:
+        clean_ne[clean_ne.index('clean')] = 'cleanli'
+    if 'canteen' in clean_ne:
+        clean_ne[clean_ne.index('canteen')] = 'food'
+    return clean_ne
+
+def rule_q9(sen, ne):
+    clean_ne = list(set(ne))
+    remove_words = ['car', 'vehicl','improv','dealership','custom','receiv','satisfact','respond','servic','time',
+                    'center','facil','feel','ok','tell','problem','pay','dealer','attent','hurri','condit','ant',
+                    'fine','deliver','get','question','deliveri','need','quality','day','amount','kind','chang',
+                    'honda','visit','told','speak','ask','requir','toyota','henc','place','area','filter','align',
+                    'compani','process','qualiti','care','outsid','complaint','manag','glass','inform','break','pad',
+                    'wash','clean','water','showroom','staff','month','year','side','break','oil','market','batteri',
+                    'pack','packag','product']
+    clean_ne = [word for word in clean_ne if word not in remove_words and len(word)>1]    
+    save_words = ['spare','reduc','reason','discount','extra','rupe','compar','differ','pay','payment','ac','part',
+                  'check','free','increas','high','low','less','more','costli','decreas','insur','explain']
+    clean_ne = list(set(clean_ne + [stemmer.stem(word) for word in sen.split() if stemmer.stem(word) in save_words]))
+    
+    # rules to merge keywords:
+    if 'rupe' in clean_ne:
+        clean_ne[clean_ne.index('rupe')] = 'charg'
+    if 'price' in clean_ne:
+        clean_ne[clean_ne.index('price')] = 'charg'        
+    if 'differ' in clean_ne:
+        clean_ne[clean_ne.index('differ')] = 'compar'        
+    if 'rate' in clean_ne:
+        clean_ne[clean_ne.index('rate')] = 'charg'
+    if 'pay' in clean_ne:
+        clean_ne[clean_ne.index('pay')] = 'charg' 
+    if 'payment' in clean_ne:
+        clean_ne[clean_ne.index('payment')] = 'charg'         
+    if 'cost' in clean_ne:
+        clean_ne[clean_ne.index('cost')] = 'charg'
+    if 'amount' in clean_ne:
+        clean_ne[clean_ne.index('amount')] = 'charg'
+    if 'bill' in clean_ne:
+        clean_ne[clean_ne.index('bill')] = 'charg'           
+    if 'money' in clean_ne:
+        clean_ne[clean_ne.index('money')] = 'charg'
+    if 'low' in clean_ne:
+        clean_ne[clean_ne.index('low')] = 'reduc'
+    if 'decreas' in clean_ne:
+        clean_ne[clean_ne.index('decreas')] = 'reduc' 
+    if 'less' in clean_ne:
+        clean_ne[clean_ne.index('less')] = 'reduc'  
+    if 'taxation' in clean_ne:
+        clean_ne[clean_ne.index('taxation')] = 'tax'
+    if 'more' in clean_ne:
+        clean_ne[clean_ne.index('more')] = 'costli'
+    if 'increas' in clean_ne:
+        clean_ne[clean_ne.index('increas')] = 'costli'
+    if 'increa' in clean_ne:
+        clean_ne[clean_ne.index('increa')] = 'costli'        
+    if 'high' in clean_ne:
+        clean_ne[clean_ne.index('high')] = 'costli'
+    if 'explain' in clean_ne:
+        clean_ne[clean_ne.index('explain')] = 'explan'   
+    if 'bumper' in clean_ne:
+        clean_ne[clean_ne.index('bumper')] = 'spare'
+    if 'part' in clean_ne:
+        clean_ne[clean_ne.index('part')] = 'spare'        
+    if 'tire' in clean_ne:
+        clean_ne[clean_ne.index('tire')] = 'spare'        
+    if 'ac' in clean_ne:
+        clean_ne[clean_ne.index('ac')] = 'spare'        
+    if 'vat' in clean_ne:
+        clean_ne[clean_ne.index('vat')] = 'tax'
+    if 'offer' in clean_ne:
+        clean_ne[clean_ne.index('offer')] = 'discount'        
+    clean_ne = list(set(clean_ne))
+
+    if len(clean_ne)>1 and 'costli' in clean_ne:
+        clean_ne.remove('costli')
+    if len(clean_ne)>1 and 'reduc' in clean_ne:
+        clean_ne.remove('reduc')
+    if len(clean_ne)>1 and 'charg' in clean_ne:
+        clean_ne.remove('charg')
+    if len(clean_ne)==1 and 'costli' in clean_ne:
+        clean_ne = ['charg']
+    if len(clean_ne)==1 and 'reduc' in clean_ne:
+        clean_ne = ['charg']
+    if 'tax' in clean_ne:
+        clean_ne= ['tax']
+    if 'labor' in clean_ne:
+        clean_ne= ['labor']        
+    if 'spare' in clean_ne:
+        clean_ne= ['spare']        
     clean_ne = list(set(clean_ne))
     return clean_ne
