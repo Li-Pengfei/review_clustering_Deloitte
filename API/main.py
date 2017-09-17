@@ -48,7 +48,7 @@ def q2(content, csv_path):
     pos_tags = []
     doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=2)
     doc_day, doc_time = doc_extracted[0], doc_extracted[1]
-    print len(doc_day)
+    print doc_time
 
 
 

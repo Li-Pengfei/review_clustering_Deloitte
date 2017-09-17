@@ -3,7 +3,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize
 from nltk.stem.porter import PorterStemmer
 import string
-
+import re
 
 def process_corpus(content, pos_tags, question):
     stop_words = stopwords.words('english')
@@ -59,16 +59,19 @@ def process_corpus(content, pos_tags, question):
                 sents = sent_tokenize(review)
                 for sen in sents:
                     word_list = nltk.word_tokenize(sen)
-                    if not set(word_list).isdisjoint(day_senswords):
-                        doc_days.append((sen, idx))
-                    else:
-                        clean_word_list = []
-                        for word in word_list:
-                            clean_word_list = clean_word_list + filter(None, re.split('(-|:|am|pm)', word)) 
-                        if 'am' in clean_word_list or 'pm' in clean_word_list or any(i.isdigit() for i in s):
-                            doc_time.append((sen, idx))
+                    if len(word_list) > 5:
+                        if not set(word_list).isdisjoint(day_senswords):
+                            doc_days.append((sen, idx))
                         else:
-                            doc_other.append((sen, idx))
+                            clean_word_list = []
+                            for word in word_list:
+                                clean_word_list = clean_word_list + filter(None, re.split('(-|:|am|pm)', word)) 
+                            if 'am' in clean_word_list or 'pm' in clean_word_list or any(i.isdigit() for i in clean_word_list):
+                                doc_time.append((sen, idx))
+                            else:
+                                doc_other.append((sen, idx))
+                    else:
+                        continue
         return doc_noimprove, [doc_days, doc_time], doc_other       
     else:
         for idx, review in enumerate(content):

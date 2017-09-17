@@ -15,11 +15,11 @@ def read_Surveycsv(filepath):
     """
     df = pd.read_csv(filepath, usecols=['Q3_1', 'Q3_2', 'Q3_3', 'Q3_4', 'Q3_5', 'Q3_6', 'Q3_7', 'Q3_8', 'Q3_9', 'Q3_10',
                                         'Q4', 'Q5'])
-    print(df.describe())
+    #print(df.describe())
 
     q4 = df['Q4'].astype('category')
-    print("\nCount summary for each question:")
-    print(q4.value_counts())
+    #print("\nCount summary for each question:")
+    #print(q4.value_counts())
 
     q5 = df['Q5']
 
