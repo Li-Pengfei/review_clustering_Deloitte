@@ -11,17 +11,18 @@ label = pd.Series()
 
 
 def process_question(ques_num, csv_path):
+    assert (ques_num in range(1, 11)), "Question number must between 1-10 (inclusive)!"
+
     file = survey_reader.read_Surveycsv(csv_path)
     content = file[ques_num][0]
     index = file[ques_num][1]
-
     print 'Length of content', len(content)
 
     switcher = {
-        1: q1, 2: q2
+        1: q1, 2: q2, 3:q3
     }
     # Get the function from switcher dictionary to process corresponding question
-    func = switcher.get(ques_num, lambda: "Question number must between 1-10 (inclusive)!")
+    func = switcher.get(ques_num)
     # Execute the function
     return func(content, csv_path)
 
@@ -36,7 +37,7 @@ def q3(content, csv_path):
     print 'No comments:', len(doc_noimprove)
     print 'Comment without keywords:', len(doc_other)
 
-    df = post_processing.df_count(nn_extracted)
+    # df = post_processing.df_count(nn_extracted)
     # print df
 
     # Rule-based clustering
@@ -44,7 +45,12 @@ def q3(content, csv_path):
 
     # LSI + Spectral Clustering
     nn_extracted_unclustered = [nn_extracted[i][0] for i in unclustered_index]
-    auto_clustering.lsi(nn_extracted_unclustered)
+    similarity_matrix = auto_clustering.lsi(nn_extracted_unclustered)
+    label_auto = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_unclustered)
+    for i, idx in enumerate(unclustered_index):
+        nn_extracted[idx] = nn_extracted[idx] + (label_auto[i],)
+
+    return nn_extracted
 
 
 
