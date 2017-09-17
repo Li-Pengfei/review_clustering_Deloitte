@@ -1,9 +1,19 @@
 import survey_reader
 import pre_processing
 import post_processing
+import rule_based_clustering
+
+import pandas as pd
+
+
+label = pd.Series()
+
 
 def process_question(ques_num, csv_path):
-    content = survey_reader.read_Surveycsv(csv_path)[ques_num]
+    file = survey_reader.read_Surveycsv(csv_path)
+    content = file[ques_num][0]
+    index = file[ques_num][1]
+
     print 'Length of content', len(content)
 
     switcher = {
@@ -16,7 +26,6 @@ def process_question(ques_num, csv_path):
     return func(content, csv_path)
 
 def q1(content, csv_path):
-    print 'q2'
     return
 
 def q3(content, csv_path):
@@ -29,6 +38,9 @@ def q3(content, csv_path):
 
     df = post_processing.df_count(nn_extracted)
     # print df
+
+    # Rule-based clustering
+    rule_based_clustering.clustering(nn_extracted, question=3)
 
 
 
