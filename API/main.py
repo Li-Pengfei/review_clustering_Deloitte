@@ -18,8 +18,7 @@ def process_question(ques_num, csv_path):
     print 'Length of content', len(content)
 
     switcher = {
-        1: q1, 2: q2, 3: q3, 4: q4, 5: q5, 6: q6,
-        7: q7, 8: q8, 9: q9, 10: q10
+        1: q1, 2: q2
     }
     # Get the function from switcher dictionary to process corresponding question
     func = switcher.get(ques_num, lambda: "Question number must between 1-10 (inclusive)!")
@@ -55,10 +54,14 @@ def q2(content, csv_path):
     pos_tags = []
     doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=2)
     doc_day, doc_time = doc_extracted[0], doc_extracted[1]
-    print len(doc_day)
+    print doc_time
 
 
 
+
+if __name__ == '__main__':
+
+    process_question(2, '../raw_data/survey_data.csv')
 
 
 
