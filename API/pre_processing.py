@@ -106,8 +106,11 @@ def process_corpus(content, pos_tags, question):
 
     
 
+def rule_q1(sen, ne):
+    return
 
-
+def rule_q2(sen, ne):
+    return
 
 
 def rule_q3(sen, ne):
@@ -217,6 +220,13 @@ def rule_q4(sen, ne):
     clean_ne = list(set(clean_ne))
     return clean_ne
 
+def rule_q5(sen, ne):
+    return
+
+def rule_q6(sen, ne):
+    return
+
+
 def rule_q7(sen, ne):
     clean_ne = list(set(ne))
     remove_words = ['custom','wait','car','facil','dealership','toyota','center',\
@@ -245,6 +255,9 @@ def rule_q7(sen, ne):
     if 'canteen' in clean_ne:
         clean_ne[clean_ne.index('canteen')] = 'food'
     return clean_ne
+
+def rule_q8(sen, ne):
+    return
 
 def rule_q9(sen, ne):
     clean_ne = list(set(ne))
@@ -331,3 +344,6 @@ def rule_q9(sen, ne):
         clean_ne= ['spare']        
     clean_ne = list(set(clean_ne))
     return clean_ne
+
+def rule_q10(sen, ne):
+    return

@@ -1,4 +1,4 @@
-import post_processing
+from collections import Counter
 from string import join
 import numpy as np
 from gensim import corpora
@@ -31,21 +31,29 @@ def spectral_clustering(similarity_matrix, corpus):
     n_clusters_ = 5
     sc = SpectralClustering(n_clusters=n_clusters_, affinity='precomputed').fit(similarity_matrix)
     labels = sc.labels_
+    word_labels = ['space']*len(labels)
     print('Estimated number of clusters: %d' % n_clusters_)
 
     for indice_cluster in range(n_clusters_):
         idx_list = np.where(labels == indice_cluster)[0]
         cluster_corpus = [sentence for idx, sentence in enumerate(corpus) if idx in idx_list]
-        df = post_processing.df_count(cluster_corpus)
+
+        df = df_count(cluster_corpus)
         label = df.most_common(3)[0][0]
         label2 = df.most_common(3)[1][0]
         label3 = df.most_common(3)[2][0]
+
         for idx in idx_list:
-            labels[idx] = "_".join([label, label2, label3])
-    return labels
+            word_labels[idx] = "_".join([label, label2, label3])
+    return word_labels
 
 
-
+def df_count(corpus):
+    text = []
+    for comment in corpus:
+        text = text + comment
+    df = Counter(text)
+    return df
 
 
 

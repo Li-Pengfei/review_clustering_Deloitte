@@ -8,7 +8,7 @@ def clustering(corpus, question):
     for word in cluster_rule_list:
         idx_set = []
         for idx, doc in enumerate(corpus):
-            if word in doc(0) and idx not in clustered_index:
+            if word in doc[0] and idx not in clustered_index:
                 idx_set.append(idx)
                 corpus[idx] = corpus[idx] + (word,)
             clustered_index = clustered_index + idx_set
