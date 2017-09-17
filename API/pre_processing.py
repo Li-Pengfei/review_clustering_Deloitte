@@ -48,15 +48,35 @@ def process_corpus(content, pos_tags, question):
                 else:
                     doc_other.append((sen, idx))
         return doc_noimprove, [doc_nn, nn_extracted], doc_other
+    else if question in [2]:
+        doc_days = []
+        doc_time = []
+        for idx, review in enumerate(content):
+            if 'no improvement' in review:
+                doc_noimprove.append((review, idx))
+            else:
+                sents = sent_tokenize(review)
+                for sen in sents:
+                    word_list = nltk.word_tokenize(sen)
+                    if not set(word_list).isdisjoint(day_senswords):
+                        doc_days.append((sen, idx))
+                    else:
+                        clean_word_list = []
+                        for word in word_list:
+                            clean_word_list = clean_word_list + filter(None, re.split('(-|:|am|pm)', word)) 
+                        if 'am' in clean_word_list or 'pm' in clean_word_list or num_there(clean_word_list):
+                            doc_time.append((sen, idx))
+                        else:
+                            doc_other.append((sen, idx))
+        return doc_noimprove, [doc_days, doc_time], doc_other       
     else:
         for idx, review in enumerate(content):
             if 'no improvement' in review:
                 doc_noimprove.append((review, idx))
             else:
-                sents = sent_tokenize(x)
+                sents = sent_tokenize(review)
                 for sen in sents:
                     nn_list = []
-                    sen = review
                     pos_new = nltk.pos_tag(nltk.word_tokenize(sen))
                     for token in pos_new:
                         if token[1] in pos_tags and not token[0] in stop_words:
@@ -73,64 +93,35 @@ def process_corpus(content, pos_tags, question):
             # Get the corresponding rule function
                     func = switcher.get(question, lambda: "Question number must between 1-10 (inclusive)!")
             # Execute the rule function
-                    nn_list = func(sen, nn_list)
+                    
 
+                
+                    nn_list = func(sen, nn_list)
                     if nn_list != []:
                         nn_extracted.append((nn_list, idx))
                         doc_nn.append((sen, idx))
                     else:
                         doc_other.append((sen, idx))
-            return doc_noimprove, [doc_nn, nn_extracted], doc_other
+        return doc_noimprove, [doc_nn, nn_extracted], doc_other
 
     
 
 
 
-def rule_q2(sen, ne):
-    clean_ne = list(set(ne))
-    #     remove_words = ["improv", "custom", "servic", "peopl","person","facil","avail","good",\
-    #                     "center","centr","car", "dealership", "vehicl", "toyota", "problem","work", "much",\
-    #                    "thing", "possibl","need"]   #stemmed
-    remove_words = ['custom', 'car', 'vehicl', 'servic', 'toyota', 'thing', 'good', \
-                    'day', 'center', 'centr', 'dealership', 'time']
-    clean_ne = [word for word in clean_ne if word not in remove_words]
+def rule_q2(sen):
+    word_list = nltk.word_tokenize(sen)
+    if not set(word_list).isdisjoint(day_senswords):
+        doc_days.append((sen, x[1]))
+    else:
+        clean_word_list = []
+            for word in word_list:
+                clean_word_list = clean_word_list + filter(None, re.split('(-|:|am|pm)', word)) 
+            if 'am' in clean_word_list or 'pm' in clean_word_list or num_there(clean_word_list):
+                doc_time.append((sen, x[1]))
+            else:
+                doc_other.append((sen, x[1]))
 
-    save_words = ['inform', 'tell', 'advis', 'understand', 'advic', 'call', 'answer', 'correct', 'guid', \
-                  'train', 'suggest', 'respons', 'commit', 'solv', 'queri', 'updat', 'attend', 'deliv', \
-                  'wait', 'mention', 'listen', 'resolv', 'respond', 'share', 'commun', 'confirm', \
-                  'behavior', 'behav', 'properly', 'proper']  # stemmed
-    stemmer = PorterStemmer()
-    clean_ne = clean_ne + [stemmer.stem(word) for word in sen.split() if stemmer.stem(word) in save_words]
-    clean_ne = list(set(clean_ne))
-
-    # rules to merge keywords:
-    if 'share' in clean_ne:
-        clean_ne[clean_ne.index('share')] = 'inform'
-    if 'tell' in clean_ne:
-        clean_ne[clean_ne.index('tell')] = 'inform'
-    if 'behav' in clean_ne:
-        clean_ne[clean_ne.index('behav')] = 'behavior'
-    if 'advic' in clean_ne:
-        clean_ne[clean_ne.index('advic')] = 'advis'
-    if 'queri' in clean_ne:
-        clean_ne[clean_ne.index('queri')] = 'question'
-    if 'properly' in clean_ne:
-        clean_ne[clean_ne.index('properly')] = 'proper'
-    if 'worker' in clean_ne:
-        clean_ne[clean_ne.index('worker')] = 'staff'
-
-    # rules to split keywords:
-    if 'inform' in clean_ne and 'information' in sen:
-        clean_ne[clean_ne.index('inform')] = 'information'
-    if 'respons' in clean_ne:
-        if ('responsibility' in sen or 'responsibilities' in sen or 'responsible' in sen):
-            clean_ne[clean_ne.index('respons')] = 'responsibility'
-        else:
-            clean_ne[clean_ne.index('respons')] = 'respond'
-    if 'listen' in clean_ne:
-        clean_ne[clean_ne.index('listen')] = 'respond'
-
-    clean_ne = list(set(clean_ne))
+    return doc_days, doc_time, doc_other
     return clean_ne
 
 
