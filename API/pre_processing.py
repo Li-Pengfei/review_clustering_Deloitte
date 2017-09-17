@@ -47,7 +47,7 @@ def process_corpus(content, pos_tags, question):
                 else:
                     doc_other.append((sen, idx))
         return doc_noimprove, [doc_nn, nn_extracted], doc_other
-    else if question in [2]:
+    elif question in [2]:
         doc_days = []
         doc_time = []
         day_senswords = ['sunday', 'sundays', 'weekend', 'weekends', 'holidays', 'holiday']
