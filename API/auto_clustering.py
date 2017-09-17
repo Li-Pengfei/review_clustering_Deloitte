@@ -1,3 +1,5 @@
+import post_processing
+from string import join
 import numpy as np
 from gensim import corpora
 from gensim.models import TfidfModel
@@ -33,8 +35,18 @@ def spectral_clustering(similarity_matrix, corpus):
 
     for indice_cluster in range(n_clusters_):
         idx_list = np.where(labels == indice_cluster)[0]
+        cluster_corpus = [sentence for idx, sentence in enumerate(corpus) if idx in idx_list]
+        df = post_processing.df_count(cluster_corpus)
+        label = df.most_common(3)[0][0]
+        label2 = df.most_common(3)[1][0]
+        label3 = df.most_common(3)[2][0]
         for idx in idx_list:
-            cluster_corpus = 
+            labels[idx] = "_".join([label, label2, label3])
+    return labels
+
+
+
+
 
 
 

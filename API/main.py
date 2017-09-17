@@ -36,7 +36,7 @@ def q3(content, csv_path):
     print 'No comments:', len(doc_noimprove)
     print 'Comment without keywords:', len(doc_other)
 
-    df = post_processing.df_count(nn_extracted)
+    # df = post_processing.df_count(nn_extracted)
     # print df
 
     # Rule-based clustering
@@ -45,8 +45,9 @@ def q3(content, csv_path):
     # LSI + Spectral Clustering
     nn_extracted_unclustered = [nn_extracted[i][0] for i in unclustered_index]
     similarity_matrix = auto_clustering.lsi(nn_extracted_unclustered)
-    auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_unclustered)
-
+    label_auto = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_unclustered)
+    for i, idx in enumerate(unclustered_index):
+        nn_extracted[idx] = nn_extracted[idx] + (label_auto[i],)
 
 
 
