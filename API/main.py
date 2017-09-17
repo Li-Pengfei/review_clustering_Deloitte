@@ -2,6 +2,7 @@ import survey_reader
 import pre_processing
 import post_processing
 import rule_based_clustering
+import auto_clustering
 
 import pandas as pd
 
@@ -39,7 +40,12 @@ def q3(content, csv_path):
     # print df
 
     # Rule-based clustering
-    rule_based_clustering.clustering(nn_extracted, question=3)
+    unclustered_index, nn_extracted = rule_based_clustering.clustering(nn_extracted, question=3)
+
+    # LSI + Spectral Clustering
+    nn_extracted_unclustered = [nn_extracted[i][0] for i in unclustered_index]
+    auto_clustering.lsi(nn_extracted_unclustered)
+
 
 
 

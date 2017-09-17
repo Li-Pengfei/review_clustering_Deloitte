@@ -1,3 +1,4 @@
-import main
 
-main.q1(1,2)
+
+x = (1,3)
+print x[0]
