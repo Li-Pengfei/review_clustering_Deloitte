@@ -31,7 +31,23 @@ def process_question(ques_num, csv_path):
     # write_Surveycsv(content, result_cluster, '2_tmp.csv')
 
 def q1(content, csv_path):
-    return
+    pos_tags = ['NN', 'NNS', 'JJ', 'JJR', 'JJS']
+    doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=1)
+    doc_nn, nn_extracted = doc_extracted[0], doc_extracted[1]
+    print 'Comment with keywords:', len(doc_nn)
+    print 'No comments:', len(doc_noimprove)
+    print 'Comment without keywords:', len(doc_other), "\n"
+    df = post_processing.df_count_tuple(nn_extracted)
+    # print df
+
+    # extract one most representative keyword for each sentence
+    nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=1)
+    df = post_processing.df_count(nn_clean)
+    nn_extracted = post_processing.main_category_clustering(df, nn_extracted)
+
+    return nn_extracted
+
+
 
 def q2(content, csv_path):
     pos_tags = []
@@ -54,9 +70,6 @@ def q3(content, csv_path):
     print 'Comment with keywords:', len(doc_nn)
     print 'No comments:', len(doc_noimprove)
     print 'Comment without keywords:', len(doc_other), "\n"
-
-    # df = post_processing.df_count(nn_extracted)
-    # print df
 
     # Rule-based clustering
     unclustered_index, nn_extracted = rule_based_clustering.clustering(nn_extracted, question=3)
@@ -83,9 +96,6 @@ def q6(content, csv_path):
     print 'Comment with keywords:', len(doc_nn)
     print 'No comments:', len(doc_noimprove)
     print 'Comment without keywords:', len(doc_other), "\n"
-
-    # df = post_processing.df_count(nn_extracted)
-    # print df
 
     # Rule-based clustering
     unclustered_index, nn_extracted = rule_based_clustering.clustering(nn_extracted, question=6)

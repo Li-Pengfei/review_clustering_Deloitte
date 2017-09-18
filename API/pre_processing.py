@@ -110,7 +110,87 @@ def process_corpus(content, pos_tags, question):
     
 
 def rule_q1(sen, ne):
-    return
+    clean_ne = list(set(ne))
+    remove_words = ["appoint", "improv", "custom", "servic", "peopl", "person", "facil", "avail", "good", \
+                    "center", "centr", "car", "dealership", "vehicl", "toyota", "problem", "work", "much", \
+                    "thing", "possibl", "need"]  # stemmed
+    clean_ne = [word for word in clean_ne if word not in remove_words]
+    save_words = ["without", "call", "wait", "pick", "pickup", "drop", "remind", "inform", "respons", "book", "fix", \
+                  "receiv", "same", "sm", "immedi", "urgent", "urgenc", "deliv", "deliveri", "explain",
+                  "detail"]  # stemmed
+    clean_ne = clean_ne + [stemmer.stem(word) for word in sen.split() if stemmer.stem(word) in save_words]
+
+    # rules to merge keywords:
+    if 'pickup' in clean_ne:
+        clean_ne[clean_ne.index('pickup')] = 'pick'
+    if 'phone' in clean_ne:
+        clean_ne[clean_ne.index('phone')] = 'call'
+    if 'telephon' in clean_ne:
+        clean_ne[clean_ne.index('telephon')] = 'call'
+    if 'messag' in clean_ne:
+        clean_ne[clean_ne.index('messag')] = 'sm'
+    if 'km' in clean_ne:
+        clean_ne[clean_ne.index('km')] = 'locat'
+    if 'area' in clean_ne:
+        clean_ne[clean_ne.index('area')] = 'locat'
+    if 'deliveri' in clean_ne:
+        clean_ne[clean_ne.index('deliveri')] = 'deliv'
+    if 'urgent' in clean_ne:
+        clean_ne[clean_ne.index('urgent')] = 'emerg'
+    if 'urgenc' in clean_ne:
+        clean_ne[clean_ne.index('urgenc')] = 'emerg'
+    if 'detail' in clean_ne:
+        clean_ne[clean_ne.index('detail')] = 'inform'
+    if 'explain' in clean_ne:
+        clean_ne[clean_ne.index('explain')] = 'inform'
+    if 'should tell' in sen:
+        clean_ne.append('inform')
+    # add keyword "appointment"
+    if 'book' in clean_ne:
+        clean_ne[clean_ne.index('book')] = 'appointment'
+    if 'day' in clean_ne:  # split 'day' to 'appointment' and 'wait'
+        if 'appointment' in sen:
+            clean_ne[clean_ne.index('day')] = 'appointment'
+        elif 'days' in sen:
+            clean_ne[clean_ne.index('day')] = 'wait'
+        else:
+            clean_ne.remove('day')
+    if 'week' in clean_ne and 'appointment' in sen:
+        clean_ne[clean_ne.index('week')] = 'appointment'
+    if 'month' in clean_ne and 'appointment' in sen:
+        clean_ne[clean_ne.index('month')] = 'appointment'
+    # add keyword "without_appointment"
+    if 'without appointment' in sen or 'without any appointment' in sen:
+        clean_ne.append('without_appointment')
+    # add keyword "on_time"
+    if 'on time' in sen and 'time' in clean_ne:
+        clean_ne[clean_ne.index('time')] = 'on_time'
+    if 'that time' in sen and ('servic' in sen or 'work' in sen or 'attend' in sen) and 'time' in clean_ne:
+        clean_ne[clean_ne.index('time')] = 'on_time'
+    if 'fulfill' in sen or 'stick' in sen and 'time' in clean_ne:
+        clean_ne[clean_ne.index('time')] = 'on_time'
+    # split "immediately" into "wiat" and "appointment" cluster
+    if 'immedi' in clean_ne:
+        if 'servic' in sen or 'work' in sen or 'attend' in sen:
+            clean_ne[clean_ne.index('immedi')] = 'wait'
+        else:
+            clean_ne[clean_ne.index('immedi')] = 'appointment'
+    # split 'time' to other clusters
+    if 'too much time' in sen:
+        clean_ne[clean_ne.index('time')] = 'wait'
+    if 'long time' in sen:
+        if 'appointment' in sen:
+            clean_ne[clean_ne.index('time')] = 'appointment'
+        else:
+            clean_ne[clean_ne.index('time')] = 'wait'
+    if 'time' in clean_ne:
+        if 'appointment' in sen:
+            clean_ne[clean_ne.index('time')] = 'appointment'
+        else:
+            clean_ne.remove('time')  # remove other 'times'
+
+    clean_ne = list(set(clean_ne))
+    return clean_ne
 
 def rule_q2(sen, ne):
     return
@@ -119,7 +199,7 @@ def rule_q2(sen, ne):
 def rule_q3(sen, ne):
     clean_ne = list(set(ne))
     remove_words = ['custom', 'car', 'vehicl', 'servic', 'toyota', 'thing', 'good', \
-                    'day', 'center', 'centr', 'dealership', 'time']
+                    'day', 'center', 'centr', 'dealership', 'time']  # stemmed
     clean_ne = [word for word in clean_ne if word not in remove_words]
 
     save_words = ['inform', 'tell', 'advis', 'understand', 'advic', 'call', 'answer', 'correct', 'guid', \
