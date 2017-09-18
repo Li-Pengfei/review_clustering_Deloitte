@@ -7,6 +7,8 @@ import re
 stemmer = PorterStemmer()
 
 def process_corpus(content, pos_tags, question):
+    assert (question in range(1, 11)), "Question number must between 1-10 (inclusive)!"
+
     stop_words = stopwords.words('english')
     punctuation_list = [unicode(i) for i in string.punctuation]
     for punctuation in punctuation_list:
@@ -37,7 +39,7 @@ def process_corpus(content, pos_tags, question):
                     7: rule_q7, 8: rule_q8, 9: rule_q9, 10: rule_q10
                 }
             # Get the corresponding rule function
-                func = switcher.get(question, lambda: "Question number must between 1-10 (inclusive)!")
+                func = switcher.get(question)
             # Execute the rule function
                 nn_list = func(sen, nn_list)
 
@@ -74,6 +76,7 @@ def process_corpus(content, pos_tags, question):
                         continue
         return doc_noimprove, [doc_days, doc_time], doc_other       
     else:
+        print "Contents with multiple sentences are splited into single sentences."
         for idx, review in enumerate(content):
             if 'no improvement' in review:
                 doc_noimprove.append((review, idx))
@@ -94,7 +97,7 @@ def process_corpus(content, pos_tags, question):
                         7: rule_q7, 8: rule_q8, 9: rule_q9, 10: rule_q10
                     }
             # Get the corresponding rule function
-                    func = switcher.get(question, lambda: "Question number must between 1-10 (inclusive)!")
+                    func = switcher.get(question)
             # Execute the rule function               
                     nn_list = func(sen, nn_list)
                     if nn_list != []:
@@ -224,7 +227,43 @@ def rule_q5(sen, ne):
     return
 
 def rule_q6(sen, ne):
-    return
+    clean_ne = list(set(ne))
+    remove_words = ['dealership', 'locat', 'servic', 'center', 'car', 'place', 'custom', 'toyota', \
+                    'facil', 'time', 'problem', 'centr', 'home', 'side', 'vehicl', 'peopl', 'lot', 'compani', \
+                    'day', 'area', 'dealer']  #stemmed
+    clean_ne = [word for word in clean_ne if word not in remove_words]
+
+    save_words = ["pick", 'pickup', 'drop', 'insid', 'outsid', 'eat']  # stemmed
+    clean_ne = clean_ne + [stemmer.stem(word) for word in sen.split() if stemmer.stem(word) in save_words]
+    clean_ne = list(set(clean_ne))
+
+    # rules to merge keywords:
+    if 'out side' in sen:
+        clean_ne.append('outside')
+    if 'high way' in sen:
+        if 'way' in clean_ne:
+            clean_ne[clean_ne.index('way')] = 'highway'
+        else:
+            clean_ne.append('highway')
+    if 'pickup' in clean_ne:
+        clean_ne[clean_ne.index('pickup')] = 'pick'
+    if 'busstop' in clean_ne:
+        clean_ne[clean_ne.index('busstop')] = 'bu'
+    if 'buse' in clean_ne:
+        clean_ne[clean_ne.index('buse')] = 'bu'
+    if 'eat' in clean_ne:
+        clean_ne[clean_ne.index('eat')] = 'food'
+    if 'canteen' in clean_ne:
+        clean_ne[clean_ne.index('canteen')] = 'food'
+    if 'kilomet' in clean_ne:
+        clean_ne[clean_ne.index('kilomet')] = 'km'
+    if 'market' in clean_ne:
+        clean_ne[clean_ne.index('market')] = 'shop'
+    if 'shop' in clean_ne and ('dealership shop' in sen or 'work shop' in sen):
+        clean_ne[clean_ne.index('shop')] = 'workshop'
+
+    clean_ne = list(set(clean_ne))
+    return clean_ne
 
 
 def rule_q7(sen, ne):

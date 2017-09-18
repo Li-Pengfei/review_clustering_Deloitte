@@ -31,7 +31,7 @@ def spectral_clustering(similarity_matrix, corpus):
     n_clusters_ = 5
     sc = SpectralClustering(n_clusters=n_clusters_, affinity='precomputed').fit(similarity_matrix)
     labels = sc.labels_
-    word_labels = ['space']*len(labels)
+    word_labels = ['']*len(labels)
     print('Estimated number of clusters: %d' % n_clusters_)
 
     for indice_cluster in range(n_clusters_):
