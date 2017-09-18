@@ -7,7 +7,7 @@ import data_helper
 # from keras.preprocessing import sequence
 from sklearn import preprocessing
 
-def rule_q2(tt_list):
+def rule_all(tt_list):
     tt_list = ['others' if x == (None, None) else x for x in tt_list]
     tt_list = list(set(tt_list))
     if len(tt_list)>1 and 'others' in tt_list:
@@ -23,7 +23,7 @@ def write_Surveycsv(content, listuple, csv_path):
     df_all = pd.merge(df_comment, df_survey, on='id', how='inner')
     df_final = df_all.groupby(['id', 'comment'])['label'].apply(list).to_frame()
 
-    df_final['label'] = df_final['label'].apply(lambda x: rule_q2(x))
+    df_final['label'] = df_final['label'].apply(lambda x: rule_all(x))
     df_final.to_csv(csv_path)
     ###
 

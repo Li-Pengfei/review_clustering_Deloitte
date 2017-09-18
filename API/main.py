@@ -10,6 +10,10 @@ from survey_writer import write_Surveycsv
 
 label = pd.Series()
 
+from survey_writer import write_Surveycsv
+
+label = pd.Series()
+
 
 def process_question(ques_num, csv_path):
     assert (ques_num in range(1, 11)), "Question number must between 1-10 (inclusive)!"
@@ -26,7 +30,11 @@ def process_question(ques_num, csv_path):
     func = switcher.get(ques_num)
     # Execute the function
     result_cluster = func(content, csv_path)
-    print result_cluster
+    write_Surveycsv(content, result_cluster, '../tmp_result/%d_tmp.csv' %ques_num)
+
+
+
+
 
     # write_Surveycsv(content, result_cluster, '2_tmp.csv')
 
@@ -100,7 +108,26 @@ def q4(content, csv_path):
 
 
 def q5(content, csv_path):
-    return
+    pos_tags = ['NN', 'NNS', 'JJ', 'JJR', 'JJS']
+    doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=5)
+    doc_nn, nn_extracted = doc_extracted[0], doc_extracted[1]
+    print 'Comment with keywords:', len(doc_nn)
+    print 'No comments:', len(doc_noimprove)
+    print 'Comment without keywords:', len(doc_other), "\n"
+
+
+    # LSI + Spectral Clustering
+    nn_extracted_corpus = [nn_single[0] for nn_single in nn_extracted]
+    similarity_matrix = auto_clustering.lsi(nn_extracted_corpus)
+    label_auto = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_corpus)
+    for idx in range(len(nn_extracted_corpus)):
+        nn_extracted[idx] = nn_extracted[idx] + (label_auto[idx],)
+    for idx in range(len(doc_noimprove)):
+        doc_noimprove[idx] = doc_noimprove[idx] + ('noimprove', )
+    
+    for idx in range(len(doc_other)):
+        doc_other[idx] = doc_other[idx] + ('others', )
+    return nn_extracted + doc_noimprove + doc_other
 
 def q6(content, csv_path):
     pos_tags = ['NN', 'NNS']
@@ -169,14 +196,33 @@ def q9(content, csv_path):
 
     return nn_extracted
 
+
 def q10(content, csv_path):
-    return
+    pos_tags = ['NN', 'NNS', 'JJ', 'JJR', 'JJS']
+    doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=10)
+    doc_nn, nn_extracted = doc_extracted[0], doc_extracted[1]
+    print 'Comment with keywords:', len(doc_nn)
+    print 'No comments:', len(doc_noimprove)
+    print 'Comment without keywords:', len(doc_other), "\n"
 
 
+    # LSI + Spectral Clustering
+    nn_extracted_corpus = [nn_single[0] for nn_single in nn_extracted]
+    similarity_matrix = auto_clustering.lsi(nn_extracted_corpus)
+    label_auto = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_corpus)
+    for idx in range(len(nn_extracted_corpus)):
+        nn_extracted[idx] = nn_extracted[idx] + (label_auto[idx],)
+    for idx in range(len(doc_noimprove)):
+        doc_noimprove[idx] = doc_noimprove[idx] + ('noimprove', )
+    
+    for idx in range(len(doc_other)):
+        doc_other[idx] = doc_other[idx] + ('others', )
+    return nn_extracted + doc_noimprove + doc_other
 
+    
 if __name__ == '__main__':
 
-    process_question(2, '../raw_data/survey_data.csv')
+    process_question(10, '../raw_data/survey_data.csv')
 
 
 

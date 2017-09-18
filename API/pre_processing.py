@@ -19,7 +19,7 @@ def process_corpus(content, pos_tags, question):
     doc_nn = []
     nn_extracted = []
     doc_other = []
-    if question in [3, 5, 10]:
+    if question in [5, 10]:
         for idx, review in enumerate(content):
             if 'no improvement' in review:
                 doc_noimprove.append((review, idx))
@@ -34,21 +34,35 @@ def process_corpus(content, pos_tags, question):
                 for counter, word in enumerate(nn_list):
                     nn_list[counter] = stemmer.stem(word)
             # apply rule
-                switcher = {
-                    1: rule_q1, 2: rule_q2, 3: rule_q3, 4: rule_q4, 5: rule_q5, 6: rule_q6,
-                    7: rule_q7, 8: rule_q8, 9: rule_q9, 10: rule_q10
-                }
-            # Get the corresponding rule function
-                func = switcher.get(question)
-            # Execute the rule function
-                nn_list = func(sen, nn_list)
-
                 if nn_list != []:
                     nn_extracted.append((nn_list, idx))
                     doc_nn.append((sen, idx))
                 else:
                     doc_other.append((sen, idx))
         return doc_noimprove, [doc_nn, nn_extracted], doc_other
+    elif question in [3]:
+        for idx, review in enumerate(content):
+            if 'no improvement' in review:
+                doc_noimprove.append((review, idx))
+            else:
+                nn_list = []
+                sen = review
+                pos_new = nltk.pos_tag(nltk.word_tokenize(sen))
+                for token in pos_new:
+                    if token[1] in pos_tags and not token[0] in stop_words:
+                        nn_list.append(token[0])
+            # stemming
+                for counter, word in enumerate(nn_list):
+                    nn_list[counter] = stemmer.stem(word)
+            # Execute the rule function
+                nn_list = rule_q3(sen, nn_list)
+
+                if nn_list != []:
+                    nn_extracted.append((nn_list, idx))
+                    doc_nn.append((sen, idx))
+                else:
+                    doc_other.append((sen, idx))
+        return doc_noimprove, [doc_nn, nn_extracted], doc_other        
     elif question in [2]:
         doc_days = []
         doc_time = []
@@ -192,8 +206,6 @@ def rule_q1(sen, ne):
     clean_ne = list(set(clean_ne))
     return clean_ne
 
-def rule_q2(sen, ne):
-    return
 
 
 def rule_q3(sen, ne):
