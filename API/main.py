@@ -144,7 +144,21 @@ def q7(content, csv_path):
     return nn_extracted
 
 def q8(content, csv_path):
-    return
+    pos_tags = ['NN', 'NNS']
+    doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=8)
+    doc_nn, nn_extracted = doc_extracted[0], doc_extracted[1]
+    print 'Comment with keywords:', len(doc_nn)
+    print 'No comments:', len(doc_noimprove)
+    print 'Comment without keywords:', len(doc_other), "\n"
+    df = post_processing.df_count_tuple(nn_extracted)
+    # print df
+
+    # extract one most representative keyword for each sentence
+    nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=8)
+    df = post_processing.df_count(nn_clean)
+    nn_extracted = post_processing.main_category_clustering(df, nn_extracted)
+
+    return nn_extracted
 
 def q9(content, csv_path):
     pos_tags = ['NN', 'NNS']

@@ -45,9 +45,10 @@ def main_category_clustering(df, corpus):
         if sent_count >= 0.7*len(corpus):
             freq_threshold = word[1]-1
             break
+    print 'Freq threshold:', freq_threshold
 
     major_list = [word[0] for word in df_ordered if word[1] > freq_threshold]
-    print "majot list:\n", major_list
+    print "major category:\n", major_list
     clustered_index = []
     for word in major_list:
         idx_set = []

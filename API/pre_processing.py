@@ -376,7 +376,75 @@ def rule_q7(sen, ne):
     return clean_ne
 
 def rule_q8(sen, ne):
-    return
+    clean_ne = list(set(ne))
+    remove_words = ['custom', 'hour', 'minut', 'time', 'car', 'vehicl', 'servic', 'work', 'day', 'week', 'dealership', \
+                    'center', 'centr','toyota', 'appoint', 'pm', 'problem', 'period', 'part', 'morn', 'improv', \
+                    'hr', 'peopl', 'person', 'lot', 'need', 'even', 'henc', 'manag', 'area', 'thing', 'till', \
+                    'place', 'job', 'compani', 'today', 'call', 'clock', 'o\'clock', 'min', 'chang', \
+                    'half', 'number']  # stemmed
+    clean_ne = [word for word in clean_ne if word not in remove_words]
+
+    save_words = ['commit', 'inform', 'delay', 'wash', 'wast', 'repair', 'fix', 'bill', 'mention', 'charg', \
+                  'exact', 'extra', 'mechan', 'clean', 'spare', 'coordin', 'commun', 'far', 'return',
+                  'deliv']  # stemmed
+    clean_ne = clean_ne + [stemmer.stem(word) for word in sen.split() if stemmer.stem(word) in save_words]
+
+    # rules to merge keywords:
+    if 'delay' in clean_ne:
+        clean_ne[clean_ne.index('delay')] = 'commit'
+    if 'extra' in clean_ne:
+        clean_ne[clean_ne.index('extra')] = 'commit'
+
+    if 'mention' in clean_ne:
+        clean_ne[clean_ne.index('mention')] = 'inform'
+    if 'coordin' in clean_ne:
+        clean_ne[clean_ne.index('coordin')] = 'inform'
+    if 'commun' in clean_ne:
+        clean_ne[clean_ne.index('commun')] = 'inform'
+    if 'how much time' in sen:
+        clean_ne.append('inform')
+
+    if 'return' in clean_ne:
+        clean_ne[clean_ne.index('return')] = 'deliveri'
+    if 'deliv' in clean_ne:
+        clean_ne[clean_ne.index('deliv')] = 'deliveri'
+
+    if 'accessori' in clean_ne:
+        clean_ne[clean_ne.index('accessori')] = 'spare'
+
+    if 'advisor' in clean_ne:
+        clean_ne[clean_ne.index('advisor')] = 'staff'
+    if 'laor' in clean_ne:
+        clean_ne[clean_ne.index('laor')] = 'staff'
+    if 'manpow' in clean_ne:
+        clean_ne[clean_ne.index('manpow')] = 'staff'
+    if 'man power' in sen:
+        clean_ne.append('staff')
+    if 'serviceman' in clean_ne:
+        clean_ne[clean_ne.index('serviceman')] = 'staff'
+    if 'worker' in clean_ne:
+        clean_ne[clean_ne.index('worker')] = 'staff'
+    if 'mechan' in clean_ne:
+        clean_ne[clean_ne.index('mechan')] = 'staff'
+
+    if 'km' in clean_ne:
+        clean_ne[clean_ne.index('km')] = 'distanc'
+    if 'far' in clean_ne:
+        clean_ne[clean_ne.index('far')] = 'distanc'
+
+    if 'fix' in clean_ne:
+        if 'appointment' not in sen:
+            clean_ne[clean_ne.index('fix')] = 'repair'
+        else:
+            clean_ne[clean_ne.index('fix')] = 'commit'
+
+    if 'wast' in clean_ne:
+        clean_ne[clean_ne.index('wast')] = 'wait'
+    if 'speed' in clean_ne:
+        clean_ne[clean_ne.index('speed')] = 'wait'
+
+    clean_ne = list(set(clean_ne))
+    return clean_ne
 
 def rule_q9(sen, ne):
     clean_ne = list(set(ne))
