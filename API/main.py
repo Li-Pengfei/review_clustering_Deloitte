@@ -131,15 +131,9 @@ def q7(content, csv_path):
     print 'Comment without keywords:', len(doc_other), "\n"
     df = post_processing.df_count_tuple(nn_extracted)
 
-    # Rule-based clustering
-    unclustered_index, nn_extracted = rule_based_clustering.clustering(nn_extracted, question=7)
-
-    # LSI + Spectral Clustering
-    nn_extracted_unclustered = [nn_extracted[i][0] for i in unclustered_index]
-    similarity_matrix = auto_clustering.lsi(nn_extracted_unclustered)
-    label_auto = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_unclustered)
-    for i, idx in enumerate(unclustered_index):
-        nn_extracted[idx] = nn_extracted[idx] + (label_auto[i],)
+    nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=7)
+    df = post_processing.df_count(nn_clean)
+    nn_extracted = post_processing.main_category_clustering(df, nn_extracted)
 
     return nn_extracted
 
