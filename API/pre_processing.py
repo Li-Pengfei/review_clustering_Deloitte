@@ -22,7 +22,7 @@ def process_corpus(content, pos_tags, question):
     if question in [5, 10]:
         for idx, review in enumerate(content):
             if 'no improvement' in review:
-                doc_noimprove.append((review, idx))
+                doc_noimprove.append((review, idx, 'no improve'))
             else:
                 nn_list = []
                 sen = review
@@ -38,12 +38,12 @@ def process_corpus(content, pos_tags, question):
                     nn_extracted.append((nn_list, idx))
                     doc_nn.append((sen, idx))
                 else:
-                    doc_other.append((sen, idx))
+                    doc_other.append((sen, idx, 'others'))
         return doc_noimprove, [doc_nn, nn_extracted], doc_other
     elif question in [3]:
         for idx, review in enumerate(content):
             if 'no improvement' in review:
-                doc_noimprove.append((review, idx))
+                doc_noimprove.append((review, idx, 'no improve'))
             else:
                 nn_list = []
                 sen = review
@@ -61,7 +61,7 @@ def process_corpus(content, pos_tags, question):
                     nn_extracted.append((nn_list, idx))
                     doc_nn.append((sen, idx))
                 else:
-                    doc_other.append((sen, idx))
+                    doc_other.append((sen, idx, 'others'))
         return doc_noimprove, [doc_nn, nn_extracted], doc_other        
     elif question in [2]:
         doc_days = []
@@ -70,7 +70,7 @@ def process_corpus(content, pos_tags, question):
 
         for idx, review in enumerate(content):
             if 'no improvement' in review:
-                doc_noimprove.append((review, idx))
+                doc_noimprove.append((review, idx, 'no improve'))
             else:
                 sents = sent_tokenize(review)
                 for sen in sents:
@@ -85,7 +85,7 @@ def process_corpus(content, pos_tags, question):
                             if 'am' in clean_word_list or 'pm' in clean_word_list or any(i.isdigit() for i in clean_word_list):
                                 doc_time.append((sen, idx))
                             else:
-                                doc_other.append((sen, idx))
+                                doc_other.append((sen, idx, 'others'))
                     else:
                         continue
         return doc_noimprove, [doc_days, doc_time], doc_other       
@@ -93,7 +93,7 @@ def process_corpus(content, pos_tags, question):
         print "Contents with multiple sentences are splited into single sentences."
         for idx, review in enumerate(content):
             if 'no improvement' in review:
-                doc_noimprove.append((review, idx))
+                doc_noimprove.append((review, idx, 'no improve'))
             else:
                 sents = sent_tokenize(review)
                 for sen in sents:
@@ -118,7 +118,7 @@ def process_corpus(content, pos_tags, question):
                         nn_extracted.append((nn_list, idx))
                         doc_nn.append((sen, idx))
                     else:
-                        doc_other.append((sen, idx))
+                        doc_other.append((sen, idx, 'others'))
         return doc_noimprove, [doc_nn, nn_extracted], doc_other
 
     

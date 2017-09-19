@@ -1,5 +1,5 @@
 import main
 
-x = main.process_question(5, '../raw_data/survey_data.csv')
+x = main.process_question(2, '../raw_data/survey_data.csv')
 
 print x
