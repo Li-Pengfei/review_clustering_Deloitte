@@ -206,7 +206,8 @@ def rule_q1(sen, ne):
     clean_ne = list(set(clean_ne))
     return clean_ne
 
-
+def rule_q2(sen, ne):
+    return
 
 def rule_q3(sen, ne):
     clean_ne = list(set(ne))

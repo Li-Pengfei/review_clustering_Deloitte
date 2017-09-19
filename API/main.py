@@ -15,10 +15,10 @@ from survey_writer import write_Surveycsv
 label = pd.Series()
 
 
-def process_question(ques_num, csv_path):
+def process_question(ques_num, input_path, output_path):
     assert (ques_num in range(1, 11)), "Question number must between 1-10 (inclusive)!"
 
-    file = survey_reader.read_Surveycsv(csv_path)
+    file = survey_reader.read_Surveycsv(input_path)
     content = file[ques_num][0]
     index = file[ques_num][1]
     print 'Number of content', len(content)
@@ -29,14 +29,11 @@ def process_question(ques_num, csv_path):
     # Get the function from switcher dictionary to process corresponding question
     func = switcher.get(ques_num)
     # Execute the function
-    result_cluster = func(content, csv_path)
-    write_Surveycsv(content, result_cluster, '../tmp_result/%d_tmp.csv' %ques_num)
+    result_cluster = func(content, input_path)
+    # print result_cluster
+    write_Surveycsv(content, result_cluster, output_path+'/%d_tmp.csv' %ques_num)
 
 
-
-
-
-    # write_Surveycsv(content, result_cluster, '2_tmp.csv')
 
 def q1(content, csv_path):
     pos_tags = ['NN', 'NNS', 'JJ', 'JJR', 'JJS']
@@ -51,7 +48,7 @@ def q1(content, csv_path):
     # extract one most representative keyword for each sentence
     nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=1)
     df = post_processing.df_count(nn_clean)
-    nn_extracted = post_processing.main_category_clustering(df, nn_extracted)
+    nn_extracted = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
 
     return nn_extracted + doc_noimprove + doc_other
 
@@ -102,7 +99,7 @@ def q4(content, csv_path):
 
     nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=4)
     df = post_processing.df_count(nn_clean)
-    nn_extracted = post_processing.main_category_clustering(df, nn_extracted)
+    nn_extracted = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
 
     return nn_extracted + doc_noimprove + doc_other
 
@@ -159,7 +156,7 @@ def q7(content, csv_path):
 
     nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=7)
     df = post_processing.df_count(nn_clean)
-    nn_extracted = post_processing.main_category_clustering(df, nn_extracted)
+    nn_extracted = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
 
     return nn_extracted + doc_noimprove + doc_other
 
@@ -176,7 +173,7 @@ def q8(content, csv_path):
     # extract one most representative keyword for each sentence
     nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=8)
     df = post_processing.df_count(nn_clean)
-    nn_extracted = post_processing.main_category_clustering(df, nn_extracted)
+    nn_extracted = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
 
     return nn_extracted + doc_noimprove + doc_other
 
@@ -191,7 +188,7 @@ def q9(content, csv_path):
 
     nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=9)
     df = post_processing.df_count(nn_clean)
-    nn_extracted = post_processing.main_category_clustering(df, nn_extracted)
+    nn_extracted = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
 
     return nn_extracted + doc_noimprove + doc_other
 

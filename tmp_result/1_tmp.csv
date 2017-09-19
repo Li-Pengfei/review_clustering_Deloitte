@@ -1,0 +1,169 @@
+id,comment,label
+0,"after taking appointment then also i have to wait 1 to 1 and half hour . even there was no rush , work should be done immediately .",['wait']
+1,service center should provide comfortable time for servicing from there end . or they should arrange service like we can do booking through messages . also toyota has given only one number for all services .,"['number', 'sm']"
+2,after arranging the appointment they should quickly service the car and also delivery of car should fast .,['deliv']
+3,"they pick up the phone and then disconnect it . they tell their schedule is busy , they say it will take some time we will call you but they never call back . and when we call the service station then immediately they ask us to send the car . they should tell us the schedule properly .","['inform', 'call', 'wait']"
+4,"toyota have an app , it \? s a mobile app which is not applicable for all the customers . first of all , this app should be for every customer . this app should be available for all the users . also this app should be free for all the users . through this app we can fix appointments . if we have any problem we can register there , so that we can get expert advice plus . we would get proactive information . we should know after how much kilometer of car driven should we do the servicing of the car so that accordingly we can take an appointment . such mobile app toyota must add so that we do not face any problem in appointment fixing .","['inform', 'app']"
+5,they must keep customer care person to take appointments and you must also increase the dealership .,['others']
+6,"last time appointment was been cancelled . they should arranged about the appointments , no customer should return . they should have consult with the owner about the servicing time .",['appointment']
+7,after take appointment dealership staff should be servicing the car that time because customer take appointment but staff are not servicing car that time we have to wait for unnecessary 25minutes so that should be improved and they should have followed the appointment time properly .,['wait']
+8,"toyota car is best in the market even the customer of toyota is much . its renold company all the people thinks they will give quick response , they will talk good and treat in good manner . jd is currently opened and location also we do not know . i made them call but they did not pick the call so i made the call to the showroom and they provide me one number . i reached to the city where their is showroom they said service will not happen so they again provide one more number . i said them the number which you provide me provide to all so we will not face any difficulties to search .","['call', u'locat', 'number']"
+9,whenever customer need to get service they should do servicing it that time frame . if we want to take our vehicle out of city at that time they should do servicing of our car .,['on_time']
+10,the procedure of appointment should be improved . as there are so many cars which executive need to follow so it takes much more time and i sat for long time .,['wait']
+11,"they give us time for the service appointment but if any other vehicle comes , they start doing servicing of that vehicle before we come . so this should not be done as they should give attention to the appointment vehicles first .",['appointment']
+12,they should make improvement in fixing the appointment . they do not work like the way they earlier used to do .,[u'fix']
+13,when customer call to service center for take appointment that time they are not giving proper appointment .,['call']
+14,there are 1 dealership only they should open more because we have to wait around 4 5 days . to collect the car i have to come 15 km from home so they should open in jaipur also one more service center .,"[u'locat', 'wait']"
+15,"if you have given appointment to the customer then his car also has to be received . if you do not receive then what is the use of appointment . when can go to another dealer also apart from uttam toyota . if customer has entered the service center after taking an appointment , then his car should be handled at the earliest and must give the solution . put the car on the service",[u'receiv']
+16,if we take appointment then they tell us to visit by 10 11 or if we visit on time they do not able provide service on time . if they are providing a time period then they should fulfill on given time . they should improve in this . they should provide timing for appointment .,['on_time']
+17,last time when i made a call for appointment not a single phone was connecting . we made call on 3 4 number then we pick the number from google then took appointment .,"['call', 'appointment']"
+18,"first of all receive the client who comes there or very first fill the job card . nobody comes to receive us . they must not make us wait for 1 1 hour . must attend us immediately since the person has taken appointment , finish his work first . there is a need to improve in cleaning department . your seniors must think about this . i wanted to complain i did now you look after it .","[u'receiv', 'wait']"
+19,pick up and drop facility should be available .,['pick']
+20,staff is less . due to that waiting time is more . they have to do first seeing . they have to fallow the note pad for taking the appointment from the customer,"['wait', 'staff']"
+21,whenever i go for service i have to wait outside of dealership till 30 minuets . we have to wait on compound and even they don \? t have parking space so we park our vehicle on road because of this we cannot leave our vehicle park on road .,['wait']
+22,"it would be convenient for customers like me if the service center is in the local area , as it will save the time as well as the crowd will be less . as of now we need to travel 20 km to reach the service center .",[u'locat']
+23,they should trained the staff who are taking appointments .,['staff']
+24,i told them to take my car for test drive and inspected but i spend my one and half hour as they denied to check the car with the method i told them,['wait']
+25,they should service the car without appointments also .,['others']
+26,persons not available at that are persons should be available to receiving the center . they have to give the proper details they have to provide the knowledge persons for explaining . after receiving the vehicle . the vehicle is not cleaning what ever the center they have to fallowing they . the dealership location is traffic place they have to the space of the dealership location parking place provide should be available . they are not servicing the after acutely problems but asking the different query,"[u'receiv', 'inform', u'locat']"
+27,they should deliver car at the promised time . they said it will take 4 hours but actually they took whole day .,"['wait', 'deliv']"
+28,they should do the work which they committed and also should not take too much time .,['wait']
+29,they should not take too much time of customers .,['wait']
+30,when customer comes in dealership that time they should quickly attend the customer give to proper response .,['on_time']
+31,some times we called that time they said as the space is not available there . so they should arrange the other place . they should open more service centers .,['call']
+32,i always taken appointment before the one day but then also after the visiting number was arriving late as well as i was facing problems . it would be good if they receive the car on time it means when we are taken number for appointment on the same number they should receive the car .,"['appointment', 'on_time']"
+33,after service while collecting vehicle it took too much time . we have to wait half hour to one hour . staffs are ok . after taking car for service should be done in half hour . they should pick our car within half hour of service .,"['staff', 'wait']"
+34,if we get the appointment on the time which we want so it will be ok . like if we want appointment on sunday so we did not get it . we are getting it very difficultly .,['appointment']
+35,they should do more improvement in fixing the appointment for the car servicing .,[u'fix']
+36,for appointment we have to call them 1 week to 2 weeks before . if i go to bangalore or coimbatore we will give in 2 days but here i have to wait for 1 or 1 and half week,"['appointment', 'wait']"
+37,appointment availability is not there in dealership . whenever we call they give us appointment after 3 4 days .,['appointment']
+38,they do not give response when we call them for service appointments .,['call']
+39,if any customer take appointment that time they should tell to the customer how much vehicle is there for the servicing and how much time it will take . they should not attend f to known customers first . they should treat to every customer equally .,['inform']
+40,you can improve your service i want next day appointment but they gave me after one week appointment .,['appointment']
+41,no improvement require all are fine,['no improve']
+42,there should be assigned 1 telephone or mobile for asking the appointment . they should getting an appointment by call . location is convenient place and charges are normal .,"[u'locat', 'call']"
+43,"servicing like oiling and greasing should be done properly . just do not wash and give . should be checked completely if it is perfect or no . what problem is there and what problem can come in future even this they should tell us . and outside customer like i went to korba from vilaspur and they were giving me two days time for servicing so i had to stay there for 2 days so that i could do complete servicing and need not come again . i went there by taking appointment . i reached there by 11 am after that they gave me car in the evening . i reached there on their buffer time so then they tell me your car is in waiting . they made me wait for 8 hours . they tell us to give 5 , 4 pointy means dealer himself is doing a mistake . customer will go to any location and those whom you call by appointment their work should be done on priority . outside customers should be given service before the local customers . and then in such a crowd they will give the car only after washing . they gave me 1 pm timing and i reached on correct time but they took the car for servicing at 4 pm . so i told them i need to go back so they just washed the car . servicing must be done perfectly in the given appointment time .","['appointment', 'inform', 'wait', 'call']"
+44,no improvement require all are fine,['no improve']
+45,when we call for the appointment they should give the appointment on same day .,['appointment']
+46,no improvement require,['no improve']
+47,"i need sms alert or any time of alert before one month for service appointment , because i stay far from the service station so i need to arrange some vehicle for servicing or i need to call my friends or relatives to pick up drop .",['sm']
+48,"i don \? t get the quick booking service from the dealership they are taking approx . 1week 2 days time to book the servicing request . if toyota improved this service then it will be good for customers . a customer always wants to get benefits , if i get the service next day after called then it good for me . when i make call to them they are busy","['call', 'appointment', 'wait']"
+49,"i don \? t have time to drop my car usually i ask them to pick the car , but they give me dates when i am not free . i ask them to pick up the car whenever i am free .",['pick']
+50,"i used car for one year only , but within this year also ac was not work properly , so they should work on it as soon as possible .",['others']
+51,service must be done on time,['on_time']
+52,they should be satisfied customers properly,['others']
+53,amana toyota opened the new service centre . but the full facilities are not yet available . that is one of the area amana toyota should improve . fullest service including water get service is not yet available . they should have fullest service they should give appointment on time also,"[u'locat', 'on_time']"
+54,no improvement require,['no improve']
+55,online facility to available for customer . if the online facility should be started on 9 . 00 then we will come to know when my car going to servicing . if they do n't have time then we can do it at evening .,[u'onlin']
+56,"to get the appointment for servicing the car , ca n't get the appointment on own convenience time . though if it will get , then they kept the car aside for 3 to 4 days .","['appointment', 'wait']"
+57,they have to increase the staff .,['staff']
+58,they have to take the servicing immediately .,['wait']
+59,i have one problem that we are not getting appointment on time and if there is any festival that we are facing some problem . but in appointment the service center is there it is like of sbi . you people know the address of customer in which area which customer is there on that you can send the advice and it is near by from there . if we will get appointment like this it will be better .,"[u'locat', 'on_time']"
+60,"they should be improve in pick up and drop . one time i have an emergency , when i call them for appointment for pick up and drop but they not done . i had to visit over there . i have an emergency but had to go there personally . they should be improve in service appointment","['emerg', 'pick']"
+61,"i was travelling from chennai to coimbatore for all service , when i ask for appointment they normally delays two days to fix the appointment itself . so if they fix the appointment immediately then it will save my timing",[u'fix']
+62,when we taken the appointment that time car service must be done .,['on_time']
+63,"appointment should be improved , they are not appointed when our given time , they giving other time .",['appointment']
+64,they have to talk properly . kindly look into this matter,['others']
+65,"they are taking appointment on computer , online booking instead of they have to take the appointment on phone it will be good for us .",[u'onlin']
+66,"when we are giving appointment they are not responding for us and not taking care , it should be improved .",['others']
+67,first we not get appointment only . if we get the appointment we get it so let let only .,['others']
+68,"i look for the slot time by 9 00am and 9 30am but i always get the appointment by 11 00am or 11 30am or 12 00pm even i take 1week prior appointment i get the same so , it should 9 00am or 9 30am so that it would be comfortable .",['appointment']
+69,they are not taking appointment if any customers caris suddenly break doen so break down service also they are not arrangimg immidiate appointment . they have to make an parellel appointment .,['others']
+70,we need to take booking before 7 days at toyota service location . then they come at home take your car with then . but other companies did n't follow such thing . they take your car for servicing any time whenever you take your car at service station .,['wait']
+71,no improvement require,['no improve']
+72,they are taking more time to give appointment we should get appointment early .,['appointment']
+73,they have to provide the communicated time period when they receive the vehicle . speed of the service,[u'receiv']
+74,"when i called at service center appointment my servicing the car , then they told me , now , we had not time , you are called us before time only , they should be given details to the customer about appointment time . they should be calling us pickup and drops timing .","['inform', 'pick']"
+75,"during the servicing time , the dealership staff must say to customers to sit and we will do your work .",['staff']
+76,they called themselves for the appointment that your cars run this much kilometer do the servicing . so they should give appointment to customer on time .,"['call', 'on_time']"
+77,"if we are appointment to the call , then they are not response to us . they are transferring the call one another . it should be improved .",['call']
+78,other than annamalai service centre no need any appointment for service but here every small thing also we have to take appointment . for emergency also we have to take appointment it consume time .,['emerg']
+79,the receiving should be good .,[u'receiv']
+80,at dealership servicing and appointment should be improved . how should be it is improved i am not possible to saying .,['others']
+81,servicing should be done in time to time .,['others']
+82,which appointment has fixed to the customer they should be 100 should be given,[u'fix']
+83,"i am not told that servicing work , we should be thought that the work how it is doing it",['others']
+84,once i had got an call from surat . they told me to do booking and when i had done the booking they told there are many cars . so i told but i had done the booking then they took my car . it is 60 km away from my town and i had to go specially for servicing . so there should be same improvement .,"['appointment', 'call', u'locat']"
+85,they can call me remind it my next service .,['call']
+86,when we take appointment of the car we face problem at that time .,['appointment']
+87,"i called to toll free number at lanson dealership so that time the told its not available in lanson dealership at pondicherry they told visit to chennai , but there is available at pondicherry that people are not aware about it . dealership people should be aware all this things . service must be improving .",['call']
+88,if we give the car for servicing they take more time to return it . we don \? t get appointment quickly . if we get the appointment then also it takes 1 \? month . we should get appointment in 2 3 days .,['appointment']
+89,no improvement require,['no improve']
+90,appointment should get on same day .,['appointment']
+91,appointment should be improved .,['others']
+92,"appointments first day they should be calling to the customer , otherwise we taken away the car at service center , then we returning back our car .",['appointment']
+93,easy to servicing appointment job card appointment taken 10 to 15 minutes after it opened . that is why service advisor should be more .,['others']
+94,after going there they should be provide appointment facility .,['others']
+95,"at last service i am waited too much time , should be improved appointment . if there less car for servicing we are not waited long time . that day more cars at servicing . hence i had waited more time .",['wait']
+96,this appointment should be made early .,['others']
+97,"another companies call if we take a appointment but they are not call us , they should be called once in month .",['appointment']
+98,"service booking appointment any time , this facility should bring for example net booking and online booking like that it should be for 24 hours it this service would they bring it will be good .",[u'onlin']
+99,"for appointment they on time like before 1 month before 1 week 1day or 1hour also they car , but they not give car on time after servicing then what is user call .",['appointment']
+100,there is a confusion in between staff of dealership . at the time of purchasing car they give me conation i faced problem in that they have one branch nearby fishayalal ormanji . so there is also confusion in staff of price selecting giving notation i not satisfied because of this . so there should be proper understanding in between staff .,['staff']
+101,when i fix the servicing so no message comes your appointment done or not and when i go service center then they told we your appointment was not there . when i call in the center then they told me your appointment was fix that why message should become .,['sm']
+102,they should give pick up drop service . they should increase drive staff or they cancel completely drop facility . one dealership offer one not it should not happen . they should charge for pick up drop it they want . so as per need customer can use it .,['pick']
+103,their no more servicing cars then also they are giving appointment too late .,['others']
+104,"appointment time should be need to checking . if customer need to urgent appointment then they are should be adjusted . the customer care not given directly appointment time . hence , should be cross checking the appointment time","['emerg', 'appointment']"
+105,an appointment pick up and drop service start in 11am . another dealership this service start in morning . so they should be also start in morning .,['pick']
+106,we have to take appointment to visit dealership so they should stop this system .,['others']
+107,we have to take appointment from pune . so we face problems so they should give us facility to take appointment from kolhapur before they know us . and if we have any urgency we can tell them . at pune we do n't know anybody so we face problem .,['emerg']
+108,there are calling for appointment . from honda we get calls so they should do follow up that your car servicing is there .,['call']
+109,spare parts are not available,['others']
+110,"once the appointment is confirm customer can delayed but if the customer is there in time that customer should be not keep waiting . when the customer is already in the service center with their vehicle with his confirm time , then that vehicle should be immediately taken for service not by keeping the vehicle out keeping the customers sitting taking the vehicle for service in 1 hour or 2 hours is not .",['wait']
+111,"if customer wants urgent appointment , then the should be given it .",['emerg']
+112,no improvement require,['no improve']
+113,i am wait till 2 month to get service appointment they should thing customer was wait till month so they should give the appointment early,['appointment']
+114,they take more time for appointment at dsk pune . we have to wait for 1 month this is very long time . so they should not take this much time . we should get service in 1 2 weeks only . it means as early as possible .,"['appointment', 'wait']"
+115,i had done job at solapur so it is convenient for me but for appointment we have to call pune . so they should start the appointment system from solapur only . and appointment manages from there only .,['call']
+116,as soon as the car enters the advisor needs to check the car toughly if any problem arises handle the problem on the same time .,['others']
+117,they are not giving appointment immediately after phone call . we told them kilometer of car then they should give me appointment after 1 or 2 days but they give me appointment after 1 1 . 1 2 month we are not getting proper service .,['appointment']
+118,if we visit there on appointment taken time then also they are not take car on time . we have to wait for long time .,"['on_time', 'wait']"
+119,there is only service centre . so we get more time for appointment . i get appointment of long time . because they have load of cars . so we did not get appointment early .,['appointment']
+120,on dealership if should provide pick up drop service is good for us . in pune doing like that they called us take the car give after servicing . some time we are busy we have no time . that time they should provide pick up drop service is good for us .,"['call', 'pick']"
+121,if any problem arises in dealership number they should inform the customer through sms for the appointment purpose .,['sm']
+122,"which people taken an appointment , they should first attained them and immediately work on it . before started the worked they should informed us how much it will take time . after committed the time they should delivered a car on time .","['inform', 'deliv', 'wait']"
+123,respondent did not answer what improvement to be done,['others']
+124,they should given an appointment in 2 to 3 days because my car was used 200 km per day .,['appointment']
+125,they should take feedback . we used to wait for 1 month for appointment or 25 days we used to wait . even after 2 days also they say us to wait . the appointment should be available fast,"['wait', 'appointment']"
+126,every time we have to book an appointment through toll free numbers only . even for any emergency also . if \? we have some other alternative numbers for emergence appointment then it will be good,"['emerg', 'appointment']"
+127,"while appointment which time they given for servicing , work should be done on that time and also they should not take another car for servicing which car came first for servicing they should prefer them first .",['on_time']
+128,after we took appointment they should remind us for an appointment .,['others']
+129,appointment needs to be given properly . for appointment we need to wait for one to one half house . management should take the responsibility on appointment the waiting space needs to be wide . they should inform is when the service needs to be given . the appointment needs to be there given within half days .,"['inform', 'appointment', 'wait']"
+130,even after 20 25 days also we don \? t get appointment . i got my appointment on 2nd but my car runned for 8000 km . it had only 200km in which i want to go job also . it took 3 days for servicing . they should increase the staff .,"['staff', u'locat', 'wait']"
+131,the spare parts of market price are less 30 difference in parts of charges they provide us .,['others']
+132,i never went to service center by taking an appointment because whenever i went there they do the servicing at that time because that time the cars are not present there which have taken time for the servicing . they should improve the appointment time schedule .,"['appointment', 'on_time']"
+133,"they gave appointment after 4 5 days . when we dropped the car for servicing , they took 2 3 days .","['appointment', 'wait']"
+134,they should open one more service center as the service center have too much rush and because of that customer not able to take appointment according to his convenient,['others']
+135,workshop should be broad to avoid harshness of customers from overcrowded situation .,['others']
+136,no no . i won \? t give any suggestion for this it is their own problem that how the way them makes customer satisfied .,['others']
+137,they should properly deal with the customers .,['others']
+138,do not deliver the car on fixed time of appointment . gives 3 days of gap after booking an appointment . even if we re emergency they do not give appointment . not on other time but at least on emergency they need to serve the customer accordingly .,"['emerg', 'appointment', 'deliv']"
+139,"if a person is in an emergency , the service center people should cooperate with the customers . if there is a customer who is free or has lots of time and if he wants to take his car to the service center and requests the service center people for the same , the service center people should pay attention to the customers request . but the customer care people are very adamant that they cannot give the number . it 's understandable that you ca n't give number but you should compromise and help the customer out with his request . now a days everyone is in a hurry and if someone is asking for an appointment , they should be provided with it . the service center people should analyze the customers situation and cooperate accordingly with them .","['emerg', 'appointment', 'number']"
+140,they should call back to the customer when they missed customer 's call,['call']
+141,"they should improve in pickup drop facility . they do delay in this facility . when i am taking appointment now a days life is very busy so they give pickup drop facility . his pickup drop facilities are very less . for example if we want tomorrow appointment then his guys are not ready to give , they postpone the day after a week or 2 week later that time his guys are available . so for this they should increase the staff","['staff', 'appointment', 'pick']"
+142,no improvement require,['no improve']
+143,there should be messaging facility for servicing appointment .,['others']
+144,when car gone there for servicing that time service advisor should come because he was came late .,['on_time']
+145,they should do quick service of our vehicle after appointment .,['others']
+146,it is good but need to improve,['others']
+147,no improvement require,['no improve']
+148,"they should have flexibility to fix an appointment . we always get an appointment after two days if we should get an appointment within 24 hours so , it will good .","[u'fix', 'wait']"
+149,if customer gone there without any appointment so they should handle a customers as soon as possible and also customers should not wait so much it me,['others']
+150,they should not attend first the customer whom they know,['others']
+151,we taken appointment then also we had to wait there almost 4 5 hour so they should do that work within half hour .,['wait']
+152,they should do improvement in appointment timing . timing have lots of gap .,['appointment']
+153,the service center should briefly explain the days . if the car running about it then the car should be done for servicing . they should call their customer . when you bring your car \? or how much km the car runner .,"['inform', 'call']"
+154,we don \? t have to call at banaras service center for car appointment . insisted of that they should give this facility at assam grad so we can get appointment fast . because when i call banaras service center i have to call 3 4 times . if i complaint why you are reserving my call then they replay that you are calling at the time of launch .,['call']
+155,there not giving appointment on time . the producer should be easy . customer should get appointment when he needed .,['on_time']
+156,they should regularly call me for car servicing .,['call']
+157,they should not take 15 20 days for appointment it should get within 1 week because i am free on saturday because i require car on those days so that why i require appointment as much as possible .,['appointment']
+158,"they should improve in appointment . when we demand for appointment they should give it in minimum 7 days . because they told to wait for 1 month , so that we have to visit sharayu for servicing .","['appointment', 'wait']"
+159,waiting time is more parts are available of car .,['wait']
+160,appointment should be book an online . booking should be happen fast .,"[u'onlin', 'appointment']"
+161,they should inform customer all information on phone . so customer time will not waste phone through customer can register car number . so phone sport is necessary .,"['inform', 'call']"
+162,"arrangement of service appointment for this i will say my friend is coming hearer picking my vehicle taking their for servicing . mr . ankit he is providing me good service he comes to pick my car for servicing , after completing he just delivering me that . this service provided by my friend mr . ankit not from the side of toyota corolla , they are charging for that pick drop . this kind of hurting thing remains in the minds of customer forever .","['deliv', 'pick']"
+163,they should improve on service appointment it needs to be done fast .,['others']
+164,appointment should be as per customer request,['others']
+165,when we call for appointment at that time mobile was switch off . the service center opens at 10 00 am but i started calling at 9 30am and that time only the mobile was servictch off i got appointment tab 10 30 am and evening 3 00 pm also the mobile was scratch . in service center if a lay calls that time the mobile was on after that it will be scratch off . there is no one to stop them they do all the work as per their over .,"['call', 'appointment']"
+166,they should deliver the car at the give time but here it takes more time to deliver the car .,['deliv']
+167,if customer visited early morning without appointment then they take service tare they have this clause that early morning it we want to do servicing then we have to pay 10 to 25 .,['others']

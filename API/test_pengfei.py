@@ -1,5 +1,4 @@
 import main
 
-x = main.process_question(2, '../raw_data/survey_data.csv')
+x = main.process_question(10, '../data/survey_data.csv', '../tmp_result/')
 
-print x

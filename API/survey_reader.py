@@ -93,7 +93,7 @@ def fileWriter(filename, file):
     author: Pengfei
     date: 07/06/2017
     """
-    thefile = open('C:/Users/pli006/Documents/Sourcetree/review_cluster/raw_data/' + filename, 'w')
+    thefile = open('C:/Users/pli006/Documents/Sourcetree/review_cluster/data/' + filename, 'w')
     for sentence in file:
         thefile.write("%s\n" % sentence)
     thefile.close()
@@ -101,7 +101,7 @@ def fileWriter(filename, file):
 
 if __name__ == '__main__':
 
-    corpus = read_Surveycsv('C:/Users/pli006/Documents/Sourcetree/review_cluster/raw_data/survey_data.csv')
+    corpus = read_Surveycsv('C:/Users/pli006/Documents/Sourcetree/review_cluster/data/survey_data.csv')
 
     fileWriter("q1.txt", corpus[1][0])
     fileWriter("q2.txt", corpus[2][0])

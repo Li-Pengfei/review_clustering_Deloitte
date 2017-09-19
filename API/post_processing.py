@@ -36,7 +36,7 @@ def filter_ne(corpus, doc_nn, df, question):  # assuming each review contain one
             corpus_keyword.append(doc[0])
     return corpus_keyword
 
-def main_category_clustering(df, corpus):
+def main_category_clustering(df, corpus, corpus_keyword):
     # Freq threshold is determined by insuring 70% of sentences is clustered
     df_ordered = df.most_common()
     sent_count = 0
@@ -52,8 +52,8 @@ def main_category_clustering(df, corpus):
     clustered_index = []
     for word in major_list:
         idx_set = []
-        for idx, doc in enumerate(corpus):
-            if word in doc[0]:
+        for idx, doc in enumerate(corpus_keyword):
+            if word in doc:
                 idx_set.append(idx)
                 corpus[idx] = corpus[idx] + (word,)
         clustered_index = clustered_index + idx_set
