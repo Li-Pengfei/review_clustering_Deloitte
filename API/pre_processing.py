@@ -260,7 +260,7 @@ def rule_q4(sen, ne):
                     'ant','fine','deliver','get','question','deliveri','need','quality','day','side','kind','chang',\
                     'honda','visit','told','speak','ask','requir','maruti','cleanli','henc','place','area','hand',\
                     'compani','process','qualiti','care','outsid','complaint','depart','hour','wait','front','home',\
-                    'centr','system']
+                    'centr','system','work','thing','part']
     clean_ne = [word for word in clean_ne if word not in remove_words and len(word)>1]
     save_words = ['polish','wash','interior','extra','rupe','check','vacuum','clean','intern',
                   'insid','ac','dry','engin','inter']
@@ -304,9 +304,10 @@ def rule_q4(sen, ne):
         clean_ne[clean_ne.index('spot')] = 'stain'          
     if 'wash' in clean_ne:
         clean_ne[clean_ne.index('wash')] = 'clean'
+    if 'cleanli' in clean_ne:
+        clean_ne[clean_ne.index('cleanli')] = 'clean'
+
     # rules for multi-keywords case
-    if len(clean_ne) > 1 and 'dust' in clean_ne:
-        clean_ne.remove('dust')
     if len(clean_ne) > 1 and 'clean' in clean_ne:
         clean_ne.remove('clean')
         
@@ -361,10 +362,11 @@ def rule_q6(sen, ne):
 
 def rule_q7(sen, ne):
     clean_ne = list(set(ne))
-    remove_words = ['custom','wait','car','facil','dealership','toyota','center',\
-                    'room','improv','servic','arrang','owner','peopl','time']
+    remove_words = ['custom','wait','car','facil','dealership','toyota','center','person',\
+                    'room','improv','servic','arrang','owner','peopl','lot','loung',\
+                    'issu','thing','someth','showroom','way','condit','vehicl','need']
     clean_ne = [word for word in clean_ne if word not in remove_words and len(word)>1]    
-    save_words = ['clean','cleanli']
+    save_words = ['clean','cleanli','sit']
     clean_ne = list(set(clean_ne + [stemmer.stem(word) for word in sen.split() if stemmer.stem(word) in save_words]))
     if len(clean_ne) > 1 and 'area' in clean_ne:
         clean_ne.remove('area')
@@ -386,6 +388,16 @@ def rule_q7(sen, ne):
         clean_ne[clean_ne.index('clean')] = 'cleanli'
     if 'canteen' in clean_ne:
         clean_ne[clean_ne.index('canteen')] = 'food'
+    if 'newspap' in clean_ne:
+        clean_ne[clean_ne.index('newspap')] = 'read'
+    if 'magazin' in clean_ne:
+        clean_ne[clean_ne.index('magazin')] = 'read'
+    if 'hr' in clean_ne:
+        clean_ne[clean_ne.index('hr')] = 'time'
+    if 'hour' in clean_ne:
+        clean_ne[clean_ne.index('hour')] = 'time'
+    if 'sit' in clean_ne:
+        clean_ne[clean_ne.index('sit')] = 'seat'                 
     return clean_ne
 
 def rule_q8(sen, ne):
@@ -461,13 +473,13 @@ def rule_q8(sen, ne):
 
 def rule_q9(sen, ne):
     clean_ne = list(set(ne))
-    remove_words = ['car', 'vehicl','improv','dealership','custom','receiv','satisfact','respond','servic','time',
-                    'center','facil','feel','ok','tell','problem','pay','dealer','attent','hurri','condit','ant',
-                    'fine','deliver','get','question','deliveri','need','quality','day','amount','kind','chang',
-                    'honda','visit','told','speak','ask','requir','toyota','henc','place','area','filter','align',
-                    'compani','process','qualiti','care','outsid','complaint','manag','glass','inform','break','pad',
-                    'wash','clean','water','showroom','staff','month','year','side','break','oil','market','batteri',
-                    'pack','packag','product']
+    remove_words = ['car', 'vehicl','improv','dealership','custom','receiv','satisfact','respond','servic','time',\
+                    'center','facil','feel','ok','tell','problem','pay','dealer','attent','hurri','condit','ant',\
+                    'fine','deliver','get','question','deliveri','need','quality','day','amount','kind','chang',\
+                    'honda','visit','told','speak','ask','requir','toyota','henc','place','area','filter','align',\
+                    'compani','process','qualiti','care','outsid','complaint','manag','glass','inform','break','pad',\
+                    'wash','clean','water','showroom','staff','month','year','side','break','oil','market','batteri',\
+                    'pack','packag','product','work']
     clean_ne = [word for word in clean_ne if word not in remove_words and len(word)>1]    
     save_words = ['spare','reduc','reason','discount','extra','rupe','compar','differ','pay','payment','ac','part',
                   'check','free','increas','high','low','less','more','costli','decreas','insur','explain']
@@ -482,6 +494,8 @@ def rule_q9(sen, ne):
         clean_ne[clean_ne.index('differ')] = 'compar'        
     if 'rate' in clean_ne:
         clean_ne[clean_ne.index('rate')] = 'charg'
+    if 'rs' in clean_ne:
+        clean_ne[clean_ne.index('rs')] = 'charg'
     if 'pay' in clean_ne:
         clean_ne[clean_ne.index('pay')] = 'charg' 
     if 'payment' in clean_ne:

@@ -1,57 +1,57 @@
 id,comment,label
 0,"they should provide tea coffee in waiting area , when customer waits there .",['drink']
 1,space should be more they have to provide sitting facility .,['space']
-2,they should increase the area where they are keeping the newspaper .,['others']
+2,they should increase the area where they are keeping the newspaper .,['read']
 3,"ac are available , there but they are not using it . waiting area must be clean .","['cleanli', 'ac']"
 4,"waiting area should have tea , magazine , lcd comfortable couch facilities .",['drink']
 5,"in the waiting area , they should have arrangement of snacks and also should have a bed to relax . they should also have a play zone for entertainment .",['others']
-6,there is waiting area common for both . now they are shifting the service center maybe andheri so that \? s why we are facing some issue .,"[u'issu', 'space']"
+6,there is waiting area common for both . now they are shifting the service center maybe andheri so that \? s why we are facing some issue .,['space']
 7,increase the space of service center .,['space']
 8,"the waiting area should be more clean neat . the service center should be more spacious . toyota cars are increasing in nos . , which is good but they should accordingly increase the no . of service centers .",['cleanli']
-9,"waiting area should be a bit better . they \? ve 2 waiting areas , one common the other is for owners . they never informed me about the waiting area of the owners . so every time i \? d to sit in the common waiting area . after 5 6 times of my visit i came to know about that . the last time i was approached by the may i help you lady , who told me about the owners waiting area told me to shift there . they should have a common sense should understand the body language of a person . the cost of the car is so high , but accordingly they should provide some more features in the car . this is a negative side of the brand . they should increase some comfort levels in the car which are not very costly but will make the car more appealing . they should provide tachometer , automatic climate control , motorized outside rearview mirror , etc . for standard fitness , they should provide rear parking censor , which is very much needed , rain draining wiper , automatic wi fi control , etc . i \? d to fix them in my car from outside . the last 3 things are very much needed in the car . they should even provide some more magazines related to automobiles toyota manual .","['comfort', u'thing', 'space', 'person', u'magazin']"
+9,"waiting area should be a bit better . they \? ve 2 waiting areas , one common the other is for owners . they never informed me about the waiting area of the owners . so every time i \? d to sit in the common waiting area . after 5 6 times of my visit i came to know about that . the last time i was approached by the may i help you lady , who told me about the owners waiting area told me to shift there . they should have a common sense should understand the body language of a person . the cost of the car is so high , but accordingly they should provide some more features in the car . this is a negative side of the brand . they should increase some comfort levels in the car which are not very costly but will make the car more appealing . they should provide tachometer , automatic climate control , motorized outside rearview mirror , etc . for standard fitness , they should provide rear parking censor , which is very much needed , rain draining wiper , automatic wi fi control , etc . i \? d to fix them in my car from outside . the last 3 things are very much needed in the car . they should even provide some more magazines related to automobiles toyota manual .","['read', 'space', 'seat', 'time']"
 10,waiting area was not so comfortable . there was no enough chairs for customers in their sitting area . specially for ladies they should arrange cushions in waiting area .,"['seat', 'space']"
 11,did not provide any suggestions,['others']
 12,"for the customers like us , you should keep tv , comfortable chairs ac in waiting area .",['seat']
-13,executive should come to use tell about much time it would take for the car to get serviced by this we can arrange or time and we don \? t need much time wait in the waiting area,['space']
-14,there was no comfortable area for waiting . waiting area need to keep separate for customers like us . it would be very useful for customers to attend the business phone calls .,"['need', 'space']"
+13,executive should come to use tell about much time it would take for the car to get serviced by this we can arrange or time and we don \? t need much time wait in the waiting area,['time']
+14,there was no comfortable area for waiting . waiting area need to keep separate for customers like us . it would be very useful for customers to attend the business phone calls .,['space']
 15,"the front side of waiting area is covered with glass and hence it becomes hot and the waiting area is so suffocative and so congested and there is an area which is surrounded by trees , it is beautiful , but there is no place for sit . there should be a canteen as because the area is isolated . the bottle they given us to drink water it should be better and if there should be a docking station where we can charge our mobile . if there will be a playground for children \? s it would be good .","['food', 'drink', 'space']"
-16,"the most improvement is requires in the waiting area . the waiting area of the service center is too small . due to reflection of sunlight , it become too hot . when i went there it was 2 . 00 pm . i did not get more attention . they are less attentive . they should ask whether i need anything . because it is located at an isolated place so nothing is available there . so if they have arrange something and even if it is payable then also it will be good for customer .","[u'someth', 'space']"
-17,we have to wait for almost 5 hours in waiting area and there they have only tv but they should have games also like carom etc .,['tv']
-18,waiting area should have camera so that customer can saw his vehicle during servicing .,[u'vehicl']
-19,"the waiting area is very small space . they can make the waiting area more comfortable by adding some new magazines , newspapers can make a wi fi zone in the area .","[u'magazin', 'space']"
+16,"the most improvement is requires in the waiting area . the waiting area of the service center is too small . due to reflection of sunlight , it become too hot . when i went there it was 2 . 00 pm . i did not get more attention . they are less attentive . they should ask whether i need anything . because it is located at an isolated place so nothing is available there . so if they have arrange something and even if it is payable then also it will be good for customer .",['space']
+17,we have to wait for almost 5 hours in waiting area and there they have only tv but they should have games also like carom etc .,['time']
+18,waiting area should have camera so that customer can saw his vehicle during servicing .,['others']
+19,"the waiting area is very small space . they can make the waiting area more comfortable by adding some new magazines , newspapers can make a wi fi zone in the area .","['read', 'space']"
 20,they should provide rest room canteen .,['food']
-21,cup saucer was remain there long time so they should do proper cleaning .,['cleanli']
+21,cup saucer was remain there long time so they should do proper cleaning .,['time']
 22,no improvement require,['no improve']
-23,"waiting lounge should be modified made attractive . the refreshments should be improved . most of the time the tv in the waiting area had signals problems . there should be sufficient amount of automobile related magazines . for children they should provide some games or awareness programs related to automobile . the waiting area should be more creative , i . e . they should show something creative relating to the cars .","['space', 'tv', u'someth', u'game', u'magazin', u'loung']"
-24,waiting area should be improved in terms of waiting time .,['others']
+23,"waiting lounge should be modified made attractive . the refreshments should be improved . most of the time the tv in the waiting area had signals problems . there should be sufficient amount of automobile related magazines . for children they should provide some games or awareness programs related to automobile . the waiting area should be more creative , i . e . they should show something creative relating to the cars .","['read', 'time', 'space']"
+24,waiting area should be improved in terms of waiting time .,['time']
 25,they should offer tea coffee and should have proper arrangement of tv waiting area should not have too much noise and should also not have foot fall of mechanics .,['drink']
-26,"waiting area should be in proper condition , it should not have too much noise",[u'condit']
+26,"waiting area should be in proper condition , it should not have too much noise",['others']
 27,there is no sitting space in waiting area if we have family with us in kolhapur,['space']
 28,waiting area space is less and it \? s congested in amana dealership . waiting area should be more spacious .,['space']
 29,they have to improve the space of the waiting area . the cleanliness is not good .,"['cleanli', 'space']"
 30,bas setting arrangement thora as acha kar de jiye bas,['others']
-31,whenever we go i always complain them that in customer lounge drivers are also sitting even driver room is available upside of dealership . staffs are also not requesting drivers to sit in drivers waiting room . this is wrong . drivers customers should not sit together . at other dealership of toyota e . g . infinium naroda also drivers customers should not sit together . and they don \? t even solve problem .,[u'driver']
+31,whenever we go i always complain them that in customer lounge drivers are also sitting even driver room is available upside of dealership . staffs are also not requesting drivers to sit in drivers waiting room . this is wrong . drivers customers should not sit together . at other dealership of toyota e . g . infinium naroda also drivers customers should not sit together . and they don \? t even solve problem .,['seat']
 32,they should have television,['others']
-33,they should do changes in the way of attending the customers on each service as customer visited there regularly .,['way']
+33,they should do changes in the way of attending the customers on each service as customer visited there regularly .,['others']
 34,they should ask for coffee or tea . sometimes we have wait long time but no one ask for tea and coffee . i do n't no wats instruction are there but seating option was not proper . seating option should be proper .,['drink']
 35,temperature is not good . keep good chairs .,['seat']
-36,"the waiting area should be improved . they should look after the beautification of the compound . garden space should be beautified . they can add more ornamental trees , more seasonal flowers can plant more rare species trees . if you visit no molecular assam refinery , in the township , you can find that you \? ve entered in a gardening area . while waiting for 2 3 hrs . for our car we can remove our boredom in the garden space .","[u'hr', 'space']"
-37,"in waiting area , they are take long time and it was time wasting for customer . first they are say you are car is ready we can come to take it but when we come to dealership that time staff are doing policing and cleaning the car so that should be improved .","['cleanli', 'space']"
-38,the lcd which you had put up in the waiting area should keep on updating . tell them to update as early as possible every time it is good . other thing in waiting area is good that was the only thing which i wanted to say about that waiting room .,[u'thing']
+36,"the waiting area should be improved . they should look after the beautification of the compound . garden space should be beautified . they can add more ornamental trees , more seasonal flowers can plant more rare species trees . if you visit no molecular assam refinery , in the township , you can find that you \? ve entered in a gardening area . while waiting for 2 3 hrs . for our car we can remove our boredom in the garden space .","['time', 'space']"
+37,"in waiting area , they are take long time and it was time wasting for customer . first they are say you are car is ready we can come to take it but when we come to dealership that time staff are doing policing and cleaning the car so that should be improved .",['time']
+38,the lcd which you had put up in the waiting area should keep on updating . tell them to update as early as possible every time it is good . other thing in waiting area is good that was the only thing which i wanted to say about that waiting room .,"['time', 'space']"
 39,waiting area is very small not a space to seat there .,['space']
 40,the waiting area is small here . it should be enlarged . they can provide coffee there .,"['drink', 'space']"
-41,there is no arrangement of tea coffee . customer keep sitting there but they do not look after us . you just get bored sitting there .,['drink']
-42,"if a customer asked them anything they told wait we will give you but after some time they said it is finished but they have the same thing for their staff , this is not good .",['staff']
+41,there is no arrangement of tea coffee . customer keep sitting there but they do not look after us . you just get bored sitting there .,"['drink', 'seat']"
+42,"if a customer asked them anything they told wait we will give you but after some time they said it is finished but they have the same thing for their staff , this is not good .",['time']
 43,look of the car can be good if couch is available .,['others']
 44,seating section size is small . it should be little large .,['others']
 45,the condition cleanliness of the car should be improved . they should change the location . the place is very small . it should be spacious . waiting area servicing area should be improved .,"['cleanli', 'space']"
-46,within time limit they should given car to customer,['others']
-47,they should work as per time table .,['others']
-48,waiting time is very long in this dealership so that should be reduced .,['others']
+46,within time limit they should given car to customer,['time']
+47,they should work as per time table .,['time']
+48,waiting time is very long in this dealership so that should be reduced .,['time']
 49,they should offer water tea to the customer and customer should see the vehicle during servicing,['drink']
 50,"the wifi which they have in their dealership it doesn \? t supports in i phone , it only supports on android phones .",['others']
-51,remote of television was not available at waiting area . they should give good services in waiting area because we get bored by sitting there for long time .,['space']
-52,staff or supervisors are not available to attend the customers . to attend the 10 people 1 supervisor is not good . there should be an 3 4 supervisor that who can keep on intimating us in the waiting room . even they can keep on intimating us that how much time it will take .,['staff']
+51,remote of television was not available at waiting area . they should give good services in waiting area because we get bored by sitting there for long time .,['seat']
+52,staff or supervisors are not available to attend the customers . to attend the 10 people 1 supervisor is not good . there should be an 3 4 supervisor that who can keep on intimating us in the waiting room . even they can keep on intimating us that how much time it will take .,"['time', 'staff']"
 53,the waiting area should be more clean .,['cleanli']
 54,"they have to improve the travelling services , they have to provide the canteen facility",['others']
 55,appointments should be taken timely . and seating capacity should be improved at the dealership .,['others']
@@ -62,30 +62,30 @@ id,comment,label
 60,waiting area should be more comfortable . while purchasing the car the outside amenities are good but in waiting area place are not much proper they need more improvement .,['space']
 61,if the space of waiting area will be expanded then it would be better . because the space is too small .,['space']
 62,in waiting room their should be an more cleanliness . also they should improve in tea or coffee .,"['cleanli', 'drink']"
-63,"in the waiting area , there should be avail a coffee vending machine and they should ask for water . and the room of waiting area is too small . as an example if you go to the particular dealership and if you will get more than one person and he is already attending to one customer and if you are asking to wait then either somebody should come and tell you that sir your waiting time is over now or they can provide token kind of system or calling system or t . v . where news is running on , so that a customer would not found himself alone .","['person', 'drink', 'space']"
+63,"in the waiting area , there should be avail a coffee vending machine and they should ask for water . and the room of waiting area is too small . as an example if you go to the particular dealership and if you will get more than one person and he is already attending to one customer and if you are asking to wait then either somebody should come and tell you that sir your waiting time is over now or they can provide token kind of system or calling system or t . v . where news is running on , so that a customer would not found himself alone .","['drink', 'time', 'space']"
 64,waiting are is not that much good in compare to other because our company is more branded that others so it should be improve .,['others']
-65,service center is far away from my home . i don \? t get well satisfaction from service center . the waiting area is too small if 6 or 7 person sit over there then there is no place we get to sit . and that time some people go to the tea shop and some others just walking outside and we also can \? t park the car properly . in the last servicing dealership staff had taken 7 hours instead of 1 hour .,"['staff', 'space', 'drink']"
+65,service center is far away from my home . i don \? t get well satisfaction from service center . the waiting area is too small if 6 or 7 person sit over there then there is no place we get to sit . and that time some people go to the tea shop and some others just walking outside and we also can \? t park the car properly . in the last servicing dealership staff had taken 7 hours instead of 1 hour .,"['space', 'time', 'drink']"
 66,they should increase the cash counter as because the rush we need to wait there for billing .,['others']
 67,earlier there use to be sofa set but now there are steel chairs . you should understand the difference between car owners and drivers . if customer waits for long time then he should feel comfortable hence sofa are required . customer needs to sit on steel chairs .,"[u'driver', 'seat']"
 68,ac was not available there so it should be available .,['ac']
 69,it is very hot there . ac also is closed there and inside there is sun light also . there is no proper place to sit .,"['ac', 'space']"
 70,there is no cleanliness . the drivers also sit on same place where we sit . there is no good service of eatables .,"['cleanli', 'space']"
-71,tv and all is there but there is no newspaper for people to read .,['tv']
+71,tv and all is there but there is no newspaper for people to read .,['read']
 72,as compare to other showrooms nippon toyota have less space in waiting area .,['space']
-73,they should offer snacks to customer and should have comfortable sitting arrangement in waiting area .,['others']
+73,they should offer snacks to customer and should have comfortable sitting arrangement in waiting area .,['seat']
 74,separate waiting area should be available for owner .,['space']
 75,they should make waiting area little better . space should increase and lighting should be good .,['space']
 76,"there should be tv in waiting area , water facility should be there . if family visits there then there should be safety .",['drink']
 77,its feel like waiting are most made for drives less for owners . waiting area is ok . open furniture it \? s looking good . welcoming should be available on entrance .,['space']
-78,the waiting area available in grand toyota there no body asks for water or tea . that 's ok if they do not ask for tea but at least come to ask for clean drinking water . if we have been waiting there for 2 hours then at least there has to be somebody to ask us for a glass of water . location is on meerut bypass and there is nothing available close by . so there at least some one come and ask us for a glass of water . only this what any person would want to have . person coming there would have already taken his tea or coffee from his home but water thirst can be felt any time . only thing is that they must ask for water .,"['person', 'drink']"
-79,"they are taking just double time to resolve the issue , they should resolve the issues in committed time .",[u'issu']
+78,the waiting area available in grand toyota there no body asks for water or tea . that 's ok if they do not ask for tea but at least come to ask for clean drinking water . if we have been waiting there for 2 hours then at least there has to be somebody to ask us for a glass of water . location is on meerut bypass and there is nothing available close by . so there at least some one come and ask us for a glass of water . only this what any person would want to have . person coming there would have already taken his tea or coffee from his home but water thirst can be felt any time . only thing is that they must ask for water .,['drink']
+79,"they are taking just double time to resolve the issue , they should resolve the issues in committed time .",['time']
 80,they should ask the tea and cofee in waiting area,['drink']
-81,"1 . if there is more waiting time , they have to provide bed facility for relaxation .",['others']
+81,"1 . if there is more waiting time , they have to provide bed facility for relaxation .",['time']
 82,no improvement require,['no improve']
-83,"if lounge for owner , so owner must available there driver should not available . what would happen there driver sit on owners place . privacy is not available there .",[u'loung']
-84,they should have a cctv camera in waiting area so that customer can see his vehicle during servicing .,[u'vehicl']
+83,"if lounge for owner , so owner must available there driver should not available . what would happen there driver sit on owners place . privacy is not available there .",['seat']
+84,they should have a cctv camera in waiting area so that customer can see his vehicle during servicing .,['others']
 85,separate room should be available in waiting area so we can not disturb because too much disturbance is there .,['others']
-86,waiting room is also in bad condition . should do properly clean waiting room .,"[u'condit', 'cleanli']"
+86,waiting room is also in bad condition . should do properly clean waiting room .,['cleanli']
 87,they should have canteen in waiting area and also have some foods like maggie etc . and if need they can charged for it . .,['food']
 88,waiting area should be good,['space']
 89,the waiting area should have drinking water and tea facilities .,['drink']
@@ -94,81 +94,81 @@ id,comment,label
 92,the waiting area should be improved . they should have more place for sitting then it would look proper . they should improve on this .,['space']
 93,there is separate rooms are available for owner and driver but sometimes they came and seat in owner room so they should take care of this .,['seat']
 94,water machine should be there because it is summer season now . and customers are already tired when they went there .,['drink']
-95,serving water should be seal pack . they served as they are offering in glass and they wash it and again offering in same glass . it is better than they should provide in seal pack bottle . car not able to see from the waiting area where they are doing servicing . servicing work should be seen from the waiting area as what work is going on in car . pc is available there so they should have some games are related to internet so they should have some refreshment . it is physically available in lakhoji toyota so they should arrange here also .,"['work', u'game', 'drink', 'space']"
+95,serving water should be seal pack . they served as they are offering in glass and they wash it and again offering in same glass . it is better than they should provide in seal pack bottle . car not able to see from the waiting area where they are doing servicing . servicing work should be seen from the waiting area as what work is going on in car . pc is available there so they should have some games are related to internet so they should have some refreshment . it is physically available in lakhoji toyota so they should arrange here also .,"['drink', 'space']"
 96,if 10 customers come there is place available for sitting but if there are 15 customers or more it is difficult for them to adjust . so the area for waiting should be improved .,['space']
 97,waiting area is very small . they have put 2 3 sofas but if more number of customers come there then it becomes crowded,"['seat', 'space']"
 98,"if customers are waiting in the services center , they have to the ask about purpose of waiting . 2 \) they have to give the proper response",['others']
-99,they should do work fast so customer not wait there a lot .,['lot']
+99,they should do work fast so customer not wait there a lot .,['others']
 100,they should offer breakfast to customers .,['others']
-101,waiting time should be reduced . after pay the billing they should quickly delivery the car if car servicing is complete then they should inform to customer otherwise we have to wait for long time in dealership .,['others']
-102,"they don \? t even ask for tea . if we ask tea or water , then only they give . work should be done fast .","['work', 'drink']"
+101,waiting time should be reduced . after pay the billing they should quickly delivery the car if car servicing is complete then they should inform to customer otherwise we have to wait for long time in dealership .,['time']
+102,"they don \? t even ask for tea . if we ask tea or water , then only they give . work should be done fast .",['drink']
 103,there are less chairs in the waiting area sitting so that should be increased .,['seat']
-104,"we give them the vehicle from servicing and we have to wait 4 hours in the waiting area , this waiting time a lot time so you should think about it and resolve it .",[u'hour']
-105,"the person who appointed at waiting area he had appointed for chatting or for work \? i we tell him for drinking water he was telling us , it is available there if we asked for coffee then also he saying same thing . if we have to tell someone else , then why you are here \? not given any services as well as not given any answers . previously ac was there but now it is not working . it was hot of inside . there should cleanliness as well as should available chairs for seating . there is not available mobile charging facility it should be available . ac should on .","['person', 'ac', 'drink', 'seat']"
+104,"we give them the vehicle from servicing and we have to wait 4 hours in the waiting area , this waiting time a lot time so you should think about it and resolve it .",['time']
+105,"the person who appointed at waiting area he had appointed for chatting or for work \? i we tell him for drinking water he was telling us , it is available there if we asked for coffee then also he saying same thing . if we have to tell someone else , then why you are here \? not given any services as well as not given any answers . previously ac was there but now it is not working . it was hot of inside . there should cleanliness as well as should available chairs for seating . there is not available mobile charging facility it should be available . ac should on .","['ac', 'drink', 'seat']"
 106,they have to use the waiting area properly .,['space']
 107,they should have a separate waiting area for owner .,['space']
 108,ac cooling is not in a correct temperature . it gives cooling in one side of the waiting area so the other side is not cool . they should improve on that .,['ac']
 109,executive should be available in waiting area to attend the customers .,['others']
-110,they should have television and they should have games in this waiting area .,[u'game']
+110,they should have television and they should have games in this waiting area .,['others']
 111,their should be an change in waiting area . you see according to you how we can say it .,['others']
-112,"waiting area is too congested . they should visit at dsk showroom and should follow their technology . how 's their area should arrange like that . from there we can see the car also . we can seat on one place we will see the car . huge space is there . seating place is not available here as well as drinking water facility not available . if someone is coming of going , then also they are not asking .","['showroom', 'space']"
+112,"waiting area is too congested . they should visit at dsk showroom and should follow their technology . how 's their area should arrange like that . from there we can see the car also . we can seat on one place we will see the car . huge space is there . seating place is not available here as well as drinking water facility not available . if someone is coming of going , then also they are not asking .",['space']
 113,in waiting room their should be an permanent staff who can handled the customer . if customer visit the service center with his vehicle then staff should handled the customers properly in waiting room .,['staff']
 114,"once i gave a germany car for servicing there they had asked for tea , coffee , buttermilk . but here they do not ask anything so his should be improved .",['drink']
-115,if the customer is seating in waiting area and the car servicing process would going to take much time then at least they should update it to the customer .,['others']
+115,if the customer is seating in waiting area and the car servicing process would going to take much time then at least they should update it to the customer .,['time']
 116,they should offer tea and water to the customers .,['drink']
 117,"in waiting room facilities should be available , once they make us wait in waiting room then they don \? t even ask for tea or coffee , they should at least ask for tea or coffee .",['drink']
 118,no improvement require all are fine,['no improve']
-119,"waiting area is not that much good . we should feel relax after entering the waiting room . their should be available tv , glass , water a c also . it should be like hotel . if we sit for 1 . 30 hrs . then we can watch the tv .","[u'hr', 'tv', 'drink', 'space']"
+119,"waiting area is not that much good . we should feel relax after entering the waiting room . their should be available tv , glass , water a c also . it should be like hotel . if we sit for 1 . 30 hrs . then we can watch the tv .","['drink', 'space', 'tv', 'time', 'seat']"
 120,should increase the space and should increase the eminence .,['space']
 121,there is no space there to sit . so enough place should be there sit if we go there .,['space']
 122,they should increase the staff in waiting area,['staff']
-123,they have to deliveries the vehicle with into he committed time instead of late delivery,[u'vehicl']
+123,they have to deliveries the vehicle with into he committed time instead of late delivery,['time']
 124,it will be improved if they give more profit . waiting area should be little bigger .,['space']
-125,if we visit to the waiting room they ask for tea and coffee . if any person visit by afternoon then they should arrange a lunch or we bring our tiffin box then they should do proper arrange for lunch . should provide the lunch in waiting room either they borrow from outside and charge us it is ok but their should be an facility in waiting room .,"['person', 'drink']"
+125,if we visit to the waiting room they ask for tea and coffee . if any person visit by afternoon then they should arrange a lunch or we bring our tiffin box then they should do proper arrange for lunch . should provide the lunch in waiting room either they borrow from outside and charge us it is ok but their should be an facility in waiting room .,['drink']
 126,"they should arrange tea , coffee in the waiting area .",['drink']
-127,waiting area should away from toilet as it 's smelling a lot .,['lot']
+127,waiting area should away from toilet as it 's smelling a lot .,['others']
 128,there were is not available news paper and magazine in waiting area and they also not offer tea and water .,['drink']
-129,when customer go their they should attend immediately . which time they till us at that time they should give the car not to take 4 5hrs . customer 's car should be clean properly and return it in 2 3hrs they should not take more time .,['cleanli']
+129,when customer go their they should attend immediately . which time they till us at that time they should give the car not to take 4 5hrs . customer 's car should be clean properly and return it in 2 3hrs they should not take more time .,['time']
 130,food facility should be available .,['food']
-131,"in waiting area there is no toilet facility available , for that you have to go inside the showroom where the cars are displayed . the toilet is common for the showroom staff the customers . there should be toilet facilities in the waiting area if some customer wants to go . there is a common one for the customers the showroom staffs for the customers who are coming to purchase new car . if they will improve the waiting area than it would be good . only the waiting , it is not that much important but my suggestion is to improve the waiting area it would be more comfortable .","['showroom', 'space', 'staff']"
-132,waiting area need to increase at this dealership .,['need']
+131,"in waiting area there is no toilet facility available , for that you have to go inside the showroom where the cars are displayed . the toilet is common for the showroom staff the customers . there should be toilet facilities in the waiting area if some customer wants to go . there is a common one for the customers the showroom staffs for the customers who are coming to purchase new car . if they will improve the waiting area than it would be good . only the waiting , it is not that much important but my suggestion is to improve the waiting area it would be more comfortable .","['staff', 'space']"
+132,waiting area need to increase at this dealership .,['space']
 133,receiving and facilities should be good at waiting area .,['others']
-134,first if they will give us on time then we will more satisfy . welcome from jamnagar so if they commit us exact time we can do other works too .,['others']
+134,first if they will give us on time then we will more satisfy . welcome from jamnagar so if they commit us exact time we can do other works too .,['time']
 135,they should clear all the queries raised by customers .,['others']
 136,"waiting area should be confidential , also ac is available there .",['ac']
 137,if any customer sitting for long time there person should come to us and said will you have a tea and coffee something like that .,['drink']
-138,their way of interaction is not good . worker are not attentive in their work . it seems to be like ignoring the customers .,"['work', 'way']"
-139,need improvement on sittings and also everything should be clean . i felt that something was missing when i was sitting there at dealership . likewise in lucknow .,"['cleanli', u'someth']"
+138,their way of interaction is not good . worker are not attentive in their work . it seems to be like ignoring the customers .,['others']
+139,need improvement on sittings and also everything should be clean . i felt that something was missing when i was sitting there at dealership . likewise in lucknow .,['seat']
 140,"it would be better if they should arrange ac , newspaper tv in the waiting area .",['ac']
-141,minimum 1 hour we have to wait . minimum time you need for service . the place which is having in kannur there car should get in minimum one hour because it is difficult to seat there more than 1 hour . one is they start in day ship and 2nd thing is that they does not have the wardrobe facility . more space should be there and one washroom should be attached to the waiting room . the space is to cramp . the seating area is not comfortable . some times we have to seat on ramp . they should inform to the customers what ever work they have done in servicing of the car .,"[u'thing', u'hour', 'space']"
+141,minimum 1 hour we have to wait . minimum time you need for service . the place which is having in kannur there car should get in minimum one hour because it is difficult to seat there more than 1 hour . one is they start in day ship and 2nd thing is that they does not have the wardrobe facility . more space should be there and one washroom should be attached to the waiting room . the space is to cramp . the seating area is not comfortable . some times we have to seat on ramp . they should inform to the customers what ever work they have done in servicing of the car .,"['space', 'time']"
 142,"waiting area should be properly neat and clean , they should have a canteen , and it \? s not up to the mark . there should be proper drinking water arrangement . it should be most precious .","['cleanli', 'drink']"
-143,waiting period is too long . they should take the car ready fast and make it more stable the customer very fast . wait over there for long time .,['others']
-144,"there should be available proper seating arrangement , must be something to entertainment available like magazine . they should make arrangement for tea snacks . we have spent 4 5 hrs . so there something should be available .","[u'hr', u'someth', 'drink', 'seat']"
+143,waiting period is too long . they should take the car ready fast and make it more stable the customer very fast . wait over there for long time .,['time']
+144,"there should be available proper seating arrangement , must be something to entertainment available like magazine . they should make arrangement for tea snacks . we have spent 4 5 hrs . so there something should be available .","['drink', 'time', 'seat']"
 145,they should improve the waiting area .,['space']
-146,"sitting area is very small and all facilities are not available . they can provide wi fi , they can show us live servicing about what all is happening on the car . all these exclusive things should be there which owner can view that how many people are working on his car and what work is going on","[u'thing', 'space']"
+146,"sitting area is very small and all facilities are not available . they can provide wi fi , they can show us live servicing about what all is happening on the car . all these exclusive things should be there which owner can view that how many people are working on his car and what work is going on",['seat']
 147,we need more confront the witting area . by bring the matter coucher for seat . they should received the customers with good manners .,"['seat', 'space']"
 148,they have to improve the waiting area they are not giving proper response .,['others']
-149,we have to wait for long time in dealership so they should reduce the time consuming .,['others']
+149,we have to wait for long time in dealership so they should reduce the time consuming .,['time']
 150,"they should offer tea and comics to customer , who is waiting in waiting area .",['drink']
-151,washroom stinks a lot,['lot']
+151,washroom stinks a lot,['others']
 152,no improvement require all are fine,['no improve']
 153,coffee shop should be open more time .,['drink']
 154,driver and owner are seating together so it should different . should available different and better place for driver and owner .,"[u'driver', 'space']"
-155,sitting programme should be proper . waiting area which is below so servicing is not visible . it should be up so that we can se our car 's servicing,['space']
-156,they should have something in waiting area for customer 's time pass .,[u'someth']
+155,sitting programme should be proper . waiting area which is below so servicing is not visible . it should be up so that we can se our car 's servicing,"['space', 'seat']"
+156,they should have something in waiting area for customer 's time pass .,['time']
 157,suppose we are seat there and no one come there to ask at least for water . like we seated there from morning 10 to evening 4 pm and we came to know that the tv was closed so it should not happened with any one .,"['tv', 'drink']"
 158,"they should offer coffee , tea and water to the customers .",['drink']
 159,they should have some foods in the waiting area .,['food']
-160,charge and waiting area need to be improving . in waiting area if they have more customer then sitting arrangement is not sufficient for all of them . they should organize some waiting lounge in dealership .,"['need', u'loung', 'space']"
+160,charge and waiting area need to be improving . in waiting area if they have more customer then sitting arrangement is not sufficient for all of them . they should organize some waiting lounge in dealership .,['seat']
 161,tap was off in the waiting area .,['others']
 162,no improvement require all are fine,['no improve']
-163,"dealership staff should be aware of the time period , they committed to fulfill our car service within a schedule time but they are not able to do this also they don \? t explain me about the work resolving procedure i did not like the dealership waiting area also i did not get the felicitation from there i was sited in car servicing place whenever i go to dealership then i don \? t get the felicitation i have a honda car but whenever i go to dealership i get reception and importance also they make good deal with me","['space', 'staff']"
+163,"dealership staff should be aware of the time period , they committed to fulfill our car service within a schedule time but they are not able to do this also they don \? t explain me about the work resolving procedure i did not like the dealership waiting area also i did not get the felicitation from there i was sited in car servicing place whenever i go to dealership then i don \? t get the felicitation i have a honda car but whenever i go to dealership i get reception and importance also they make good deal with me","['space', 'time']"
 164,waiting has less space thus it should be spacious .,['space']
 165,waiting area should be proper . more reading books should be there . waiting area seating should be increase and it should be more convenient . they only offer tea we are paying amount for food which we don \? t even get . canteen should be there .,"['food', 'seat', 'space']"
 166,power point should be available in which can connect our computer .,['others']
 167,they should provide snacks to the customers,['others']
 168,waiting area should be improved because space is very small so customer not wait for much time in this dealership .,['space']
-169,waiting area should be more comfortable for customers . recent area is just like a box it \? s not like a lounge it should be more comfortable designed .,"[u'loung', 'space']"
+169,waiting area should be more comfortable for customers . recent area is just like a box it \? s not like a lounge it should be more comfortable designed .,['space']
 170,there is small place for waiting area .,['space']
 171,they should have proper seating facilities in the waiting area also should have television .,['seat']
 172,it should be good well cleaned . tea coffee facility should be available and they should provide magazines to read or somethings through which we can do time pass .,"['cleanli', 'drink']"
@@ -184,26 +184,26 @@ id,comment,label
 182,it will be better if waiting area is increased . specially customer have to wait outside . its enough if waiting area is increased,['space']
 183,they should ask for coffee or water in waiting area . there should be wi fi .,['drink']
 184,"there is no ac in the waiting area so , its so difficult to wait in waiting area in summer season",['ac']
-185,"they should be one dedicated person who will basically talk to everyone , who 's there sitting at the waiting area . he just ask them when was his appointment or did you get the booking done even if he had to wait he should be told very clearly that ok , we are quietly busy right now i would request it to please wait for 15 minutes . waiting area is not comfortable , because there is not proper sofa all that to seat . its not very comfortable very cramps . there is outsider counter , so service level places have to different , its like a bank . its can not be like a bank . correct other places are very clean like millennium toyota all that there service areas all that much better than lakozy . when people coming to the waiting area , then they should be greeted they should be at least attend too after taking appointment .","['person', 'seat', 'space']"
+185,"they should be one dedicated person who will basically talk to everyone , who 's there sitting at the waiting area . he just ask them when was his appointment or did you get the booking done even if he had to wait he should be told very clearly that ok , we are quietly busy right now i would request it to please wait for 15 minutes . waiting area is not comfortable , because there is not proper sofa all that to seat . its not very comfortable very cramps . there is outsider counter , so service level places have to different , its like a bank . its can not be like a bank . correct other places are very clean like millennium toyota all that there service areas all that much better than lakozy . when people coming to the waiting area , then they should be greeted they should be at least attend too after taking appointment .","['space', 'seat']"
 186,"when we take car of 30 to 35 lake for services center , they are not preferring a tea also , they should provide tea it will be good .",['drink']
 187,the waiting time is more and waiting room 's sofa is not comfortable . it should be waiting room is much better .,['seat']
-188,commercial vehicles were creating so many disturbance for the other owners so they should provide different or make partiality in owners waiting area commercial persons waiting area . there all services were nice there is no any issue,"[u'issu', 'person']"
+188,commercial vehicles were creating so many disturbance for the other owners so they should provide different or make partiality in owners waiting area commercial persons waiting area . there all services were nice there is no any issue,['others']
 189,"painting area is very be small , large at painting area places were not comfortable while rush",['space']
 190,the waiting area is too small . if it will be making large then it would be better .,['space']
 191,"the waiting area should be improved by expanding the space , other all facilities are ok",['space']
-192,they need to provide some entertainment in wait area like magazines discussion room for customer to talk with manager .,[u'magazin']
+192,they need to provide some entertainment in wait area like magazines discussion room for customer to talk with manager .,['read']
 193,waiting room need to be more clean .,['cleanli']
 194,waiting area should be improved . staff should be trained like if we ask tea or coffee then also they do n't come till half hour and in waiting area good cleanliness should be maintain .,"['drink', 'space']"
 195,waiting area there should be more chairs .,['seat']
 196,there should be improvement in waiting room . there is only 2 3 iron chair . there should be sofa or bed for customer to sit .,['seat']
 197,"the service charge must be reduced . in guwahati there is only one service center , it must be increased , so there will be a competition . it is problematic as here is only one service center . if service center will be more then everyone will not gather in one place .",['space']
-198,in waiting area whatever the work is done it shouold be visible clearly .,['work']
+198,in waiting area whatever the work is done it shouold be visible clearly .,['others']
 199,seating chair should be good quality . waiting area should be open place .,"['space', 'seat']"
 200,"in a waiting area should be have water , snakes and canteen service if females customer comes . there should be have different room . there has one room for driver also . there should be have extra room .","['drink', u'driver']"
 201,"in a waiting area has mosquito , feeling hot . there have safe not good too place is also less there have no tv . there should be have tv there should be have news paper also , so we can read the news paper and also see the tv freely .","['tv', 'space']"
 202,waiting area should be improved . in waiting area people should be changed because they are not good .,['space']
-203,in waiting area has sofa news paper also . every facility is good but they should be improve . to more comfort to customer . it should be good comfort .,['comfort']
-204,in waiting area having a lots of rush they should be arrange seating area . they should be ask for water when customer go therein waiting area has lots of people look like fare . so they should be improve it .,"['drink', 'lot']"
+203,in waiting area has sofa news paper also . every facility is good but they should be improve . to more comfort to customer . it should be good comfort .,['others']
+204,in waiting area having a lots of rush they should be arrange seating area . they should be ask for water when customer go therein waiting area has lots of people look like fare . so they should be improve it .,['drink']
 205,provide one separate waiting room in that also provide ac .,['ac']
 206,waiting area is very small so it should be big improve,['space']
 207,"there was no door in bathroom i felt very uncleanliness , atmosphere of waiting room was not at all good . service charge is too much , must be reduce it and keep the cleanliness of waiting room .",['cleanli']
@@ -211,15 +211,15 @@ id,comment,label
 209,"waiting area should be comfortable . canteen is there but food quality is not good . in waiting area which the sofa 's are there they are very old they are very hard . for customer tea , coffee should be good .","['food', 'seat', 'drink', 'space']"
 210,there should be an improvement on waiting areas . when there is too much crowd on that time we faces problem on seat . so they should increase the seats or else are fine . seat must be increased in waiting area .,"['seat', 'space']"
 211,they should improve for comfortless in the waiting area,['others']
-212,while we are taking away the car for servicing they are taken more waiting time . it should be less servicing time . there should be servicing immediately .,['others']
-213,"have some separate lounge for the customers where they can sit . they do n't have sufficient place , i mean , small lounge . they should have a lounge because if somebody gets tired , can sit for 2 3 hours , proper place for all . they can provide tea or coffee that is very satisfying .","['drink', u'loung', 'space']"
-214,there is no air condition no good bathroom facility . so they should available ac waiting area bathroom should be good . also they should represent tea of coffee . when we are sitting waiting 1 hours . so they arrange 1 coffee for the customers .,"[u'condit', 'drink', u'hour']"
-215,waiting area should be wider for the comfort . customers have to wait for long time at waiting area so they need very airy and wide area .,"['comfort', 'space']"
+212,while we are taking away the car for servicing they are taken more waiting time . it should be less servicing time . there should be servicing immediately .,['time']
+213,"have some separate lounge for the customers where they can sit . they do n't have sufficient place , i mean , small lounge . they should have a lounge because if somebody gets tired , can sit for 2 3 hours , proper place for all . they can provide tea or coffee that is very satisfying .","['space', 'drink', 'seat']"
+214,there is no air condition no good bathroom facility . so they should available ac waiting area bathroom should be good . also they should represent tea of coffee . when we are sitting waiting 1 hours . so they arrange 1 coffee for the customers .,"['drink', 'seat']"
+215,waiting area should be wider for the comfort . customers have to wait for long time at waiting area so they need very airy and wide area .,['time']
 216,space should be increased . staff should explain that who to talk with the customer . trained staff should be their ask them that they require tea or coffee .,"['staff', 'drink', 'space']"
-217,they have to provide the separate waiting time and cabin . room for staff members and customers . cleanness is very poor . facilities are not good for the high quality customers,"['cleanli', 'staff']"
-218,they should understand the satisfaction of customer . they should talk slowly not quickly . if they waiting in waiting area they should have go there and tell them your work will done . other facility has there .,['work']
+217,they have to provide the separate waiting time and cabin . room for staff members and customers . cleanness is very poor . facilities are not good for the high quality customers,"['cleanli', 'staff', 'time']"
+218,they should understand the satisfaction of customer . they should talk slowly not quickly . if they waiting in waiting area they should have go there and tell them your work will done . other facility has there .,['others']
 219,"increase the proper capacity , cleaning must be there , electrical room freshener must be available there it is much be working condition .",['cleanli']
-220,waiting time is too long this time should be reduced .,['others']
+220,waiting time is too long this time should be reduced .,['time']
 221,space should be increase on waiting area .,['space']
 222,"make it feel fresh they should have good bathroom at waiting area . they should available snacks bar also they should be available vending machine , vending machine means you want to buy any snacks like buy chocolates or coffee .",['drink']
 223,waitting area should be more broad as it is very short place,['space']
@@ -230,7 +230,7 @@ id,comment,label
 228,they should give quick service to customer in waiting area .,['space']
 229,"the waiting area should be improved . those who come in service center , there should be a separate waiting area for them with the arrangement of tea and coffee along with t . v .","['drink', 'space']"
 230,for drivers food facility should be free,[u'driver']
-231,have to wait more in waiting room lobby . they must complete the service on time as promised .,['others']
+231,have to wait more in waiting room lobby . they must complete the service on time as promised .,['time']
 232,they should offer tea water to customer in waiting area in summer season .,['drink']
 233,waiting room is not good . not satisfied with waiting room .,['others']
 234,in washing area there should be maintained,['space']
@@ -239,28 +239,28 @@ id,comment,label
 237,in service center was waiting area was rough and also not for driver class we done the 10000 servicing instead of waiting area has no space customer wait outside while servicing in waiting area has only 4 5 sofa area was so less in servicing take 3 4 hour so that why they should be provide wi fi facility there have no person to ask for water and also toilet was unclean .,['space']
 238,waiting area must be increased . they should provide the separate area waiting area for gents ladies,['space']
 239,waiting area should be improved more space,['space']
-240,they should be give our car which time they said after servicing,['others']
+240,they should be give our car which time they said after servicing,['time']
 241,waiting area should be limited,['space']
 242,they should be provide good service seating arrangement if some customer wait till morning to evening than they should provide at least tea an coffee,['drink']
 243,there should be separate waiting area . car should not be park there . we can see our car servicing from waiting area so there should be arrangement like so .,['space']
 244,their have less waiting area,['space']
-245,"in waiting area there is a television but it is not working and air condition facility should be there . it is a summary season , so if there is a air condition . it will be very good .",[u'condit']
-246,"in waiting area there should be magazines book list for reading . by this customer will not face any problem . if customers want to seat read , there is no such arrangement .",[u'magazin']
+245,"in waiting area there is a television but it is not working and air condition facility should be there . it is a summary season , so if there is a air condition . it will be very good .",['others']
+246,"in waiting area there should be magazines book list for reading . by this customer will not face any problem . if customers want to seat read , there is no such arrangement .",['read']
 247,waiting areas have in servicing center which is not good for women \? toyota show room is good but when we go waiting area it look like factory . they should put tv in waiting area waiting area should be neat clean service center people should be improve waiting area .,['cleanli']
-248,waiting area should be proper and there tv magazine also available .,['tv']
-249,"in waiting area all facility are there like tv , newspaper etc . but if any staff will come to us after 15 minutes it will be good or some snakes should be available there .","['tv', 'staff']"
+248,waiting area should be proper and there tv magazine also available .,['read']
+249,"in waiting area all facility are there like tv , newspaper etc . but if any staff will come to us after 15 minutes it will be good or some snakes should be available there .","['read', 'staff']"
 250,"in waiting area there should be tv , sofa air condition facility .",['seat']
 251,waiting area is not proper . in waiting they do n't ask that they require tea or coffee .,"['drink', 'space']"
 252,waiting area is very small . that area must be increased then it is better for us .,['space']
 253,waiting area was not good . at the time of last 2 servicing news paper are not in one place it was scattered . ac water was leaking . i do n't like it . these should be proper cleaning good atmosphere over there so customer feel good .,"['cleanli', 'drink', 'space']"
-254,waiting are should be systematic . if we are come with family kids then there should be something for entertainment .,[u'someth']
+254,waiting are should be systematic . if we are come with family kids then there should be something for entertainment .,['others']
 255,waiting area should be improve . they should provide tea or water to customer . ac should be on at the summer season . there are 2 stalls at waiting . one is for vip one is for driver all other people . so it is not right . they should treat all the people as same .,"['ac', 'drink', u'driver', 'space']"
-256,amana toyota should be available t . v for entertainment to the customers in waiting area they should available newspapers also . they should have clean good bathroom . they should available prayer hall also in service center,['cleanli']
-257,they should remove the dining table from waiting area they should do arrangement for sitting over there . we have wait 1 to 1 half hour so they should do proper sitting arrangement .,[u'hour']
+256,amana toyota should be available t . v for entertainment to the customers in waiting area they should available newspapers also . they should have clean good bathroom . they should available prayer hall also in service center,"['read', 'cleanli']"
+257,they should remove the dining table from waiting area they should do arrangement for sitting over there . we have wait 1 to 1 half hour so they should do proper sitting arrangement .,['seat']
 258,in waiting area there should be some entitlement because i feel boor .,['others']
-259,they tell 10mintues takes more time to do it . for any paper or printout to remove it takes 10 minutes for waiting . if any customer will come their then their work should be done . because customer should not wait for them .,['work']
+259,they tell 10mintues takes more time to do it . for any paper or printout to remove it takes 10 minutes for waiting . if any customer will come their then their work should be done . because customer should not wait for them .,['time']
 260,they provide rest room but it should be more neat clean . and the quality of the lunch must be improved .,['cleanli']
-261,"i am not comfortable with the waiting area . i purchased 10 to 12 lakh car , but i definitely saw how they are servicing my car , they are in front of our doing servicing then i satisfied , they should be allowed at servicing time also we see them how they are working . at waiting are their concept i do n't liked . one day i am going at nashik wason toyota , they not changed oil etc . , but they taken me charge . that is why we are should be allowed at when they are servicing time .",['space']
+261,"i am not comfortable with the waiting area . i purchased 10 to 12 lakh car , but i definitely saw how they are servicing my car , they are in front of our doing servicing then i satisfied , they should be allowed at servicing time also we see them how they are working . at waiting are their concept i do n't liked . one day i am going at nashik wason toyota , they not changed oil etc . , but they taken me charge . that is why we are should be allowed at when they are servicing time .","['time', 'space']"
 262,i told this before also we can \? t charge our mobile over there . there charge wit is not good . change the machine of there .,['others']
 263,in waiting area their should be improvement .,['space']
 264,waiting area should be improve .,['space']
@@ -269,21 +269,21 @@ id,comment,label
 267,"the seating arrangement should be good in the waiting area , it is no well maintained .",['seat']
 268,at waiting area should be provide cctv camera because of customer saw them how they are servicing our car .,['others']
 269,the chair should be comfortable in waiting area .,['seat']
-270,"1 \) while dropping the car to service . it is not an issue but while returning back to home have to spend around 200 rs . same happen while coming to picking up the car . dealership provide facilities till certain area . so the dealership must provide other facilities to us like providing other cars . 2 \) there is no ac in waiting area . due to that it is so suffocating there even no cold water there . ladies and children have to wait there . due to sweating due not there they have to wait for 3 4 hours . hence the waiting area must be improved . even the two wheeler service center having good waiting area , why not these dealerships cannot have the facilities .","['ac', u'hour', 'space', 'drink', u'issu']"
-271,waiting area not comfort table . it should be comfort table it help the customer,['comfort']
-272,space is small of waiting area . there should be some thing for time pass there should be chatting .,"[u'thing', 'space']"
+270,"1 \) while dropping the car to service . it is not an issue but while returning back to home have to spend around 200 rs . same happen while coming to picking up the car . dealership provide facilities till certain area . so the dealership must provide other facilities to us like providing other cars . 2 \) there is no ac in waiting area . due to that it is so suffocating there even no cold water there . ladies and children have to wait there . due to sweating due not there they have to wait for 3 4 hours . hence the waiting area must be improved . even the two wheeler service center having good waiting area , why not these dealerships cannot have the facilities .","['ac', 'drink', 'space', 'time']"
+271,waiting area not comfort table . it should be comfort table it help the customer,['others']
+272,space is small of waiting area . there should be some thing for time pass there should be chatting .,"['time', 'space']"
 273,in sharayu toyota service center there is no any canteen facility available . they should be provide canteen facility or they should be give the pick up drop facility to near by restaurant .,['others']
 274,they should provide net facility at waiting area .,['space']
-275,interior of waiting area is not good sitting arrangement is also ok . there should be one screen . so we come to now work is going on of my car or there should be on holding mirror . so we can saw or car while they are working .,['others']
+275,interior of waiting area is not good sitting arrangement is also ok . there should be one screen . so we come to now work is going on of my car or there should be on holding mirror . so we can saw or car while they are working .,['seat']
 276,there are different cabins for driver customers in waiting area,[u'driver']
 277,waiting area should be improved . they should offer customer tea water 2 3 time i visited there did n't offer me anything .,"['drink', 'space']"
 278,have to take token to meet the attendee . if any counter is free then other customer should be allowed . they must change the token system .,['others']
 279,waiting area should be clean .,['cleanli']
-280,"seating place bisleri is there . it should be cleaned . they provide magazines overthere , but its 6 months old , should be provide new magazines . customers getting board to read 6 months magazines . if provide new magazine then customer get pass the time to read new magazine .","['cleanli', u'magazin', 'space']"
+280,"seating place bisleri is there . it should be cleaned . they provide magazines overthere , but its 6 months old , should be provide new magazines . customers getting board to read 6 months magazines . if provide new magazine then customer get pass the time to read new magazine .","['read', 'cleanli', 'time', 'space']"
 281,canteen should increase .,['food']
 282,which waiting area has in service center there are space are less it should increase . area are little congested their has no facility of cold water . so this should be doing it .,"['drink', 'space']"
 283,"in wafting area lanson dealership is not clean , the chair is not kept clean , and the sitting arrange med is not proper they should keep wafting area neat and clean .",['seat']
-284,waiting area should be at basement so that as soon as vehicle parked at basement where they worked on vehicle in front of us or also there should be way to go up stairs from inside they have their waiting room from where we didn \? t come know that they are working on my vehicle since we not able o see my vehicle from their waiting room .,[u'vehicl']
+284,waiting area should be at basement so that as soon as vehicle parked at basement where they worked on vehicle in front of us or also there should be way to go up stairs from inside they have their waiting room from where we didn \? t come know that they are working on my vehicle since we not able o see my vehicle from their waiting room .,['others']
 285,in waiting area cleanness washroom are not good .,['cleanli']
 286,"waiting room should be increased , it will good for customer .",['others']
 287,"in waiting area sunlight comes , so feeling hot they should be clean also should be little bit cage in waiting area .",['cleanli']
@@ -292,10 +292,10 @@ id,comment,label
 290,waiting area should be large and also it should be better,['space']
 291,"at service center 50 customer taken a way the vehicle , but at waiting area there is only limited place standing at 10 15 people , reaming people are standing \( waiting \) outside hence , waiting , area should be large , it should be better for customer .",['space']
 292,improvement needed in waiting area like as there is only one room provided to the ola driver customer . at least they should provide one separate room to the owner as they purchase the ola by spending lakhs of rupees i . e . separate room should be provided to the owner driver .,[u'driver']
-293,everything should be improved . i visited there at 11o \? clock . i wait there long time they committed 1 hrs . but they take 21 2 hrs . waiting area should be improved .,"[u'hr', 'space']"
-294,there should improve waiting time they are taking 2 3 hours more time then committed .,[u'hour']
+293,everything should be improved . i visited there at 11o \? clock . i wait there long time they committed 1 hrs . but they take 21 2 hrs . waiting area should be improved .,"['time', 'space']"
+294,there should improve waiting time they are taking 2 3 hours more time then committed .,['time']
 295,waiting area should be improvement . at waiting area the pillow and bed are cleaning so it should be cleaning,"['cleanli', 'space']"
-296,"the waiting area in harsha dealership the sitting arrangement and hospitality facility \( medical kit \) should be there compulsory , if they more improve the waiting area it will be good .",['others']
+296,"the waiting area in harsha dealership the sitting arrangement and hospitality facility \( medical kit \) should be there compulsory , if they more improve the waiting area it will be good .",['seat']
 297,"at waiting area is not cleaning , there sofa very dirty , it should be changed also it cleaning .",['cleanli']
 298,they had to now that which improvement they had to do it . what i should tell them which improvement they had to do there .,['others']
 299,space is very less in waiting area they should increase the space .,['space']
@@ -304,51 +304,51 @@ id,comment,label
 302,at waiting area space very small places . it should be large . they should asked customers in tea coffee and water .,"['drink', 'space']"
 303,"waiting area of dealership , it should be improve . seating arrangement should be proper . ac and all those thing they should be imposed then it should be little bit comfortable .","['ac', 'space']"
 304,waiting area is at open space they should maintain it properly and make good sitting arrangement .,['space']
-305,"at waiting area should be separate place car owner and driver and also . separate provide tea , water and ac car owner and driver , lunch should be provided to the driver . at small companies are provided good facility , hence big showrooms are should be provide good facility .","['showroom', 'drink', 'space']"
+305,"at waiting area should be separate place car owner and driver and also . separate provide tea , water and ac car owner and driver , lunch should be provided to the driver . at small companies are provided good facility , hence big showrooms are should be provide good facility .","['drink', 'space']"
 306,waiting area should be big .,['space']
-307,"i was waiting there , so one customer also was there who increase the volume . that 's why there should be have partitian there is only one room lay wood something should be out there . it should be close in mahindra should be has different waiting area for the driver owner also . so it should be like this .","[u'someth', u'driver']"
-308,"they are not doing proper water wash , the body of the car also not cleaned properly . they actually told us to collect at \? 4pm \? however after we reached that time only they started to water service . then we have to wait for 1 to 1 . 5 hours already 10 customers are in queue . so we are not getting place to sit in waiting room we have wait outside the service center","['drink', u'hour', 'space']"
-309,"waiting time should be improved and setting should be more , they are doing modified but it should be increased .",['others']
-310,customer comes nearby the waiting area and calling also . them waiting area it should be not bit improve oiling and all of thing should be not have near by the waiting area .,"[u'thing', 'space']"
+307,"i was waiting there , so one customer also was there who increase the volume . that 's why there should be have partitian there is only one room lay wood something should be out there . it should be close in mahindra should be has different waiting area for the driver owner also . so it should be like this .",[u'driver']
+308,"they are not doing proper water wash , the body of the car also not cleaned properly . they actually told us to collect at \? 4pm \? however after we reached that time only they started to water service . then we have to wait for 1 to 1 . 5 hours already 10 customers are in queue . so we are not getting place to sit in waiting room we have wait outside the service center","['drink', 'space', 'time']"
+309,"waiting time should be improved and setting should be more , they are doing modified but it should be increased .",['time']
+310,customer comes nearby the waiting area and calling also . them waiting area it should be not bit improve oiling and all of thing should be not have near by the waiting area .,['space']
 311,in washing area they should do work properly there . the drive owner sat together . so they fell unsecured so it should be different in it . drive language is different .,['space']
 312,no improvement require,['no improve']
 313,no improvement require,['no improve']
 314,"if the stage of waiting area will be large then it will be good . if they set up more service center , then it would be better . the sales of jayashree are increased , as inn earlier nobody could think about toyota but now a days everyone is buying toyota . in birbhum there is no service center . if any service center will be open in district town , then it would be better .",['others']
-315,"when we are waiting at waiting area they should keep some magazine , news paper and snacks , then we will be get some entertainment .",[u'magazin']
+315,"when we are waiting at waiting area they should keep some magazine , news paper and snacks , then we will be get some entertainment .",['read']
 316,in waiting room they should increase little bit entertainment . in waiting room should have drinking water \? so it \? s good for us . in summer time they should charge the drinking water like according to climate they give .,['drink']
-317,"at first they need to improve the waiting area . six sits are there it should minimum 150 to 200 sq . ft . six persons are sited very ugly . if area is big so we feel good . for short area we face problem , by forced we sited at sales area . after some time staffs gives up us from there . one children room available there where kids are playing games , this room we can see from sales room but at service room we cannot see the room . i think customers are god they should not behave like silly with them , they should behave polite with customer .","['staff', 'person', u'game', 'space']"
+317,"at first they need to improve the waiting area . six sits are there it should minimum 150 to 200 sq . ft . six persons are sited very ugly . if area is big so we feel good . for short area we face problem , by forced we sited at sales area . after some time staffs gives up us from there . one children room available there where kids are playing games , this room we can see from sales room but at service room we cannot see the room . i think customers are god they should not behave like silly with them , they should behave polite with customer .","['seat', 'time', 'space']"
 318,waiting area is very small . rush is there so you should increase the seating arrangement .,"['seat', 'space']"
-319,waiting area is small only 4 or 5 people can sit there . waiting area should be big .,['space']
-320,"sitting place should be good . because customer are tired to stand one place for servicing takes huge time , so they should provide seating facility before it \? s good . now it \? s new open this showroom which is very bad . driver or owner seat in one place , so it should be different .","['showroom', 'space']"
-321,they say anyone of the staff will attend you in the waiting area but none of the staff come . so it takes lot of time to wait . these service must do in better way .,"['way', 'lot', 'staff']"
+319,waiting area is small only 4 or 5 people can sit there . waiting area should be big .,"['space', 'seat']"
+320,"sitting place should be good . because customer are tired to stand one place for servicing takes huge time , so they should provide seating facility before it \? s good . now it \? s new open this showroom which is very bad . driver or owner seat in one place , so it should be different .",['space']
+321,they say anyone of the staff will attend you in the waiting area but none of the staff come . so it takes lot of time to wait . these service must do in better way .,"['time', 'staff']"
 322,"at waiting area wi fi is not connected it should be connect , normally there is no sitting facility tea , coffee facilities , so they should provide all this things .",['drink']
-323,last time there waiting area was good this time they had done some changes . i did not found open area to sit wait .,['space']
+323,last time there waiting area was good this time they had done some changes . i did not found open area to sit wait .,"['seat', 'time']"
 324,waiting area needs to be clean there should be change in housekeeping staff .,['cleanli']
 325,waiting area should be littlie bit comfortable and hygienic . in waiting area should be have cafeteria . tea coffee and snacks should be available .,['drink']
-326,waiting area is very big . they should do shedding over there . at the time of rainy season they should cover up it .,['space']
+326,waiting area is very big . they should do shedding over there . at the time of rainy season they should cover up it .,"['time', 'space']"
 327,waiting area should be clean it properly .,['cleanli']
-328,customer should be comfortable in waiting area with refreshment and magazine .,[u'magazin']
+328,customer should be comfortable in waiting area with refreshment and magazine .,['read']
 329,we are not getting tea water on time . they should give at least water on time .,['drink']
-330,waiting area needs to be car properly . waiting area is too small even five customer ca n't sit it is very congested . waiting area needs to treated properly . only 4 customer can sit . at least they need to provide tea or coffee or water facility needs to be provided to customer . if this changes happens it is too good and there needs to be big space where some more persons able to sit comfortably .,"['need', 'drink', 'space']"
+330,waiting area needs to be car properly . waiting area is too small even five customer ca n't sit it is very congested . waiting area needs to treated properly . only 4 customer can sit . at least they need to provide tea or coffee or water facility needs to be provided to customer . if this changes happens it is too good and there needs to be big space where some more persons able to sit comfortably .,"['seat', 'drink', 'space']"
 331,waiting area was not in proper cleaning .,['cleanli']
-332,"if a customer is waiting in waiting room for more than 5 6 hours . the basic need of customer needs to be fulfilled . they need to provide with refreshments . water facility needs to be good . there must be aura system . there must be snacks facility to the customer even it is chargeable because dealership is inside where up to 2 km no shops are available . if the customer waiting for 5 6 in waiting rooms they must provide with some magazines in english , hindi or news related books must be provided . gorakhpur dealership is inside where there is no shop available in that location .","['need', u'magazin', 'drink', u'hour']"
+332,"if a customer is waiting in waiting room for more than 5 6 hours . the basic need of customer needs to be fulfilled . they need to provide with refreshments . water facility needs to be good . there must be aura system . there must be snacks facility to the customer even it is chargeable because dealership is inside where up to 2 km no shops are available . if the customer waiting for 5 6 in waiting rooms they must provide with some magazines in english , hindi or news related books must be provided . gorakhpur dealership is inside where there is no shop available in that location .","['read', 'drink', 'time']"
 333,at waiting place should be large .,['space']
-334,they should make much better sitting arrangements .,['others']
+334,they should make much better sitting arrangements .,['seat']
 335,they should change the setup of waiting zone . they should add couple of sofas . they should make some arrangements like when we seat in waiting zone from that place we can easily see how they servicing the car .,"['seat', 'space']"
 336,"waiting area should be more better waiting area was very congested and very small space , something 150 or 200 square fit now it should be in vertically it gives more spaces .",['space']
 337,waiting area was very short and the space was also very small .,['space']
 338,they have to improve the cleanliness .,['cleanli']
-339,"sitting area was not good . waiting area should be improved . they should provide special chair , entertainment ac for customers .","['seat', 'space']"
+339,"sitting area was not good . waiting area should be improved . they should provide special chair , entertainment ac for customers .","['space', 'seat']"
 340,they should give some better facilities in waiting area . they should arrange better amenities in waiting area .,['space']
 341,"in waiting area sofa should be clean and which they provide refreshment like tea and coffee quality , it should be improve .",['drink']
 342,there is no space in waiting area . the chair over there is in lokhand where it is not comfortable . the chair should be changed,"['seat', 'space']"
 343,should improve comfort area and clean the waiting area .,['cleanli']
 344,"in waiting area staff was not provide water or cold drinks to a customer atlatl they should or cold drinks to a customer , at least they should provide water or cold drink in summer time to a customer .",['drink']
-345,waiting area is too small because everyone sits over there employee driver and customer . separating waiting area should be provided to customer .,"[u'driver', 'space']"
-346,waiting area needs to be different .,['need']
+345,waiting area is too small because everyone sits over there employee driver and customer . separating waiting area should be provided to customer .,"['space', 'seat']"
+346,waiting area needs to be different .,['space']
 347,the dsk there is tv in waiting area . there should be facility of customer as per their choice to watch the channels .,['tv']
-348,"first of all , they should improve in waiting area . they should also deliver car within time they commit us to deliver car . they tell us time of 4 . 00 pm and deliver our car at 5 6 7 pm . they should not do like this to people because everyone is not free to wait there . all the people waiting in room was talking the same that they gave us time of 4 pm and delivered our vehicle at 8 pm .","[u'vehicl', 'space']"
-349,waiting area should little bit increase and also they should informed to the customer how much it will take time for a servicing .,['others']
+348,"first of all , they should improve in waiting area . they should also deliver car within time they commit us to deliver car . they tell us time of 4 . 00 pm and deliver our car at 5 6 7 pm . they should not do like this to people because everyone is not free to wait there . all the people waiting in room was talking the same that they gave us time of 4 pm and delivered our vehicle at 8 pm .","['time', 'space']"
+349,waiting area should little bit increase and also they should informed to the customer how much it will take time for a servicing .,['time']
 350,owner waiting room should be comfort also they should provide tea snakes . for driver there should be having another waiting room .,"['drink', u'driver']"
 351,waiting area should be improved because so much dust particles are found there .,['others']
 352,1 . they have to improve the waiting area,['space']
@@ -360,85 +360,85 @@ id,comment,label
 358,waiting area should be improve . they should provide bathroom facility over there .,['space']
 359,the waiting space needs to be more sofa waiting launched air conditioner needs to be proper .,['space']
 360,there should be improvement in host facility in waiting area .,['others']
-361,"at waiting area not proper , there provided two tv , but , if two servicing car coming after not enough place for sitting . if we are sitting one side then we don \? t saw the tv ,","['tv', 'space']"
+361,"at waiting area not proper , there provided two tv , but , if two servicing car coming after not enough place for sitting . if we are sitting one side then we don \? t saw the tv ,","['tv', 'seat', 'space']"
 362,"when we go in the waiting area they do not ask for tea coffee . we have to ask from them . the one who come to take our car we ask them to get tea for us , but they themselves never ask us if we want tea , water or cold . do we have to ask you for one cup of tea \? dealership is 20 kms away from my home . now who will go 20 kms and then come back again 20 kms so we wait in waiting area then they must at least ask customers for a cup of tea .",['drink']
 363,they should do alternate arrangement for the customer if the waiting is full .,['others']
 364,"service center should be more haijenik , because of there too much mosquitoes , less place also they same treated for taxi driver and owner of the car and they look after us for taxi driver , so it should improvement . if we compared to maruthi and toyota \? the toyota plan is very less . so , toyota haijenik is all good , and then also it is comfortable for us .",['space']
 365,if the space should be larger then it would be better .,['space']
 366,"they should have a good waiting area , they should have a separate area for drivers , the noise of outside should not come in waiting area , waiting area should neat clean , comfortable and ac should working there , they should ask for tea , coffee water to customers .",['drink']
 367,they waiting area should be cool,['space']
-368,"waiting area is not good , it \? s now alcohol room . waiting area should be like from where the car servicing can be seen . i don \? t like it at all , i \? m very dissatisfied for it . when guwahati opened , it should be like that . now the room is not fit for the owners for sitting . it \? s for driver for smoking , it \? s a smoking zone now . there should be glass in the room that we can see the car servicing .","[u'driver', 'space']"
-369,"due to less staff wait time is more , cleanness facilities are not available",['cleanli']
+368,"waiting area is not good , it \? s now alcohol room . waiting area should be like from where the car servicing can be seen . i don \? t like it at all , i \? m very dissatisfied for it . when guwahati opened , it should be like that . now the room is not fit for the owners for sitting . it \? s for driver for smoking , it \? s a smoking zone now . there should be glass in the room that we can see the car servicing .","[u'driver', 'seat', 'space']"
+369,"due to less staff wait time is more , cleanness facilities are not available",['time']
 370,"their ac should be working because it was summer season . their should be have tv and wi fi connection also , so customer was not feel bored there .","['tv', 'ac']"
-371,they should have a lounge and a separate cabin in waiting area .,[u'loung']
+371,they should have a lounge and a separate cabin in waiting area .,['others']
 372,ladies washroom must be anywhere else in the waiting area .,['others']
 373,"waiting area should be improved . area should be more comfortable and available , and then it would be better . i don \? t have any particular idea how to improve but i know it should be improved . it should be enthusiast and sophisticated , modern then i like that .",['space']
 374,they should ask for tea coffee to customer .,['drink']
-375,"they have to provide the alternate staff in the lunch time , reduce the waiting time",['staff']
+375,"they have to provide the alternate staff in the lunch time , reduce the waiting time",['time']
 376,"washroom dustbin should be neat clean , they should improve the whole system .",['cleanli']
 377,there is no seating arrangement and drinking water facility in waiting room . there should be good seating arrangement and cleanliness should be maintained .,"['drink', 'seat']"
 378,they should increase the space of waiting area .,['space']
-379,lanson pondicherry waiting area is very clean and also provide tea and coffee . but there is no entertainment facility at waiting area . it would be good if they keep tv or newspaper .,"['tv', 'drink']"
-380,"waiting room must be available for customers , the available waiting area is not having better facilities . the current waiting room is in front of the service adviser hence , customers are watching tv and due to that service adviser is facing disturbance when they pick phone calls and its affect their own duty . we reached dealership after 10 40 km of driving and we also need to wait 3 hours . privacy is needed to rest in waiting room and sometimes my family as well come with me . we want some privacy for watching tv , reading newspaper etc . hence , need improvement on waiting room .","['tv', u'hour', 'space']"
+379,lanson pondicherry waiting area is very clean and also provide tea and coffee . but there is no entertainment facility at waiting area . it would be good if they keep tv or newspaper .,"['read', 'drink']"
+380,"waiting room must be available for customers , the available waiting area is not having better facilities . the current waiting room is in front of the service adviser hence , customers are watching tv and due to that service adviser is facing disturbance when they pick phone calls and its affect their own duty . we reached dealership after 10 40 km of driving and we also need to wait 3 hours . privacy is needed to rest in waiting room and sometimes my family as well come with me . we want some privacy for watching tv , reading newspaper etc . hence , need improvement on waiting room .","['tv', 'read', 'time', 'space']"
 381,respondent not answered how to improve .,['others']
 382,"they should replace the fans with ac in waiting area , should have charging points and waiting should be neat clean .",['cleanli']
-383,they took too much time for servicing . i take my car at 11 30pm for servicing and i wait there for some time and i came back at 5 00 to 5 30pm they text me that they have done the servicing . the work which can be finish in 2 hours they are taking 4 hours for that work . if they improve the timing then it would be better .,[u'hour']
+383,they took too much time for servicing . i take my car at 11 30pm for servicing and i wait there for some time and i came back at 5 00 to 5 30pm they text me that they have done the servicing . the work which can be finish in 2 hours they are taking 4 hours for that work . if they improve the timing then it would be better .,['time']
 384,waiting area should have ac .,['ac']
-385,"there is a tea stall in waiting area for customers \? satisfaction if they should provide other facilities then it would be good . they should improve the waiting area because the customers have to wait a long time there for servicing . there should be an isolated area where magazine , tv , newspaper and some informatics thing should be available . there should be a laptop charger point for charging the laptop . they can provide better quality of sofa and chairs .","['tv', 'drink', 'seat', 'space']"
+385,"there is a tea stall in waiting area for customers \? satisfaction if they should provide other facilities then it would be good . they should improve the waiting area because the customers have to wait a long time there for servicing . there should be an isolated area where magazine , tv , newspaper and some informatics thing should be available . there should be a laptop charger point for charging the laptop . they can provide better quality of sofa and chairs .","['read', 'drink', 'seat', 'time']"
 386,respondent not answered how to improve .,['others']
 387,"ac should working properly in the waiting area , whenever we take our family to service center they have n't any sitting space for us .",['space']
 388,they should have the refreshment in waiting area link magazine and should offer something with the tea .,['drink']
-389,waiting area facilities are less need to improve the same . by improvement i mean they need to fix an air conditioner and the system like lunch there should be canteen . the dealership service is good there is no issues .,"[u'issu', 'space']"
-390,they should have sitting arrangment and ac at the service center and should have a person to offer tea coffie .,['ac']
+389,waiting area facilities are less need to improve the same . by improvement i mean they need to fix an air conditioner and the system like lunch there should be canteen . the dealership service is good there is no issues .,['space']
+390,they should have sitting arrangment and ac at the service center and should have a person to offer tea coffie .,['seat']
 391,less number of sofa was available in dealership staff was not giving proper response .,['seat']
 392,waiting area should be more specious because their waiting area has less space .,['space']
 393,there is no specific setting arrangement for people . you people are know better as how to do improvement .,['others']
 394,they should change the drinking water time to time and waiting area should be comfortable,['drink']
-395,sitting arrangement should be better .,['others']
+395,sitting arrangement should be better .,['seat']
 396,"improvement should be done in waiting area , it means that is a complete open area . there is no personal area like particular room should be there . that room is not there . it means if we came to pick up our car so meetings are held in that area . due to this getting disturbed again and again .",['space']
-397,waiting area need to improve . cleanliness stuff was here there in waiting area . if we go to waiting area of audi or any premium segment experience like that was not here . suppose we go to buy brand of mercedes audi or bmw their display cleanliness have premium smell . the way they explain customers provide them seating arrangement . maruti toyota don \? t car like them . your service area waiting area both are together . this both should be different .,"['need', 'cleanli', 'space', 'way']"
+397,waiting area need to improve . cleanliness stuff was here there in waiting area . if we go to waiting area of audi or any premium segment experience like that was not here . suppose we go to buy brand of mercedes audi or bmw their display cleanliness have premium smell . the way they explain customers provide them seating arrangement . maruti toyota don \? t car like them . your service area waiting area both are together . this both should be different .,"['cleanli', 'space']"
 398,"at waiting area , they have ac but not in use and even no fan . all the facilities are there but also they need to repair ac as well .",['ac']
 399,it is fine but should be more comfortable,['others']
 400,the waiting area is not so special . for sitting they were keep iron chair instead of this they should keep sofa so we feel relax .,"['seat', 'space']"
 401,waiting area should be clean,['cleanli']
 402,driver left the car for servicing and the dealership given place to wait and there are only 4 cots that need to be increased so that it will be helpful to them .,['space']
 403,no improvement require,['no improve']
-404,waiting area needs to increase the most . if 5 people are seating in waiting area 6th person cannot seat . seating arrangement should be proper in waiting area .,"['need', 'person', 'space']"
-405,there is no canteen facility at mascot toyota . the drivers are always irritated and there are no sitting facility . they should improve their sitting arrangements . the ac there does not work properly . they 've only kept ac for namesake . we get food coupons at uttam toyota but at mascot toyota we do n't get anything . they do n't even come to offer us something to drink or eat .,"['food', 'ac', u'driver', u'someth']"
-406,"at waiting room , they have tv but need to fix tata sky connection . also replace all the newspaper into new newspapers . avoiding the machinery tea and coffee they need to make manually the tea and coffee to its customers","['tv', 'drink']"
-407,should require space in waiting area . there should available facility of tea coffee . the waiting area should be a place from where i can see the car servicing . so i can see what they do with my car and what they done . this all things should be available there .,"[u'thing', 'drink', 'space']"
+404,waiting area needs to increase the most . if 5 people are seating in waiting area 6th person cannot seat . seating arrangement should be proper in waiting area .,['space']
+405,there is no canteen facility at mascot toyota . the drivers are always irritated and there are no sitting facility . they should improve their sitting arrangements . the ac there does not work properly . they 've only kept ac for namesake . we get food coupons at uttam toyota but at mascot toyota we do n't get anything . they do n't even come to offer us something to drink or eat .,"['food', 'ac', 'seat']"
+406,"at waiting room , they have tv but need to fix tata sky connection . also replace all the newspaper into new newspapers . avoiding the machinery tea and coffee they need to make manually the tea and coffee to its customers","['tv', 'read', 'drink']"
+407,should require space in waiting area . there should available facility of tea coffee . the waiting area should be a place from where i can see the car servicing . so i can see what they do with my car and what they done . this all things should be available there .,"['drink', 'space']"
 408,i cant say anything . they should know this themselves .,['others']
-409,dealership location is out side of our town . private cabs like ola and uber are there . they are delight because it the showroom comes on highway and dhanbad is in which place its in town there is no showroom available . other companies showroom is available in side of the town . but this far way from highway . we are facing some problem in that for traveling . if they are able to open their 2nd unit inside the town so it will helpful for other people also . in town any middle location will do it should be maximum 4 5 km or 10 km that is also fine but it was far way .,"['showroom', 'space', 'way']"
+409,dealership location is out side of our town . private cabs like ola and uber are there . they are delight because it the showroom comes on highway and dhanbad is in which place its in town there is no showroom available . other companies showroom is available in side of the town . but this far way from highway . we are facing some problem in that for traveling . if they are able to open their 2nd unit inside the town so it will helpful for other people also . in town any middle location will do it should be maximum 4 5 km or 10 km that is also fine but it was far way .,['space']
 410,"location was dirty and also inside had no any facility , so it should be improve , then it should be good for us .",['others']
 411,waiting area should be develop . ac is not available there phone facility also not available so it should be available .,"['ac', 'space']"
-412,there are not paying attention to the customer who sited in waiting area . after taking appointment before 10 15 days we have to wait half an hour over there . they are not asking about water also at waiting area so they should affer water at waiting area .,"['drink', u'hour']"
+412,there are not paying attention to the customer who sited in waiting area . after taking appointment before 10 15 days we have to wait half an hour over there . they are not asking about water also at waiting area so they should affer water at waiting area .,"['time', 'drink']"
 413,no improvement require,['no improve']
-414,sitting arrangement should be good at waiting area tv or magazine should be available for customer over there .,['tv']
-415,they had tried to work on pending area . but not worked properly as there is not proper seat for driver and owner . and the other thing the seat they have designed is not at all comfortable . from both side ac is there them too the sunrays affect . seat should be properly designed and they should put curtains our there . inside there is no arrangement of cold water . we have to go out and say loudly to bring water . they should cover the window of car by some cloth so that sunrays would not affect the person .,"['person', 'ac', 'seat', 'drink', 'space']"
+414,sitting arrangement should be good at waiting area tv or magazine should be available for customer over there .,['seat']
+415,they had tried to work on pending area . but not worked properly as there is not proper seat for driver and owner . and the other thing the seat they have designed is not at all comfortable . from both side ac is there them too the sunrays affect . seat should be properly designed and they should put curtains our there . inside there is no arrangement of cold water . we have to go out and say loudly to bring water . they should cover the window of car by some cloth so that sunrays would not affect the person .,"['ac', 'seat', 'drink', 'space']"
 416,in madhuban toyota waiting area seats are uncomfortable so seat should be contort able and also waiting area size are small .,['seat']
 417,"there should be sofa available at waiting area , ac tv also should be there for entertainment .",['tv']
-418,sitting arrangement should be better .,['others']
-419,sitting arrangement should be good . canteen should be available over there .,['food']
+418,sitting arrangement should be better .,['seat']
+419,sitting arrangement should be good . canteen should be available over there .,"['food', 'seat']"
 420,"which have waiting area in dealership so , then they should be maintain properly their waiting area was little bit less compare to honda waiting area they have small waiting area because i also have honda car and their waiting area are big .",['others']
 421,they have to provide separate waiting area for drivers and owner 's and their staff,[u'driver']
 422,"there waiting area was always croudy . there also have only one washroom for all people in waiting area tv are always on , so that 's why i feel disturbance there always when we go there in waiting area , it was full . that 's why we always seat in front office of dealership compare to other dealership there have less space , so it 's should be increase .","['tv', 'space']"
-423,air conditioner facility is not available over there fan facility also less . waiting time needs to be improved .,['need']
-424,if someone visits to the center they say wait for half an hour till that time no one ask for water . customer used to come at sunny time and sits over there . if customer ask thorn only they response .,['drink']
+423,air conditioner facility is not available over there fan facility also less . waiting time needs to be improved .,['time']
+424,if someone visits to the center they say wait for half an hour till that time no one ask for water . customer used to come at sunny time and sits over there . if customer ask thorn only they response .,"['drink', 'seat']"
 425,"should be improve in waiting area , driver or driver both seating place be different .",['space']
-426,they should improve waiting area sitting arrangement should be increase . the customer who wait at waiting area then all staff should give proper attention to all the customer give same service to all customer without be buyers .,['staff']
-427,they should do proper sitting arrangement at waiting area to sit customer .,['space']
+426,they should improve waiting area sitting arrangement should be increase . the customer who wait at waiting area then all staff should give proper attention to all the customer give same service to all customer without be buyers .,"['staff', 'seat']"
+427,they should do proper sitting arrangement at waiting area to sit customer .,['seat']
 428,they should improve in waiting area . there ac was damage because of it customer till hot . they should repair a ac and also put a fan .,"['ac', 'space']"
-429,waiting area should be different . the member work over there and at the same place the customer use to sit . because of that the member who work gets disturb because the customer use to bit chichat . waiting area should be at some different place not nearby the service center . like customer and work are different . if the customer who comes first and then the second customer . so the second customer work was completed instead of first customer . it will hurt the first customer so waiting area should be different and the customer should sit separately .,"['work', 'space']"
-430,"in waiting area the waiting room is completely inside ac also not available over there . i gave complaint also many times . i have 5 innova in our family . so at the time of servicing every year we give a complaint from showroom service center in 3 4 km it \? s not on straight road , not on highway but is too inside of the road from there we are not getting any vehicle so we have to sit there only . so there ac is not working the ac is too old one . we told them to repair it also we have told that we are giving money .","[u'vehicl', 'ac', 'showroom']"
+429,waiting area should be different . the member work over there and at the same place the customer use to sit . because of that the member who work gets disturb because the customer use to bit chichat . waiting area should be at some different place not nearby the service center . like customer and work are different . if the customer who comes first and then the second customer . so the second customer work was completed instead of first customer . it will hurt the first customer so waiting area should be different and the customer should sit separately .,"['seat', 'space']"
+430,"in waiting area the waiting room is completely inside ac also not available over there . i gave complaint also many times . i have 5 innova in our family . so at the time of servicing every year we give a complaint from showroom service center in 3 4 km it \? s not on straight road , not on highway but is too inside of the road from there we are not getting any vehicle so we have to sit there only . so there ac is not working the ac is too old one . we told them to repair it also we have told that we are giving money .","['ac', 'seat', 'time']"
 431,there should be one more coffee machine at waiting area .,['drink']
-432,"there should be a facility of a . c in waiting area there should be newspaper , magazines also in waiting area , it will be good for us .",[u'magazin']
+432,"there should be a facility of a . c in waiting area there should be newspaper , magazines also in waiting area , it will be good for us .",['read']
 433,"they not offer tea snacks at waiting room . there is no shops nearby . at satarkar toyota they should offer customer tea , water .",['drink']
 434,should be improve in waiting area space should be increase and also they should attempt a customer first .,['space']
 435,they should have more space and ac should be working .,['space']
-436,they should have a proper sitting arrangement in waiting area .,['space']
+436,they should have a proper sitting arrangement in waiting area .,['seat']
 437,the waiting are in open space waiting area and service area are at same place . it should be at different places .,['space']
 438,there should be food facility available at waiting area . there tv also not working properly news channel not available on tv .,"['food', 'tv']"
-439,proper sitting arrangement should be there at waiting area . there should be facility of water at the summer time ac or cooler should be available over there .,"['drink', 'space']"
+439,proper sitting arrangement should be there at waiting area . there should be facility of water at the summer time ac or cooler should be available over there .,"['drink', 'seat']"
 440,in waiting area should be have canteen facility .,['space']
 441,wifi was not working properly and also water supply not proper .,['drink']
 442,they should improve waiting area . most driver stay over owner not available more . they should give cold water and canteen facility over there .,"['drink', u'driver', 'space']"
@@ -455,10 +455,10 @@ id,comment,label
 453,in waiting area should be have more pace it was so small,['others']
 454,i think in millennium toyota service center i . e . i didn \? t come across waiting area . sitting problem is there in millennium toyota so they have to need some sofa or some chairs or seats arrangement .,"['space', 'seat']"
 455,they should improve in waiting area before it we get tea or coffee but now we not get anything so they should concentrate on it .,['drink']
-456,the waiting area is open where the customer used to wait . we can able to see the customer who are sitting out if it is not in open area then it is good .,['space']
+456,the waiting area is open where the customer used to wait . we can able to see the customer who are sitting out if it is not in open area then it is good .,"['seat', 'space']"
 457,perilously the waiting area was clean . now i feel like the chain is not comfortable and feel like station chair so we require sofa chair for sitting this not fair .,"['cleanli', 'seat']"
 458,waiting area is not clean and they do not response us .,['cleanli']
 459,they should arrange chair properly then it will be good . they should share the car performance with the customer .,['seat']
 460,the tv setup box not have all channel which is at waiting area .,['tv']
-461,if in service center some one take longer time for completing the servicing of the car that time they should make good comfortable waiting area for customer who is present during his car servicing at service center .,['others']
-462,sharayu toyota waiting rooms don \? t have space there should be one sofa for customer to rest . they should provide games and canteen facility also .,"[u'game', 'space']"
+461,if in service center some one take longer time for completing the servicing of the car that time they should make good comfortable waiting area for customer who is present during his car servicing at service center .,['time']
+462,sharayu toyota waiting rooms don \? t have space there should be one sofa for customer to rest . they should provide games and canteen facility also .,['space']
