@@ -4,7 +4,7 @@ import post_processing
 import rule_based_clustering
 from q2_timeinfo import time_extract, day_extract
 import pandas as pd
-from survey_writer import write_Surveycsv
+from survey_writer import write_Label
 
 label = pd.Series()
 
@@ -23,7 +23,7 @@ def process_question(ques_num, csv_path):
     func = switcher.get(ques_num, lambda: "Question number must between 1-10 (inclusive)!")
     # Execute the function
     result_cluster = func(content, csv_path)
-    write_Surveycsv(content, result_cluster, '2_tmp.csv')
+    write_Label(content, result_cluster, '2_tmp.csv')
 
 def q1(content, csv_path):
     return

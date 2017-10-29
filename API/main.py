@@ -5,12 +5,12 @@ import rule_based_clustering
 import auto_clustering
 from q2_timeinfo import time_extract, day_extract
 import pandas as pd
-from survey_writer import write_Surveycsv
+from survey_writer import write_Label
 
 
 label = pd.Series()
 
-from survey_writer import write_Surveycsv
+from survey_writer import write_Label
 
 label = pd.Series()
 
@@ -31,7 +31,8 @@ def process_question(ques_num, input_path, output_path):
     # Execute the function
     result_cluster = func(content, input_path)
     # print result_cluster
-    write_Surveycsv(content, result_cluster, output_path+'/%d_tmp.csv' %ques_num)
+    # write_Label(content, result_cluster, output_path + '/%d_tmp.csv' % ques_num)
+    write_Label(content, result_cluster, input_path, index)
 
 
 
