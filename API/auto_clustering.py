@@ -28,8 +28,9 @@ def lsi(corpus):
     similarity_matrix = f(similarity_matrix)
     return similarity_matrix
 
-def spectral_clustering(similarity_matrix, corpus):
-    n_clusters_ = 5
+
+def spectral_clustering(similarity_matrix, corpus, cluster_num=5):
+    n_clusters_ = cluster_num
     sc = SpectralClustering(n_clusters=n_clusters_, affinity='precomputed').fit(similarity_matrix)
     labels = sc.labels_
     word_labels = ['']*len(labels)

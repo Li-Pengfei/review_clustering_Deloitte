@@ -30,16 +30,15 @@ def process_question(ques_num, input_path, cluster_info_path):
     # Get the function from switcher dictionary to process corresponding question
     func = switcher.get(ques_num)
     # Execute the function
-    result_cluster, cluster_info_all = func(content, input_path)
+    result_cluster, cluster_info_all = func(content)
     # print result_cluster
-    print cluster_info_all
-    # write_Label(content, result_cluster, output_path + '/%d_tmp.csv' % ques_num)
+    # print cluster_info_all
     survey_writer.write_Label(content, result_cluster, input_path, index)
     survey_writer.write_Cluster_Info(cluster_info_all, cluster_info_path)
 
 
 
-def q1(content, csv_path):
+def q1(content):
     pos_tags = ['NN', 'NNS', 'JJ', 'JJR', 'JJS']
     doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=1)
     doc_nn, nn_extracted = doc_extracted[0], doc_extracted[1]
@@ -61,7 +60,7 @@ def q1(content, csv_path):
 
 
 
-def q2(content, csv_path):
+def q2(content):
     pos_tags = []
     doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=2)
     doc_day, doc_time = doc_extracted[0], doc_extracted[1]
@@ -87,7 +86,7 @@ def q2(content, csv_path):
 
     return doc_day + doc_time + doc_noimprove + doc_other, cluster_info_all
 
-def q3(content, csv_path):
+def q3(content):
     pos_tags = ['NN', 'NNS', 'JJ', 'JJR', 'JJS']
     doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=3)
     doc_nn, nn_extracted = doc_extracted[0], doc_extracted[1]
@@ -114,7 +113,7 @@ def q3(content, csv_path):
 
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
-def q4(content, csv_path):
+def q4(content):
     pos_tags = ['NN', 'NNS']
     doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=4)
     doc_nn, nn_extracted = doc_extracted[0], doc_extracted[1]
@@ -133,7 +132,7 @@ def q4(content, csv_path):
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
 
-def q5(content, csv_path):
+def q5(content):
     pos_tags = ['NN', 'NNS', 'JJ', 'JJR', 'JJS']
     doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=5)
     doc_nn, nn_extracted = doc_extracted[0], doc_extracted[1]
@@ -145,7 +144,7 @@ def q5(content, csv_path):
     # LSI + Spectral Clustering
     nn_extracted_corpus = [nn_single[0] for nn_single in nn_extracted]
     similarity_matrix = auto_clustering.lsi(nn_extracted_corpus)
-    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_corpus)
+    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_corpus, cluster_num=10)
     for idx in range(len(nn_extracted_corpus)):
         nn_extracted[idx] = nn_extracted[idx] + (label_auto[idx],)
     # for idx in range(len(doc_noimprove)):
@@ -156,7 +155,7 @@ def q5(content, csv_path):
     cluster_info_all = [[5, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
-def q6(content, csv_path):
+def q6(content):
     pos_tags = ['NN', 'NNS']
     doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=6)
     doc_nn, nn_extracted = doc_extracted[0], doc_extracted[1]
@@ -183,7 +182,7 @@ def q6(content, csv_path):
 
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
-def q7(content, csv_path):
+def q7(content):
     pos_tags = ['NN', 'NNS']
     doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=7)
     doc_nn, nn_extracted = doc_extracted[0], doc_extracted[1]
@@ -201,7 +200,7 @@ def q7(content, csv_path):
 
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
-def q8(content, csv_path):
+def q8(content):
     pos_tags = ['NN', 'NNS']
     doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=8)
     doc_nn, nn_extracted = doc_extracted[0], doc_extracted[1]
@@ -220,7 +219,7 @@ def q8(content, csv_path):
 
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
-def q9(content, csv_path):
+def q9(content):
     pos_tags = ['NN', 'NNS']
     doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=9)
     doc_nn, nn_extracted = doc_extracted[0], doc_extracted[1]
@@ -239,7 +238,7 @@ def q9(content, csv_path):
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
 
-def q10(content, csv_path):
+def q10(content):
     pos_tags = ['NN', 'NNS', 'JJ', 'JJR', 'JJS']
     doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=10)
     doc_nn, nn_extracted = doc_extracted[0], doc_extracted[1]
@@ -251,7 +250,7 @@ def q10(content, csv_path):
     # LSI + Spectral Clustering
     nn_extracted_corpus = [nn_single[0] for nn_single in nn_extracted]
     similarity_matrix = auto_clustering.lsi(nn_extracted_corpus)
-    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_corpus)
+    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_corpus, cluster_num=10)
     for idx in range(len(nn_extracted_corpus)):
         nn_extracted[idx] = nn_extracted[idx] + (label_auto[idx],)
     # for idx in range(len(doc_noimprove)):
