@@ -265,7 +265,7 @@ def q10(content):
     
 if __name__ == '__main__':
 
-    process_question(10, '../raw_data/survey_data.csv')
+    process_question(2, '../raw_data/survey_data.csv','../raw_data/survey_cluster.csv')
 
 
 

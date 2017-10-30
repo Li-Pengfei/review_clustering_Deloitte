@@ -6,6 +6,8 @@ import string
 import re
 stemmer = PorterStemmer()
 
+global_remove_list = ['car', 'vehicl','improv','dealership','custom',"center", "centr", "toyota","thing",'everyth','anyth'\
+                    'someth','dealer','work','showroom']
 def process_corpus(content, pos_tags, question):
     assert (question in range(1, 11)), "Question number must between 1-10 (inclusive)!"
 
@@ -125,9 +127,8 @@ def process_corpus(content, pos_tags, question):
 
 def rule_q1(sen, ne):
     clean_ne = list(set(ne))
-    remove_words = ["appoint", "improv", "custom", "servic", "peopl", "person", "facil", "avail", "good", \
-                    "center", "centr", "car", "dealership", "vehicl", "toyota", "problem", "work", "much", \
-                    "thing", "possibl", "need"]  # stemmed
+    remove_words = global_remove_list+["appoint", "improv", "custom", "servic", "peopl", "person", "facil", "avail", "good", \
+                    "problem", "work", "possibl", "need"]  # stemmed
     clean_ne = [word for word in clean_ne if word not in remove_words]
     save_words = ["without", "call", "wait", "pick", "pickup", "drop", "remind", "inform", "respons", "book", "fix", \
                   "receiv", "same", "sm", "immedi", "urgent", "urgenc", "deliv", "deliveri", "explain",
@@ -211,8 +212,7 @@ def rule_q2(sen, ne):
 
 def rule_q3(sen, ne):
     clean_ne = list(set(ne))
-    remove_words = ['custom', 'car', 'vehicl', 'servic', 'toyota', 'thing', 'good', \
-                    'day', 'center', 'centr', 'dealership', 'time']  # stemmed
+    remove_words = global_remove_list+['custom', 'good', 'day', 'center', 'centr', 'dealership', 'time']  # stemmed
     clean_ne = [word for word in clean_ne if word not in remove_words]
 
     save_words = ['inform', 'tell', 'advis', 'understand', 'advic', 'call', 'answer', 'correct', 'guid', \
@@ -255,12 +255,12 @@ def rule_q3(sen, ne):
 
 def rule_q4(sen, ne):
     clean_ne = list(set(ne))
-    remove_words = ['car', 'vehicl','improv','dealership','custom','receiv','satisfact','respond','servic','time',\
-                    'innova','center','facil','feel','ok','tell','problem','pay','dealer','attent','hurri','condit',\
+    remove_words = global_remove_list+['receiv','satisfact','respond','servic','time',\
+                    'innova','facil','feel','ok','tell','problem','pay','dealer','attent','hurri','condit',\
                     'ant','fine','deliver','get','question','deliveri','need','quality','day','side','kind','chang',\
                     'honda','visit','told','speak','ask','requir','maruti','cleanli','henc','place','area','hand',\
                     'compani','process','qualiti','care','outsid','complaint','depart','hour','wait','front','home',\
-                    'centr','system','work','thing','part']
+                    'centr','system','work','part']
     clean_ne = [word for word in clean_ne if word not in remove_words and len(word)>1]
     save_words = ['polish','wash','interior','extra','rupe','check','vacuum','clean','intern',
                   'insid','ac','dry','engin','inter']
@@ -322,9 +322,9 @@ def rule_q5(sen, ne):
 
 def rule_q6(sen, ne):
     clean_ne = list(set(ne))
-    remove_words = ['dealership', 'locat', 'servic', 'center', 'car', 'place', 'custom', 'toyota', \
-                    'facil', 'time', 'problem', 'centr', 'home', 'side', 'vehicl', 'peopl', 'lot', 'compani', \
-                    'day', 'area', 'dealer']  #stemmed
+    remove_words = global_remove_list+['locat', 'servic', 'center', 'car', 'place', \
+                    'facil', 'time', 'problem', 'home', 'side', 'peopl', 'lot', 'compani', \
+                    'day', 'area']  #stemmed
     clean_ne = [word for word in clean_ne if word not in remove_words]
 
     save_words = ["pick", 'pickup', 'drop', 'insid', 'outsid', 'eat']  # stemmed
@@ -362,9 +362,9 @@ def rule_q6(sen, ne):
 
 def rule_q7(sen, ne):
     clean_ne = list(set(ne))
-    remove_words = ['custom','wait','car','facil','dealership','toyota','center','person',\
+    remove_words = global_remove_list+['wait','car','facil','person',\
                     'room','improv','servic','arrang','owner','peopl','lot','loung',\
-                    'issu','thing','someth','showroom','way','condit','vehicl','need']
+                    'issu','thing','someth','showroom','way','condit','need']
     clean_ne = [word for word in clean_ne if word not in remove_words and len(word)>1]    
     save_words = ['clean','cleanli','sit']
     clean_ne = list(set(clean_ne + [stemmer.stem(word) for word in sen.split() if stemmer.stem(word) in save_words]))
@@ -402,9 +402,9 @@ def rule_q7(sen, ne):
 
 def rule_q8(sen, ne):
     clean_ne = list(set(ne))
-    remove_words = ['custom', 'hour', 'minut', 'time', 'car', 'vehicl', 'servic', 'work', 'day', 'week', 'dealership', \
-                    'center', 'centr','toyota', 'appoint', 'pm', 'problem', 'period', 'part', 'morn', 'improv', \
-                    'hr', 'peopl', 'person', 'lot', 'need', 'even', 'henc', 'manag', 'area', 'thing', 'till', \
+    remove_words = global_remove_list+['hour', 'minut', 'time', 'day', 'week', \
+                    'appoint', 'pm', 'problem', 'period', 'part', 'morn', \
+                    'hr', 'peopl', 'person', 'lot', 'need', 'even', 'henc', 'manag', 'area', 'till', \
                     'place', 'job', 'compani', 'today', 'call', 'clock', 'o\'clock', 'min', 'chang', \
                     'half', 'number']  # stemmed
     clean_ne = [word for word in clean_ne if word not in remove_words]
@@ -473,13 +473,13 @@ def rule_q8(sen, ne):
 
 def rule_q9(sen, ne):
     clean_ne = list(set(ne))
-    remove_words = ['car', 'vehicl','improv','dealership','custom','receiv','satisfact','respond','servic','time',\
-                    'center','facil','feel','ok','tell','problem','pay','dealer','attent','hurri','condit','ant',\
+    remove_words = global_remove_list+['receiv','satisfact','respond''time',\
+                    'facil','feel','ok','tell','problem','pay','attent','hurri','condit','ant',\
                     'fine','deliver','get','question','deliveri','need','quality','day','amount','kind','chang',\
                     'honda','visit','told','speak','ask','requir','toyota','henc','place','area','filter','align',\
                     'compani','process','qualiti','care','outsid','complaint','manag','glass','inform','break','pad',\
-                    'wash','clean','water','showroom','staff','month','year','side','break','oil','market','batteri',\
-                    'pack','packag','product','work']
+                    'wash','clean','water','staff','month','year','side','break','oil','market','batteri',\
+                    'pack','packag','product']
     clean_ne = [word for word in clean_ne if word not in remove_words and len(word)>1]    
     save_words = ['spare','reduc','reason','discount','extra','rupe','compar','differ','pay','payment','ac','part',
                   'check','free','increas','high','low','less','more','costli','decreas','insur','explain']
