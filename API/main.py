@@ -5,7 +5,7 @@ import rule_based_clustering
 import auto_clustering
 from q2_timeinfo import time_extract, day_extract
 import pandas as pd
-from survey_writer import write_Label
+import survey_writer
 
 
 label = pd.Series()
@@ -15,7 +15,7 @@ from survey_writer import write_Label
 label = pd.Series()
 
 
-def process_question(ques_num, input_path, output_path):
+def process_question(ques_num, input_path, cluster_info_path):
     assert (ques_num in range(1, 11)), "Question number must between 1-10 (inclusive)!"
 
     file = survey_reader.read_Surveycsv(input_path)
@@ -29,10 +29,11 @@ def process_question(ques_num, input_path, output_path):
     # Get the function from switcher dictionary to process corresponding question
     func = switcher.get(ques_num)
     # Execute the function
-    result_cluster = func(content, input_path)
+    result_cluster, cluster_info_all = func(content, input_path)
     # print result_cluster
     # write_Label(content, result_cluster, output_path + '/%d_tmp.csv' % ques_num)
-    write_Label(content, result_cluster, input_path, index)
+    survey_writer.write_Label(content, result_cluster, input_path, index)
+    survey_writer.write_Cluster_Info(cluster_info_all, cluster_info_path)
 
 
 
@@ -49,9 +50,12 @@ def q1(content, csv_path):
     # extract one most representative keyword for each sentence
     nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=1)
     df = post_processing.df_count(nn_clean)
-    nn_extracted = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
+    nn_extracted, cluster_info = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
 
-    return nn_extracted + doc_noimprove + doc_other
+    # cluster_info_all format: [[question number, label, freq, centroid_sentence],...]
+    cluster_info_all = [[1, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+
+    return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
 
 
@@ -78,16 +82,23 @@ def q3(content, csv_path):
     print 'Comment without keywords:', len(doc_other), "\n"
 
     # Rule-based clustering
-    unclustered_index, nn_extracted = rule_based_clustering.clustering(nn_extracted, question=3)
+    unclustered_index, nn_extracted, cluster_info = rule_based_clustering.clustering(nn_extracted, question=3)
+
+    # cluster_info_all format: [[question number, label, freq, centroid_sentence],...]
+    cluster_info_all = [[3, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
 
     # LSI + Spectral Clustering
     nn_extracted_unclustered = [nn_extracted[i][0] for i in unclustered_index]
+    doc_nn_unclustered = [doc_nn[i] for i in unclustered_index]
     similarity_matrix = auto_clustering.lsi(nn_extracted_unclustered)
-    label_auto = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_unclustered)
+    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_unclustered)
     for i, idx in enumerate(unclustered_index):
         nn_extracted[idx] = nn_extracted[idx] + (label_auto[i],)
 
-    return nn_extracted + doc_noimprove + doc_other
+    for info in cluster_info:
+        cluster_info_all.append([3, info[0], info[1], doc_nn_unclustered[info[2]][0]])
+
+    return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
 def q4(content, csv_path):
     pos_tags = ['NN', 'NNS']
@@ -100,9 +111,12 @@ def q4(content, csv_path):
 
     nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=4)
     df = post_processing.df_count(nn_clean)
-    nn_extracted = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
+    nn_extracted, cluster_info = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
 
-    return nn_extracted + doc_noimprove + doc_other
+    # cluster_info_all format: [[question number, label, freq, centroid_sentence],...]
+    cluster_info_all = [[4, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+
+    return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
 
 def q5(content, csv_path):
@@ -117,14 +131,16 @@ def q5(content, csv_path):
     # LSI + Spectral Clustering
     nn_extracted_corpus = [nn_single[0] for nn_single in nn_extracted]
     similarity_matrix = auto_clustering.lsi(nn_extracted_corpus)
-    label_auto = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_corpus)
+    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_corpus)
     for idx in range(len(nn_extracted_corpus)):
         nn_extracted[idx] = nn_extracted[idx] + (label_auto[idx],)
     # for idx in range(len(doc_noimprove)):
     #     doc_noimprove[idx] = doc_noimprove[idx] + ('noimprove', )
     # for idx in range(len(doc_other)):
     #     doc_other[idx] = doc_other[idx] + ('others', )
-    return nn_extracted + doc_noimprove + doc_other
+
+    cluster_info_all = [[5, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+    return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
 def q6(content, csv_path):
     pos_tags = ['NN', 'NNS']
@@ -135,16 +151,23 @@ def q6(content, csv_path):
     print 'Comment without keywords:', len(doc_other), "\n"
 
     # Rule-based clustering
-    unclustered_index, nn_extracted = rule_based_clustering.clustering(nn_extracted, question=6)
+    unclustered_index, nn_extracted, cluster_info = rule_based_clustering.clustering(nn_extracted, question=6)
+
+    # cluster_info_all format: [[question number, label, freq, centroid_sentence],...]
+    cluster_info_all = [[6, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
 
     # LSI + Spectral Clustering
     nn_extracted_unclustered = [nn_extracted[i][0] for i in unclustered_index]
+    doc_nn_unclustered = [doc_nn[i] for i in unclustered_index]
     similarity_matrix = auto_clustering.lsi(nn_extracted_unclustered)
-    label_auto = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_unclustered)
+    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_unclustered)
     for i, idx in enumerate(unclustered_index):
         nn_extracted[idx] = nn_extracted[idx] + (label_auto[i],)
 
-    return nn_extracted + doc_noimprove + doc_other
+    for info in cluster_info:
+        cluster_info_all.append([6, info[0], info[1], doc_nn_unclustered[info[2]][0]])
+
+    return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
 def q7(content, csv_path):
     pos_tags = ['NN', 'NNS']
@@ -157,9 +180,12 @@ def q7(content, csv_path):
 
     nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=7)
     df = post_processing.df_count(nn_clean)
-    nn_extracted = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
+    nn_extracted, cluster_info = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
 
-    return nn_extracted + doc_noimprove + doc_other
+    # cluster_info_all format: [[question number, label, freq, centroid_sentence],...]
+    cluster_info_all = [[7, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+
+    return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
 def q8(content, csv_path):
     pos_tags = ['NN', 'NNS']
@@ -169,14 +195,16 @@ def q8(content, csv_path):
     print 'No comments:', len(doc_noimprove)
     print 'Comment without keywords:', len(doc_other), "\n"
     df = post_processing.df_count_tuple(nn_extracted)
-    # print df
 
     # extract one most representative keyword for each sentence
     nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=8)
     df = post_processing.df_count(nn_clean)
-    nn_extracted = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
+    nn_extracted, cluster_info = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
 
-    return nn_extracted + doc_noimprove + doc_other
+    # cluster_info_all format: [[question number, label, freq, centroid_sentence],...]
+    cluster_info_all = [[8, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+
+    return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
 def q9(content, csv_path):
     pos_tags = ['NN', 'NNS']
@@ -189,9 +217,12 @@ def q9(content, csv_path):
 
     nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=9)
     df = post_processing.df_count(nn_clean)
-    nn_extracted = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
+    nn_extracted, cluster_info = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
 
-    return nn_extracted + doc_noimprove + doc_other
+    # cluster_info_all format: [[question number, label, freq, centroid_sentence],...]
+    cluster_info_all = [[9, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+
+    return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
 
 def q10(content, csv_path):
@@ -206,14 +237,17 @@ def q10(content, csv_path):
     # LSI + Spectral Clustering
     nn_extracted_corpus = [nn_single[0] for nn_single in nn_extracted]
     similarity_matrix = auto_clustering.lsi(nn_extracted_corpus)
-    label_auto = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_corpus)
+    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_corpus)
     for idx in range(len(nn_extracted_corpus)):
         nn_extracted[idx] = nn_extracted[idx] + (label_auto[idx],)
     # for idx in range(len(doc_noimprove)):
     #     doc_noimprove[idx] = doc_noimprove[idx] + ('noimprove', )
     # for idx in range(len(doc_other)):
     #     doc_other[idx] = doc_other[idx] + ('others', )
-    return nn_extracted + doc_noimprove + doc_other
+
+    cluster_info_all = [[10, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+
+    return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
     
 if __name__ == '__main__':

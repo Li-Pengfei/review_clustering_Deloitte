@@ -1,5 +1,6 @@
 from collections import Counter
 import heapq
+from cluster_centroid import get_Cluster_Centroid
 
 def df_count_tuple(corpus):
     text = []
@@ -49,6 +50,9 @@ def main_category_clustering(df, corpus, corpus_keyword):
 
     major_list = [word[0] for word in df_ordered if word[1] > freq_threshold]
     print "major category:\n", major_list
+
+    cluster_info = []  # format: [[label, freq, centroid_sentence_idx],...]
+
     clustered_index = []
     for word in major_list:
         idx_set = []
@@ -57,6 +61,12 @@ def main_category_clustering(df, corpus, corpus_keyword):
                 idx_set.append(idx)
                 corpus[idx] = corpus[idx] + (word,)
         clustered_index = clustered_index + idx_set
+
+        cluster_doc = [corpus[i][0] for i in idx_set]
+        cluster_centroid = get_Cluster_Centroid(cluster_doc)
+        centroid_sentence_idx = idx_set[cluster_centroid]
+        cluster_info.append([word, len(idx_set), centroid_sentence_idx])
+
     clustered_index = set(clustered_index)
     unclustered_index = list(set(range(len(corpus))) - clustered_index)
     print "No. of clustered sentences:", len(clustered_index)
@@ -64,7 +74,7 @@ def main_category_clustering(df, corpus, corpus_keyword):
     for idx in unclustered_index:
         corpus[idx] = corpus[idx] + ("others",)
 
-    return corpus
+    return corpus, cluster_info
 
 
 def filter_rule_q1(doc, xth, corpus_keyword, original_corpus):
