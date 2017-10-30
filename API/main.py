@@ -6,6 +6,7 @@ import auto_clustering
 from q2_timeinfo import time_extract, day_extract
 import pandas as pd
 import survey_writer
+import numpy as np
 
 
 label = pd.Series()
@@ -31,6 +32,7 @@ def process_question(ques_num, input_path, cluster_info_path):
     # Execute the function
     result_cluster, cluster_info_all = func(content, input_path)
     # print result_cluster
+    print cluster_info_all
     # write_Label(content, result_cluster, output_path + '/%d_tmp.csv' % ques_num)
     survey_writer.write_Label(content, result_cluster, input_path, index)
     survey_writer.write_Cluster_Info(cluster_info_all, cluster_info_path)
@@ -63,15 +65,27 @@ def q2(content, csv_path):
     pos_tags = []
     doc_noimprove, doc_extracted, doc_other = pre_processing.process_corpus(content, pos_tags, question=2)
     doc_day, doc_time = doc_extracted[0], doc_extracted[1]
+    label_day = []
+    label_time = []
+    cluster_info_all=[]
+
     for idx, sing_review in enumerate(doc_day):
         doc_day[idx] = (sing_review[0], sing_review[1], day_extract(sing_review))
+        label_day.append(day_extract(sing_review))
     for idx, sing_review in enumerate(doc_time):
         doc_time[idx] = (sing_review[0], sing_review[1], time_extract(sing_review))
-    # for idx, sing_review in enumerate(doc_noimprove):
-    #     doc_noimprove[idx] = (sing_review[0], sing_review[1], 'noimprove')
-    # for idx, sing_review in enumerate(doc_other):
-    #     doc_other[idx] = (sing_review[0], sing_review[1], 'others')
-    return doc_day + doc_time + doc_noimprove + doc_other
+        label_time.append(time_extract(sing_review))
+
+    unique_day, unique_day_indices = np.unique(label_day, return_inverse=True)
+    for i in range(len(unique_day)):
+        label = unique_day[i]
+        idx_set = np.where(np.array(unique_day_indices) == i)[0]
+        sent = doc_day[idx_set[0]][0]
+        cluster_info_all.append([2, label, len(idx_set), sent])
+
+    cluster_info_all.append([2, 'specific_time', len(doc_time), ''])
+
+    return doc_day + doc_time + doc_noimprove + doc_other, cluster_info_all
 
 def q3(content, csv_path):
     pos_tags = ['NN', 'NNS', 'JJ', 'JJR', 'JJS']

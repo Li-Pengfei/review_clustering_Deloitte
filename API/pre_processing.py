@@ -87,7 +87,7 @@ def process_corpus(content, pos_tags, question):
                             else:
                                 doc_other.append((sen, idx, 'others'))
                     else:
-                        continue
+                        doc_other.append((sen, idx, 'others'))
         return doc_noimprove, [doc_days, doc_time], doc_other       
     else:
         print "Contents with multiple sentences are splited into single sentences."

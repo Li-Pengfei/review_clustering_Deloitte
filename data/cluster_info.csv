@@ -100,3 +100,7 @@ question,cluster_label,frequency,sentence_exemplar
 10,call_follow_car,36,1 . they have to increase the follow up calls after servicing .
 10,servic_car_call,132,they should do i feedback call after car servicing .
 10,problem_car_custom,62,follow up calls should be providing to customer after servicing the car .
+2,holidays,13,"as there are many people those who do the service , they only get time for doing servicing on holiday only ."
+2,sunday,225,service center should be open on sunday .
+2,weekend,5,so instead if they would be working on the weekends it would be more comfortable for the customers .
+2,specific_time,331,
