@@ -46,15 +46,15 @@ def q1(content):
     print 'No comments:', len(doc_noimprove)
     print 'Comment without keywords:', len(doc_other), "\n"
     df = post_processing.df_count_tuple(nn_extracted)
-    # print df
 
     # extract one most representative keyword for each sentence
     nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=1)
     df = post_processing.df_count(nn_clean)
-    nn_extracted, cluster_info = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
+    nn_extracted, cluster_info = post_processing.main_category_clustering(df, nn_extracted, nn_clean, doc_nn)
 
     # cluster_info_all format: [[question number, label, freq, centroid_sentence],...]
-    cluster_info_all = [[1, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+    # cluster_info_all = [[1, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+    cluster_info_all = [[1, info[0], info[1], info[2]] for info in cluster_info]
 
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
@@ -95,21 +95,21 @@ def q3(content):
     print 'Comment without keywords:', len(doc_other), "\n"
 
     # Rule-based clustering
-    unclustered_index, nn_extracted, cluster_info = rule_based_clustering.clustering(nn_extracted, question=3)
+    unclustered_index, nn_extracted, cluster_info = rule_based_clustering.clustering(nn_extracted,  doc_nn, question=3)
 
     # cluster_info_all format: [[question number, label, freq, centroid_sentence],...]
-    cluster_info_all = [[3, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+    cluster_info_all = [[3, info[0], info[1], info[2]] for info in cluster_info]
 
     # LSI + Spectral Clustering
     nn_extracted_unclustered = [nn_extracted[i][0] for i in unclustered_index]
     doc_nn_unclustered = [doc_nn[i] for i in unclustered_index]
     similarity_matrix = auto_clustering.lsi(nn_extracted_unclustered)
-    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_unclustered)
+    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_unclustered, doc_nn_unclustered)
     for i, idx in enumerate(unclustered_index):
         nn_extracted[idx] = nn_extracted[idx] + (label_auto[i],)
 
     for info in cluster_info:
-        cluster_info_all.append([3, info[0], info[1], doc_nn_unclustered[info[2]][0]])
+        cluster_info_all.append([3, info[0], info[1], info[2]])
 
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
@@ -124,10 +124,10 @@ def q4(content):
 
     nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=4)
     df = post_processing.df_count(nn_clean)
-    nn_extracted, cluster_info = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
+    nn_extracted, cluster_info = post_processing.main_category_clustering(df, nn_extracted, nn_clean, doc_nn)
 
     # cluster_info_all format: [[question number, label, freq, centroid_sentence],...]
-    cluster_info_all = [[4, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+    cluster_info_all = [[4, info[0], info[1], info[2]] for info in cluster_info]
 
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
@@ -144,15 +144,11 @@ def q5(content):
     # LSI + Spectral Clustering
     nn_extracted_corpus = [nn_single[0] for nn_single in nn_extracted]
     similarity_matrix = auto_clustering.lsi(nn_extracted_corpus)
-    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_corpus, cluster_num=10)
+    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_corpus, doc_nn, cluster_num=10)
     for idx in range(len(nn_extracted_corpus)):
         nn_extracted[idx] = nn_extracted[idx] + (label_auto[idx],)
-    # for idx in range(len(doc_noimprove)):
-    #     doc_noimprove[idx] = doc_noimprove[idx] + ('noimprove', )
-    # for idx in range(len(doc_other)):
-    #     doc_other[idx] = doc_other[idx] + ('others', )
 
-    cluster_info_all = [[5, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+    cluster_info_all = [[5, info[0], info[1], info[2]] for info in cluster_info]
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
 def q6(content):
@@ -164,21 +160,21 @@ def q6(content):
     print 'Comment without keywords:', len(doc_other), "\n"
 
     # Rule-based clustering
-    unclustered_index, nn_extracted, cluster_info = rule_based_clustering.clustering(nn_extracted, question=6)
+    unclustered_index, nn_extracted, cluster_info = rule_based_clustering.clustering(nn_extracted, doc_nn, question=6)
 
     # cluster_info_all format: [[question number, label, freq, centroid_sentence],...]
-    cluster_info_all = [[6, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+    cluster_info_all = [[6, info[0], info[1], info[2]] for info in cluster_info]
 
     # LSI + Spectral Clustering
     nn_extracted_unclustered = [nn_extracted[i][0] for i in unclustered_index]
     doc_nn_unclustered = [doc_nn[i] for i in unclustered_index]
     similarity_matrix = auto_clustering.lsi(nn_extracted_unclustered)
-    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_unclustered)
+    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_unclustered, doc_nn_unclustered)
     for i, idx in enumerate(unclustered_index):
         nn_extracted[idx] = nn_extracted[idx] + (label_auto[i],)
 
     for info in cluster_info:
-        cluster_info_all.append([6, info[0], info[1], doc_nn_unclustered[info[2]][0]])
+        cluster_info_all.append([6, info[0], info[1], info[2]])
 
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
@@ -193,10 +189,10 @@ def q7(content):
 
     nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=7)
     df = post_processing.df_count(nn_clean)
-    nn_extracted, cluster_info = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
+    nn_extracted, cluster_info = post_processing.main_category_clustering(df, nn_extracted, nn_clean, doc_nn)
 
     # cluster_info_all format: [[question number, label, freq, centroid_sentence],...]
-    cluster_info_all = [[7, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+    cluster_info_all = [[7, info[0], info[1], info[2]] for info in cluster_info]
 
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
@@ -212,10 +208,10 @@ def q8(content):
     # extract one most representative keyword for each sentence
     nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=8)
     df = post_processing.df_count(nn_clean)
-    nn_extracted, cluster_info = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
+    nn_extracted, cluster_info = post_processing.main_category_clustering(df, nn_extracted, nn_clean, doc_nn)
 
     # cluster_info_all format: [[question number, label, freq, centroid_sentence],...]
-    cluster_info_all = [[8, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+    cluster_info_all = [[8, info[0], info[1], info[2]] for info in cluster_info]
 
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
@@ -230,10 +226,10 @@ def q9(content):
 
     nn_clean = post_processing.filter_ne(nn_extracted, doc_nn, df, question=9)
     df = post_processing.df_count(nn_clean)
-    nn_extracted, cluster_info = post_processing.main_category_clustering(df, nn_extracted, nn_clean)
+    nn_extracted, cluster_info = post_processing.main_category_clustering(df, nn_extracted, nn_clean, doc_nn)
 
     # cluster_info_all format: [[question number, label, freq, centroid_sentence],...]
-    cluster_info_all = [[9, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+    cluster_info_all = [[9, info[0], info[1], info[2]] for info in cluster_info]
 
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 
@@ -250,15 +246,11 @@ def q10(content):
     # LSI + Spectral Clustering
     nn_extracted_corpus = [nn_single[0] for nn_single in nn_extracted]
     similarity_matrix = auto_clustering.lsi(nn_extracted_corpus)
-    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_corpus, cluster_num=10)
+    label_auto, cluster_info = auto_clustering.spectral_clustering(similarity_matrix, nn_extracted_corpus, doc_nn, cluster_num=10)
     for idx in range(len(nn_extracted_corpus)):
         nn_extracted[idx] = nn_extracted[idx] + (label_auto[idx],)
-    # for idx in range(len(doc_noimprove)):
-    #     doc_noimprove[idx] = doc_noimprove[idx] + ('noimprove', )
-    # for idx in range(len(doc_other)):
-    #     doc_other[idx] = doc_other[idx] + ('others', )
 
-    cluster_info_all = [[10, info[0], info[1], doc_nn[info[2]][0]] for info in cluster_info]
+    cluster_info_all = [[10, info[0], info[1], info[2]] for info in cluster_info]
 
     return nn_extracted + doc_noimprove + doc_other, cluster_info_all
 

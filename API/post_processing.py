@@ -37,7 +37,7 @@ def filter_ne(corpus, doc_nn, df, question):  # assuming each review contain one
             corpus_keyword.append(doc[0])
     return corpus_keyword
 
-def main_category_clustering(df, corpus, corpus_keyword):
+def main_category_clustering(df, corpus, corpus_keyword, original_sent):
     # Freq threshold is determined by insuring 70% of sentences is clustered
     df_ordered = df.most_common()
     sent_count = 0
@@ -51,7 +51,7 @@ def main_category_clustering(df, corpus, corpus_keyword):
     major_list = [word[0] for word in df_ordered if word[1] > freq_threshold]
     print "major category:\n", major_list
 
-    cluster_info = []  # format: [[label, freq, centroid_sentence_idx],...]
+    cluster_info = []  # format: [[label, freq, centroid_sentence],...]
 
     clustered_index = []
     for word in major_list:
@@ -62,10 +62,10 @@ def main_category_clustering(df, corpus, corpus_keyword):
                 corpus[idx] = corpus[idx] + (word,)
         clustered_index = clustered_index + idx_set
 
-        cluster_doc = [corpus[i][0] for i in idx_set]
+        cluster_doc = [original_sent[i][0] for i in idx_set]
         cluster_centroid = get_Cluster_Centroid(cluster_doc)
-        centroid_sentence_idx = idx_set[cluster_centroid]
-        cluster_info.append([word, len(idx_set), centroid_sentence_idx])
+        # centroid_sentence_idx = idx_set[cluster_centroid]
+        cluster_info.append([word, len(idx_set), cluster_centroid])
 
     clustered_index = set(clustered_index)
     unclustered_index = list(set(range(len(corpus))) - clustered_index)
