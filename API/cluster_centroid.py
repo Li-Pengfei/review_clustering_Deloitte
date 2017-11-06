@@ -20,10 +20,18 @@ def get_Cluster_Centroid(corpus):
 
     sentence = []
     sent_tokens = []
+    min_sent_len = 100
+    max_sent_len = 0
     for comment in corpus:
         sents = sent_tokenize(comment)    # split comment into single sentence
         for sent in sents:
             sentence.append(sent)
+            # find min and max sentence length
+            sent_len = len(word_tokenize(sent))
+            if sent_len < min_sent_len:
+                min_sent_len = sent_len
+            if sent_len > max_sent_len:
+                max_sent_len = sent_len
             # tokenize and remove stopwords
             tokens = [token for token in word_tokenize(sent) if token not in stop_words]
             # stemming and remove common words
@@ -46,6 +54,14 @@ def get_Cluster_Centroid(corpus):
     sim_list = cosine_similarity(centroid_vec.reshape(1, -1),numpy_matrix )[0]
     sim_ordered = sorted(enumerate(sim_list), key=lambda item: -item[1])
 
+    # find the sentence closest to centroid and length smaller than max_sent_len
+    sent_len_threshold = min_sent_len + (max_sent_len-min_sent_len)/4
+    # print "threshold", sent_len_threshold
     centroid_sent = sentence[sim_ordered[0][0]]
+    for index in sim_ordered:
+        sent_len = len(word_tokenize(sentence[index[0]]))
+        if sent_len < sent_len_threshold:
+            centroid_sent = sentence[index[0]]
+            break
     return centroid_sent
 
