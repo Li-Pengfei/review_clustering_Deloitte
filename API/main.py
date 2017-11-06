@@ -7,6 +7,7 @@ from q2_timeinfo import time_extract, day_extract
 import pandas as pd
 import survey_writer
 import numpy as np
+from cluster_centroid import get_Cluster_Centroid
 
 
 label = pd.Series()
@@ -32,7 +33,7 @@ def process_question(ques_num, input_path, cluster_info_path):
     # Execute the function
     result_cluster, cluster_info_all = func(content)
     # print result_cluster
-    # print cluster_info_all
+    print cluster_info_all
     survey_writer.write_Label(content, result_cluster, input_path, index)
     survey_writer.write_Cluster_Info(cluster_info_all, cluster_info_path)
 
@@ -79,7 +80,7 @@ def q2(content):
     for i in range(len(unique_day)):
         label = unique_day[i]
         idx_set = np.where(np.array(unique_day_indices) == i)[0]
-        sent = doc_day[idx_set[0]][0]
+        sent = get_Cluster_Centroid([doc_day[i][0] for i in idx_set])
         cluster_info_all.append([2, label, len(idx_set), sent])
 
     cluster_info_all.append([2, 'specific_time', len(doc_time), ''])
