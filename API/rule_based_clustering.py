@@ -1,6 +1,6 @@
 from cluster_centroid import get_Cluster_Centroid
 
-def clustering(corpus, question):
+def clustering(corpus,original_sent,  question ):
     clustered_index = []
 
     cluster_info = []  # format: [[label, freq, centroid_sentence_idx],...]
@@ -20,10 +20,9 @@ def clustering(corpus, question):
                 corpus[idx] = corpus[idx] + (word,)
         clustered_index = clustered_index + idx_set
 
-        cluster_doc = [corpus[i][0] for i in idx_set]
+        cluster_doc = [original_sent[i][0] for i in idx_set]
         cluster_centroid = get_Cluster_Centroid(cluster_doc)
-        centroid_sentence_idx = idx_set[cluster_centroid]
-        cluster_info.append([word, len(idx_set), centroid_sentence_idx])
+        cluster_info.append([word, len(idx_set), cluster_centroid])
 
     clustered_index = set(clustered_index)
     unclustered_index = list(set(range(len(corpus))) - clustered_index)

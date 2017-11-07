@@ -29,7 +29,7 @@ def lsi(corpus):
     return similarity_matrix
 
 
-def spectral_clustering(similarity_matrix, corpus, cluster_num=5):
+def spectral_clustering(similarity_matrix, corpus, original_sent, cluster_num=5):
     n_clusters_ = cluster_num
     sc = SpectralClustering(n_clusters=n_clusters_, affinity='precomputed').fit(similarity_matrix)
     labels = sc.labels_
@@ -42,6 +42,7 @@ def spectral_clustering(similarity_matrix, corpus, cluster_num=5):
         idx_list = np.where(labels == indice_cluster)[0]
 
         cluster_corpus = [sentence for idx, sentence in enumerate(corpus) if idx in idx_list]
+        cluster_corpus_original = [sentence[0] for idx, sentence in enumerate(original_sent) if idx in idx_list]
 
         df = post_processing.df_count(cluster_corpus)
         label = df.most_common(3)[0][0]
@@ -52,9 +53,9 @@ def spectral_clustering(similarity_matrix, corpus, cluster_num=5):
         for idx in idx_list:
             word_labels[idx] = cluster_label
 
-        cluster_centroid = get_Cluster_Centroid(cluster_corpus)
-        centroid_sentence_idx = idx_list[cluster_centroid]
-        cluster_info.append([cluster_label, len(idx_list), centroid_sentence_idx])
+        cluster_centroid = get_Cluster_Centroid(cluster_corpus_original)
+        # centroid_sentence_idx = idx_list[cluster_centroid]
+        cluster_info.append([cluster_label, len(idx_list), cluster_centroid])
     print("The remaining sentences are automatically clustered")
     return word_labels, cluster_info
 

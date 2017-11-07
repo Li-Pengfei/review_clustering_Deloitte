@@ -1,0 +1,99 @@
+question,cluster_label,frequency,sentence_exemplar
+1,appointment,46,so we get more time for appointment .
+1,wait,44,after taking appointment then also i have to wait 1 to 1 and half hour .
+1,call,32,there are calling for appointment .
+1,on_time,16,so they should give appointment to customer on time .
+1,pick,15,they should improve in pickup drop facility .
+1,emerg,11,even for any emergency also .
+1,staff,10,they have to increase the staff .
+1,locat,10,jd is currently opened and location also we do not know .
+1,inform,10,they should inform is when the service needs to be given .
+1,receiv,8,nobody comes to receive us .
+1,app,7,through this app we can fix appointments .
+1,fix,6,they should make improvement in fixing the appointment .
+1,deliv,6,do not deliver the car on fixed time of appointment .
+1,number,5,also toyota has given only one number for all services .
+1,onlin,5,appointment should be book an online .
+1,sm,5,when i call in the center then they told me your appointment was fix that why message should become .
+2,holidays,13,dealership should be open on holiday also .
+2,sunday,225,service center should be open on sunday also .
+2,weekend,5,we can have car while too the office if serviced on weekends
+2,specific_time,331,
+3,detail,29,that time they must completely explain the details of servicing
+3,updat,7,advisor should update the customer time to time about the problems of the vehicle .
+3,advis,32,dealership staff should give advice explanation about the services .
+3,commit,4,they should give car on committed time .
+3,behavior,9,the staff behaviour is not good .
+3,knowledg,16,staff should have proper knowledge .
+3,train,8,they should give proper training to their advisor .
+3,guid,7,they should satisfied customer properly .
+3,question,10,so they should provide explanations for the customer \?
+3,information,29,staff are not giving proper information about servicing .
+3,inform,34,i want to tell something if anything is required in service they don \?
+3,respond,7,supervisor don \?
+3,advisor_servic_proper,13,advisor should explain the customer properly .
+3,servic_staff_call,46,while servicing time they are not properly explain with our car .
+3,problem_servic_staff,26,dealership staff need to explain all the problems .
+3,explan_servic_proper,9,explain properly about the servicing and all .
+3,understand_problem_manag,9,when they tight a \?
+4,clean,843,t wash engine then they should clean car properly but they are not cleaning car properly .
+4,interior,263,they should clean inside interior properly .
+4,staff,199,service staff are not clean the vehicle properly .
+4,check,104,they should check car properly at the time of servicing .
+4,charg,65,they are take charge for washing service but they are not properly clean the car so that service should be improved .
+4,dust,60,the dirt should not remain even after washing .
+4,polish,48,car should be clean properly also polish should be done properly .
+4,dri,32,they should use vacuum for cleaning .
+4,glass,32,they should clean the glasses of the vehicle properly .
+5,vehicl_custom_problem,31,"so , that they can check our vehicle properly and delivered"
+5,car_servic_time,139,"more service centers should be made , because due to the single service center they don \?"
+5,good_qualiti_car,40,servicing quality should be good .
+5,part_car_qualiti,29,t serviced on quality part properly .
+5,car_time_qualiti,35,if they servicing the car they should check the quality of the car .
+5,work_qualiti_car,38,they should improve service quality .
+5,staff_car_servic,27,a servicing center some staffs are work properly .
+5,custom_car_problem,27,quality of service has to be improved .
+5,problem_car_servic,37,but on the other car this problem is not there .
+5,servic_qualiti_car,42,they should improve the servicing quality .
+6,bu,42,even the bus facility is also not available in that place .
+6,shop,22,at the dealership location there is no available body shop .
+6,food,21,there is no facility for food and no hotels available nearby the location .
+6,board,13,they should put one board in national highway
+6,transport,16,there should be transportation facility .
+6,citi_drop_highway,1422,service center should be at least at main location or it is at pimpri and chinchwad .
+6,km_citi_distanc,247,city is 10 km far away from service center .
+6,road_citi_highway,178,location of 67 service center should be on the main road .
+6,maruti_nagar_sector,317,there should be open one service center at gurgaon with showroom .
+6,citi_heart_bangalor,235,service center location is very far from in city .
+7,space,229,the waiting area should be improved .
+7,drink,108,"in waiting area they should ask tea , coffee or to the customer ."
+7,seat,97,waiting area there should be more chairs .
+7,time,80,"in waiting area , they are take long time and it was time wasting for customer ."
+7,cleanli,39,the waiting area should be more clean .
+7,ac,25,waiting area should have ac .
+7,read,21,waiting area should be proper and there tv magazine also available .
+7,food,15,food facility should be available .
+7,driver,14,there has one room for driver also .
+7,tv,13,the dsk there is tv in waiting area .
+8,servic,454,they take more time to complete the servicing .
+8,deliveri,191,they should deliver car on committed time .
+8,commit,136,they should give car on committed time .
+8,staff,89,staff should be increase .
+8,wait,37,because time of customer is wasted .
+8,inform,32,how much time it will take should inform us .
+9,charg,947,charges are more they should reduce charges .
+9,servic,763,charges charged for the services are high so they should reduce it .
+9,spare,449,they have to reduce the charges of spare parts and service charges
+9,labor,249,labor charges is very high it should be reduce .
+9,tax,143,"all bills charges , service tax labor charges should be reduced"
+9,compar,115,charges should be reduced and while comparing to market charges in other dealership toyota has high charges .
+10,vehicl_servic_custom,31,they do not call after service .
+10,complaint_call_action,26,they should take action on feedback call .
+10,car_call_servic,37,"so , they should be follow up calls ."
+10,call_end_develop,14,t give him any follow up calls .
+10,problem_call_custom,43,they are not doing feedback call after servicing .
+10,servic_call_car,45,they should do follow up calls after giving service .
+10,follow_call_custom,22,no follow up calls .
+10,custom_call_feedback,139,after servicing they are not calling follow up calls .
+10,feedback_call_servic,37,they should improve feedback calls after service .
+10,time_feedback_custom,31,they should do the feedback calls on the time .
