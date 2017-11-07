@@ -83,7 +83,9 @@ def q2(content):
         sent = get_Cluster_Centroid([doc_day[i][0] for i in idx_set])
         cluster_info_all.append([2, label, len(idx_set), sent])
 
-    cluster_info_all.append([2, 'specific_time', len(doc_time), ''])
+    doc_time_cluster = [doc[0] for doc in doc_time]
+    sent = get_Cluster_Centroid(doc_time_cluster)
+    cluster_info_all.append([2, 'specific_time', len(doc_time), sent])
 
     return doc_day + doc_time + doc_noimprove + doc_other, cluster_info_all
 
@@ -258,7 +260,7 @@ def q10(content):
     
 if __name__ == '__main__':
 
-    process_question(2, '../raw_data/survey_data.csv','../raw_data/survey_cluster.csv')
+    process_question(3, '../data/survey_data.csv', '../data/cluster_info.csv')
 
 
 

@@ -60,7 +60,7 @@ def get_Cluster_Centroid(corpus):
     centroid_sent = sentence[sim_ordered[0][0]]
     for index in sim_ordered:
         sent_len = len(word_tokenize(sentence[index[0]]))
-        if sent_len < sent_len_threshold:
+        if 5 < sent_len < sent_len_threshold:
             centroid_sent = sentence[index[0]]
             break
     return centroid_sent
